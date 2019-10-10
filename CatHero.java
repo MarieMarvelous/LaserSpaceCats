@@ -1,19 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class CatHero here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class CatHero extends Hero
-{
-    /**
-     * Act - do whatever the CatHero wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
+public class CatHero extends Hero {
+    public static final int SPEED=5;
+    public CatHero() {
+        super(10);
+    }
+    
+    public void act() {
+        super.act();
+        super.movement("a", "d", "w", "s", SPEED);
+        //super.checkCollision();
+        
     }    
 }

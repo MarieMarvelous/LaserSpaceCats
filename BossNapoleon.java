@@ -6,8 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BossNapoleon extends Enemy
-{
+public class BossNapoleon extends Enemie {
     /**
      * Act - do whatever the BossNapoleon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
