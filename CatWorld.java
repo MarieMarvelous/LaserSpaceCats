@@ -17,5 +17,7 @@ public class CatWorld extends World {
         mouse.setLocation(703,499);
         catHero.setLocation(519,505);
         catHero.setLocation(667,506);
+        Rat rat = new Rat();
+        addObject(rat,979,325);
     }
 }

@@ -14,4 +14,10 @@ public abstract class Enemy extends Entity {
             getWorld().removeObject(this);
         }
     }
+    
+    public void resizeImage(int width, int height) {
+        GreenfootImage image =getImage();
+        image.scale(width, height);
+        setImage(image);
+    } 
 }
