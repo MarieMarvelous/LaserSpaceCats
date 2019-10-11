@@ -7,6 +7,7 @@ public abstract class Enemy extends Entity {
         super.act();
         checkForLaserCollision();
     }    
+    
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
