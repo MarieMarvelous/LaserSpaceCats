@@ -1,18 +1,36 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Entity here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Entity extends Actor implements Lootable {
-    /**
-     * Act - do whatever the Entity wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
+public abstract class Entity extends Actor implements Lootable {
+
+    public void act() {
+
     }    
+    public void move(int amount) {
+        double angle = Math.toRadians(getRotation() );
+        int x = (int) Math.round(getX() + Math.cos(angle) * amount);
+        int y = (int) Math.round(getY() + Math.sin(angle) * amount);
+        
+        setLocation(x, y);
+    }
+     public void turn(int angle) {
+        setRotation(getRotation() + angle);
+    }
+        public void moveStraight(int amount, Direction dir) {
+        switch (dir) {
+            case NORTH:
+                setLocation(getX(), getY() - amount);
+                break;
+            case EAST:
+                setLocation(getX() + amount, getY());
+                break;
+            case SOUTH: 
+                setLocation(getX(), getY() + amount);
+                break;
+            case WEST:
+                setLocation(getX() - amount, getY());
+                break;
+            default:
+                break;
+        }
+    }
 }
