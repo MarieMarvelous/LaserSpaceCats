@@ -7,6 +7,7 @@ public class CatWorld extends World {
         super(1600, 900, 1); 
         prepare();
     }
+    
     private void prepare()
     {
         CatHero catHero = new CatHero();
@@ -14,5 +15,7 @@ public class CatWorld extends World {
         Mouse mouse = new Mouse();
         addObject(mouse,1001,426);
         mouse.setLocation(703,499);
+        catHero.setLocation(519,505);
+        catHero.setLocation(667,506);
     }
 }
