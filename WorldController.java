@@ -11,20 +11,14 @@ public class WorldController {
     public WorldController() {
     }
 
-    /*private static World createTestWorld() {
-        TestWorld world = new TestWorld();
-        Greenfoot.setWorld(world);
-        return world;
-    }*/
-
-    private static World createGarden() {
-        Garden world = new Garden();
+    private static World createHouse() {
+        House world = new House();
         Greenfoot.setWorld(world);
         return world;
     }
-
-    private static World createHouse() {
-        House world = new House();
+    
+    private static World createGarden() {
+        Garden world = new Garden();
         Greenfoot.setWorld(world);
         return world;
     }

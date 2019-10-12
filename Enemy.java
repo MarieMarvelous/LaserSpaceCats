@@ -12,6 +12,7 @@ public abstract class Enemy extends Entity {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
             getWorld().removeObject(this);
+            CatWorld.registerKill();
         }
     }
     

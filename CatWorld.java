@@ -4,7 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the parent World class. All other levels inherit from this one.
  */
 public class CatWorld extends World {
-    private static boolean alreadyInitialized = false;
+    public static int killableEnemies;
+    public static int killedEnemies = 0;
 
     public CatWorld() {
         super(1600, 900, 1);
@@ -13,11 +14,12 @@ public class CatWorld extends World {
     }
 
     public void act() {
+        this.showText("Press \"Enter\" ", 800, 450);
         //only called once!
-        if (!alreadyInitialized) {
-            Greenfoot.delay(250);
+
+        if(Greenfoot.isKeyDown("enter")){
+            //Greenfoot.delay(250);
             WorldController.switchToNextWorld(this);
-            alreadyInitialized = true;
         }
 
         //real act()
@@ -26,6 +28,16 @@ public class CatWorld extends World {
 
     private void prepare() {
 
+    }
+
+    public void checkForNextWorld(World world) {
+        if (killedEnemies >= killableEnemies) {
+            WorldController.switchToNextWorld(world);
+        }
+    }
+    
+    public static void registerKill() {
+        killedEnemies++;
     }
 
 }

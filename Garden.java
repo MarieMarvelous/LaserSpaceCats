@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Garden extends CatWorld {    
 
+
     public Garden() {
         super();
         //Spawn Objects in World

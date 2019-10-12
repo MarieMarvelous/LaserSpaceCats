@@ -6,20 +6,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class House extends CatWorld {
+public class House extends CatWorld {    
     private static int counter = 0;
 
     public House() {
         super();
+        killableEnemies = 8;
         addObject(new CatHero(), 200, 200);
-        
-        addObject(new Rat(), 500, 500);
+        spawnEnemy();
     }
     
     public void act() {
-        counter++;
-        if (counter > 250) {
-            WorldController.switchToNextWorld(this);
+        checkForNextWorld(this);
+    }
+    
+    public void spawnEnemy() {
+        for (int i = 1; i <= killableEnemies; i++) {            
+            addObject(new Mouse(), Greenfoot.getRandomNumber(1550) + 25, 850);
         }
     }
 }
