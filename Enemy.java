@@ -20,4 +20,14 @@ public abstract class Enemy extends Entity {
         image.scale(width, height);
         setImage(image);
     } 
+    
+    public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
+        move(Greenfoot.getRandomNumber(zufallVorwaerts));
+        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
+            turn(-drehung);
+        }
+        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
+            turn(drehung);
+        }
+    }
 }

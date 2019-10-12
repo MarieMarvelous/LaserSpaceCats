@@ -8,7 +8,7 @@ public class Laser extends Projectile {
         this.angle = adaptedAngle;
         setRotation(adaptedAngle); 
         GreenfootImage image = this.getImage();
-        image.scale(110, 60);
+        image.scale(40, 18);
         this.setImage(image);
     }
 

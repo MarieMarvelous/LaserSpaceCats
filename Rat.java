@@ -9,8 +9,7 @@ public class Rat extends Enemy {
         return 5;
     }
 
-    public void act() 
-    {
-        // Add your action code here.
+    public void act() {
+        movement(5, 3, 8);
     }    
 }

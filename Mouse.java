@@ -10,13 +10,7 @@ public class Mouse extends Enemy {
     }
     
     public void act() {
-        move(Greenfoot.getRandomNumber(5));
-        if(Greenfoot.getRandomNumber(10) <=4){
-            turn(-10);
-        }
-        if(Greenfoot.getRandomNumber(10) >4){
-            turn(10);
-        }
+        movement(5, 4, 10);
         super.act();
     }    
 }
