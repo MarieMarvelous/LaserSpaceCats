@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Entity
-comment1.params=
-comment1.target=void\ act()
-comment2.params=amount
-comment2.target=void\ move(int)
-comment3.params=angle
-comment3.target=void\ turn(int)
-numComments=4
