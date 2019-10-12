@@ -15,5 +15,6 @@ public class Sewers extends CatWorld
      */
     public Sewers()
     {
+        super();
     }
 }
