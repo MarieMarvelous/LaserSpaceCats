@@ -1,26 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Garden here.
+ * This class describes the second Level. The Garden!
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This level should lead to the third one - The sewers.
  */
 public class Garden extends CatWorld {    
-    
-    public Garden(){
-        
+
+    public Garden() {
+        this.prepare();
     }
-    
+
     private void prepare() {
-        CatHero catHero = new CatHero();
-        //addObject(catHero,656,498);
-        Mouse mouse = new Mouse();
-        //Greenfoot.getWorld().addObject(mouse,1001,426);
-        mouse.setLocation(703,499);
-        catHero.setLocation(519,505);
-        catHero.setLocation(667,506);
-        Rat rat = new Rat();
-        //Greenfoot.getWorld().addObject(rat,979,325);
+        //Spawn Objects in World
+        addObject(new CatHero(),667,506);
+
+        //enemies
+        addObject(new Mouse(),703,499);
+        addObject(new Rat(),979,325);
     }
 }
