@@ -12,7 +12,7 @@ public class House extends CatWorld {
     public House() {
         super();
         killableEnemies = 8;
-        addObject(new CatHero(), 200, 200);
+        addObject(new CatHero(), 400, 225);
         spawnEnemy();
     }
     
@@ -22,7 +22,7 @@ public class House extends CatWorld {
     
     public void spawnEnemy() {
         for (int i = 1; i <= killableEnemies; i++) {            
-            addObject(new Mouse(), Greenfoot.getRandomNumber(1550) + 25, 850);
+            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
         }
     }
 }

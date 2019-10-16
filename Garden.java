@@ -13,11 +13,11 @@ public class Garden extends CatWorld {
     public Garden() {
         super();
         //Spawn Objects in World
-        addObject(new CatHero(),667,506);
+        addObject(new CatHero(),400,225);
 
         //enemies
-        addObject(new Mouse(),703,499);
-        addObject(new Rat(),979,325);
+        //addObject(new Mouse(),703,499);
+        //addObject(new Rat(),979,325);
     }
 
     public void act() {
