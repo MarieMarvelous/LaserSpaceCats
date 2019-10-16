@@ -25,11 +25,11 @@ public abstract class Enemy extends Entity {
     public void checkForCatCollision(int drawback, int drawbackFrames) {
         if (frameCounter == 0) {
             CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-            if (isTouching(CatHero.class)) {
-                //catHero.checkCollision();
-                move(-drawback);                
-                startFrameCounting(drawbackFrames);
+            if (isTouching(CatHero.class) && canDealDamage) {
+                catHero.checkCollision();
                 canDealDamage = false;
+                move(-drawback);                
+                startFrameCounting(drawbackFrames);                
             }
         }
     }

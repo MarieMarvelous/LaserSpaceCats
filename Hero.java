@@ -57,7 +57,7 @@ public class Hero extends Actor {
         getWorld().showText(leben, 100, 100);
         if(health <= 0){
             Greenfoot.stop();
-            getWorld().showText("Game Over", 800, 450);
+            getWorld().showText("Game Over", getWorld().getWidth()/2, getWorld().getHeight()/2);
         }
     }
 
