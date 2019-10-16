@@ -10,7 +10,7 @@ public class CatWorld extends World {
     public CatWorld() {
         super(800, 450, 1);
         Greenfoot.setSpeed(50);
-        prepare();
+        this.prepare();
     }
 
     public void act() {
@@ -39,5 +39,12 @@ public class CatWorld extends World {
     public static void registerKill() {
         killedEnemies++;
     }
+    
+    
+    /*public void spawnedEnemy() {
+        for (int i = 1; i <= killableEnemies; i++) {            
+            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
+        }
+    }*/
 
 }

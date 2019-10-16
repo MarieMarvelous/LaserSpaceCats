@@ -12,18 +12,18 @@ public class House extends CatWorld {
     public House() {
         super();
         killableEnemies = 8;
-        addObject(new CatHero(), 400, 225);
-        spawnEnemy();
+        addObject(new CatHero(), 50, 50);
+        //addObject(new Ape(), 300,300); //TestAffe
+        spawnedEnemy();
     }
     
     public void act() {
         checkForNextWorld(this);
     }
     
-    public void spawnEnemy() {
+    public void spawnedEnemy() {
         for (int i = 1; i <= killableEnemies; i++) {            
-            //addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
-            addObject(new Ape(), 300,300);
+            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
         }
     }
 }

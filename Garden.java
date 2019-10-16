@@ -14,6 +14,8 @@ public class Garden extends CatWorld {
         super();
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
+        killableEnemies = 4;
+        //super.spawnedEnemy();
 
         //enemies
         //addObject(new Mouse(),703,499);
@@ -22,6 +24,7 @@ public class Garden extends CatWorld {
 
     public void act() {
         Greenfoot.delay(250);
-        WorldController.switchToNextWorld(this);
+        //WorldController.switchToNextWorld(this);
+        checkForNextWorld(this);
     }
 }

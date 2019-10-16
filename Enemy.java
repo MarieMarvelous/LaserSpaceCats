@@ -34,32 +34,29 @@ public abstract class Enemy extends Entity {
     }
     
     
-    public void runTowardsCatHero ()
-    {
+    public void runTowardsCatHero () {
         move(3);
         if (getWorld().getObjects(CatHero.class).isEmpty()) return; 
         Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
         turnTowards(CatHero.getX(), CatHero.getY()); 
     }
    
-    public void shootBanana() 
-    { 
+    public void shootBanana() { 
         if (shotTimer > 0 && --shotTimer > 0) return;
         Actor banana = new Banana(0);
         getWorld().addObject(banana, getX(), getY());
         banana.setRotation(getRotation()); 
         shotTimer = 50; //je höher desto langsamer kommen die Bananen
     }
-        public boolean canSee(Class clss)
-    {
+        public boolean canSee(Class clss) {
         Actor actor = getOneObjectAtOffset(0, 0, clss);
         return actor != null;        
     }
-    public void shootCatHero()
-    {
+    
+    /*public void shootCatHero() {
         if (canSee (CatHero.class))  //läuft los wenn Ape CatHero sieht. Object in Range?
         {
             getWorld().addObject(new Banana(80), this.getX(), this.getY()); 
         }
-    }
+    }*/
 }
