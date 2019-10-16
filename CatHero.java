@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CatHero extends Hero {
     public static final int SPEED=5;
     public CatHero() {
-        super(1);
+        super(50);
     }
     
     public void act() {

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Enemy
+comment1.params=
+comment1.target=int\ giveDamage()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkForLaserCollision()
+comment4.params=drawback\ drawbackFrames
+comment4.target=void\ checkForCatCollision(int,\ int)
+comment5.params=width\ height
+comment5.target=void\ resizeImage(int,\ int)
+comment6.params=zufallVorwaerts\ zufallDrehung\ drehung
+comment6.target=void\ movement(int,\ int,\ int)
+numComments=7

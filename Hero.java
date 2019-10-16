@@ -1,6 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 import java.awt.Point;
+import java.util.ArrayList;
 
 public class Hero extends Actor {
     public int health;
@@ -8,15 +9,16 @@ public class Hero extends Actor {
     public int cooldown;
     public static int defaultCooldown;
     
-    
+    ArrayList<GreenfootImage> greenfootImages = new ArrayList();
+
     public Hero(int health) {
-        this.health=health;
+        this.health = health;
         this.canShootAgain = true;
         this.defaultCooldown = 10;
         this.cooldown = this.defaultCooldown;
     }
-    
-     public void movement(String left, String right, String up, String down, int speed) {
+
+    public void movement(String left, String right, String up, String down, int speed) {
         if(Greenfoot.isKeyDown(left)) {
             move(-speed);
         }
@@ -31,21 +33,24 @@ public class Hero extends Actor {
         }
         checkForShooting();
     }
-    
+
     public void act() {
         if (cooldown > 0) {
             cooldown--;
         } else {
             cooldown = this.defaultCooldown;
             canShootAgain = true;
-        }
+        }      
     } 
-    
+
     public void checkCollision(){
         if(isTouching(Enemy.class)){
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
-                health-=enemy.giveDamage();
+                if (enemy.canDealDamage) {
+                    health-=enemy.giveDamage();
+                    getWorld().addObject(new DamageIndicator(String.valueOf(enemy.giveDamage())), getX(), getY()+10);
+                }
             }
         }
         String leben = String.valueOf(health);
@@ -55,22 +60,27 @@ public class Hero extends Actor {
             getWorld().showText("Game Over", 800, 450);
         }
     }
+
     public void shootLaser(int angle) {
         if (canShootAgain) {
             getWorld().addObject(new Laser(angle), this.getX(), this.getY());
             canShootAgain = false;
         }
     }    
+
     public void checkForShooting() {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if (mouse != null && Greenfoot.getMouseInfo().getButton() == 1) {
             shootLaser(getMouseDirection(mouse));
         }
     }    
+
     public int getMouseDirection(MouseInfo mouse) {
         double deltaX = mouse.getX() - this.getX();
         double deltaY = mouse.getY() - this.getY();
-        
+
         return 90 - (int) (Math.atan2(deltaX, deltaY) * 57.3);
     }
+    
+    
 }

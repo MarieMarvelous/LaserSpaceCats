@@ -1,14 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public abstract class Enemy extends Entity {
+
     public abstract int giveDamage();
-    private int shotTimer;
-    public void act (){
+    public boolean canDealDamage = true;
+
+    public void act () {        
+        if (canDealDamage) {
+            checkForCatCollision(drawback, drawbackFrames);
+        }
+        checkForLaserCollision();        
+        countFrames();
         super.act();
-        checkForLaserCollision();
     }    
-    
+
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
@@ -16,50 +21,38 @@ public abstract class Enemy extends Entity {
             CatWorld.registerKill();
         }
     }
-    
+
+    public void checkForCatCollision(int drawback, int drawbackFrames) {
+        if (frameCounter == 0) {
+            CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+            if (isTouching(CatHero.class)) {
+                //catHero.checkCollision();
+                move(-drawback);                
+                startFrameCounting(drawbackFrames);
+                canDealDamage = false;
+            }
+        }
+    }
+
     public void resizeImage(int width, int height) {
         GreenfootImage image =getImage();
         image.scale(width, height);
         setImage(image);
     } 
-    
+
     public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
-        move(Greenfoot.getRandomNumber(zufallVorwaerts));
-        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
-            turn(-drehung);
-        }
-        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
-            turn(drehung);
+        if (frameCounter == 0) {
+            move(Greenfoot.getRandomNumber(zufallVorwaerts));
+            if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
+                turn(-drehung);
+            }
+            if(Greenfoot.getRandomNumber(10) >zufallDrehung){
+                turn(drehung);
+            }
+            canDealDamage = true;
         }
     }
+
     
-    
-    public void runTowardsCatHero ()
-    {
-        move(3);
-        if (getWorld().getObjects(CatHero.class).isEmpty()) return; 
-        Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
-        turnTowards(CatHero.getX(), CatHero.getY()); 
-    }
-   
-    public void shootBanana() 
-    { 
-        if (shotTimer > 0 && --shotTimer > 0) return;
-        Actor banana = new Banana(0);
-        getWorld().addObject(banana, getX(), getY());
-        banana.setRotation(getRotation()); 
-        shotTimer = 50; //je höher desto langsamer kommen die Bananen
-    }
-        public boolean canSee(Class clss)
-    {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
-        return actor != null;        
-    }
-    public void shootCatHero()
-    {
-        if (canSee (CatHero.class))  //läuft los wenn Ape CatHero sieht. Object in Range?
-        {
-            getWorld().addObject(new Banana(80), this.getX(), this.getY()); 
-        }
-    }
+
 }
