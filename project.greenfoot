@@ -1,11 +1,15 @@
 #Greenfoot project file
 class.Ape.image=monkey.png
+class.BossDog.image=dog.png
+class.BossMouse.image=pigeon.png
+class.BossNapoleon.image=hawkin.png
+class.BossScientist.image=einstein.png
 class.BossSlime.image=lhkhgv.png
-class.CatHero.image=CatHero.png
+class.CatHero.image=cat.png
 class.Dinosaur.image=dinosaur.png
-class.Garden.image=granite-light.jpg
+class.Garden.image=grasstexture.jpg
 class.GuianaSpaceCenter.image=recycpap.jpg
-class.House.image=brick.jpg
+class.House.image=kitchen-floor.jpg
 class.Laser.image=LaserBeam.png
 class.Mouse.image=mouse.png
 class.Rat.image=rat.png
