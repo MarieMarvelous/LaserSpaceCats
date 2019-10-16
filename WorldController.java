@@ -14,18 +14,42 @@ public class WorldController {
     private static World createHouse() {
         House world = new House();
         Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
         return world;
     }
     
     private static World createGarden() {
         Garden world = new Garden();
         Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createSewers() {
         Sewers world = new Sewers();
         Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
+        return world;
+    }
+    
+    private static World createGuianaSpaceCenter() {
+        GuianaSpaceCenter world = new GuianaSpaceCenter();
+        Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
+        return world;
+    }
+    
+    private static World createMoon() {
+        Moon world = new Moon();
+        Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
+        return world;
+    }
+    
+    private static World createEnding() {
+        Ending world = new Ending();
+        Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
         return world;
     }
 
@@ -43,10 +67,16 @@ public class WorldController {
             sewers.showText("sewers", 200, 200);
         }
         if (world instanceof Sewers) {
-            //viertes Level laden
+            World guianaSpaceCenter = createGuianaSpaceCenter();
+            guianaSpaceCenter.showText("Guiana Space Center", 200, 200);
         }
         if (world instanceof GuianaSpaceCenter) {
-            //fünftes Level laden
+            World moon = createMoon();
+            moon.showText("Moon", 200, 200);
+        }
+        if (world instanceof Moon) {
+            World ending = createEnding();
+            ending.showText("Ending", 200, 200);
         }
     }
 }

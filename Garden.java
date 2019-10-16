@@ -15,16 +15,17 @@ public class Garden extends CatWorld {
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
         killableEnemies = 4;
-        //super.spawnedEnemy();
+        spawnedEnemy();
 
-        //enemies
-        //addObject(new Mouse(),703,499);
-        //addObject(new Rat(),979,325);
     }
 
     public void act() {
-        Greenfoot.delay(250);
-        //WorldController.switchToNextWorld(this);
         checkForNextWorld(this);
+    }
+    
+    public void spawnedEnemy() {
+        for (int i = 1; i <= killableEnemies; i++) {            
+            addObject(new Rat(), Greenfoot.getRandomNumber(750) + 25, 400);
+        }
     }
 }

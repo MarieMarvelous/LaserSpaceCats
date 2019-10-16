@@ -11,9 +11,8 @@ public class House extends CatWorld {
 
     public House() {
         super();
-        killableEnemies = 8;
         addObject(new CatHero(), 50, 50);
-        //addObject(new Ape(), 300,300); //TestAffe
+        killableEnemies = 2;
         spawnedEnemy();
     }
     
