@@ -9,7 +9,7 @@ public class CatHero extends Hero {
     public void act() {
         super.act();
         super.movement("a", "d", "w", "s", SPEED);
-        //super.checkCollision();
+        super.checkCollision();
         
     }    
 }

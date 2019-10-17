@@ -5,27 +5,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CatWorld extends World {
     public static int killableEnemies;
-    public static int killableEnemiesGarden;
     public static int killedEnemies = 0;
-    public static int killedEnemiesGarden = 0;
 
     public CatWorld() {
-        super(800, 450, 1);
+        super(1600, 900, 1);
         Greenfoot.setSpeed(50);
         this.prepare();
     }
 
     public void act() {
-        this.showText("Press \"Enter\" ", 400, 225);
-        //only called once!
-
+        this.showText("Press \"Enter\" ", 800, 400);
         if(Greenfoot.isKeyDown("enter")){
             WorldController.switchToNextWorld(this);
         }
     }
-
-   
-
+    
     private void prepare() {
 
     }
@@ -38,6 +32,25 @@ public class CatWorld extends World {
     
     public static void registerKill() {
         killedEnemies++;
+    }
+    
+    public void spawnSingleEnemy(Enemy enemy) {
+        this.addObject(enemy, Greenfoot.getRandomNumber(1550) + 25, 870);
+    }
+    
+    public void spawnEnemy(EnemyType type, int amount) {
+        for (int i = 0; i < amount; i++) {
+            switch(type) {
+                case MOUSE:
+                    spawnSingleEnemy(new Mouse());
+                    break;
+                case RAT:
+                    spawnSingleEnemy(new Rat());
+                    break;
+                default:
+                    break;
+            }
+        }
     }
   
 }
