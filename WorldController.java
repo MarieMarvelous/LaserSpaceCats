@@ -77,6 +77,7 @@ public class WorldController {
         if (world instanceof Moon) {
             World ending = createEnding();
             ending.showText("Ending", 200, 200);
+            Greenfoot.stop();
         }
     }
 }
