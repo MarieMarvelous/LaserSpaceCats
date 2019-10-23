@@ -16,8 +16,8 @@ public class Garden extends CatWorld {
         super();
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
-        spawnEnemy(EnemyType.RAT, 2);
-        killableEnemies = 4;
+        spawnEnemy(EnemyType.SQUIRREL, 2);
+        killableEnemies = 7;
 
     }
 

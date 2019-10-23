@@ -14,8 +14,7 @@ public class BossDog extends Enemy {
     public BossDog() {
     }
     
-    public void act() 
-    {
+    public void act() {
         // Add your action code here.
     }    
 }
