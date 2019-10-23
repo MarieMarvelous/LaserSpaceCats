@@ -14,16 +14,19 @@ public class House extends CatWorld {
         super();
         addObject(new CatHero(), 50, 50);
         spawnEnemy(EnemyType.MOUSE, 2);
+        this.showText("Welle 1", 700, 25);
         killableEnemies = 6;
     }
 
     public void act() {
         if (killedEnemies >= 2 && secondWaveReady) {
             spawnEnemy(EnemyType.MOUSE, 2);
+            this.showText("Welle 2", 700, 25);
             secondWaveReady = false;
         }
         if (killedEnemies >= 4 && thirdWaveReady) {
             spawnEnemy(EnemyType.MOUSE, 2);
+            this.showText("Welle 3", 700, 25);
             thirdWaveReady = false;
         }
         checkForNextWorld(this);

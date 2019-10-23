@@ -7,19 +7,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-public class Garden extends CatWorld {    
+public class Garden extends CatWorld {  
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
 
 
     public Garden() {
         super();
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
-        killableEnemies = 4;
-        spawnedEnemy();
+        spawnEnemy(EnemyType.RAT, 2);
+        killableEnemies = 6;
 
     }
 
     public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.RAT, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.RAT, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
+        
         checkForNextWorld(this);
     }
     
