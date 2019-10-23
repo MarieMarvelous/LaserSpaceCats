@@ -24,7 +24,7 @@ public class CatHero extends Hero {
         super.movement("a", "d", "w", "s", SPEED);
         super.checkCollision();
         
-    }    
+        
         
         if (getImage() == imagef1) {
             setImage(imagef2);
@@ -37,7 +37,7 @@ public class CatHero extends Hero {
                 setImage(imagef4);
             }
         }
-    } 
+    
     
    
     
@@ -45,16 +45,14 @@ public class CatHero extends Hero {
         if (getImage() == imagef1) {
             setImage(imagef2);
         }
-        else {
-            if (getImage() == imagef4) {
-                setImage(imagef4);
-            }
-            else {
-                setImage(imagef4);
-            }
+               else {
+                if (getImage() == imagef4) {
+                    setImage(imagef4);
+                }
+                    else {
+                        setImage(imagef4);
+                }
         }
     } 
-    
-   
-    
 }
+    

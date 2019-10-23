@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Leandra) 
  * @version (16.10)
  */
-public class Artefact extends Entity
+public class artefact extends Entity
 {
 public void act() 
     {

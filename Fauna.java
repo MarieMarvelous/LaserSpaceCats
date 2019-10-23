@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Fauna extends Artefact
+public class Fauna extends artefact
 {
     /**
      * Act - do whatever the Fauna wants to do. This method is called whenever
