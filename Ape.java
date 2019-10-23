@@ -7,11 +7,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Ape extends Enemy {
+
+    
     public int giveDamage() {
         return 5;
     }
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    
+    public void act() {
+        runTowardsCatHero();
+        //shootBanana();
+        //shootCatHero();
+        //shootBanana();
+        //super.canSee();
+        
+        
+    }   
 }

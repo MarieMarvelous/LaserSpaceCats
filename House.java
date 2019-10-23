@@ -1,28 +1,39 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class House here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class House extends CatWorld {    
-    private static int counter = 0;
+public class House extends CatWorld {
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
+    private static boolean bossWaveReady = true;
 
     public House() {
         super();
-        killableEnemies = 8;
-        addObject(new CatHero(), 400, 225);
-        spawnEnemy();
+        addObject(new CatHero(), 50, 50);
+        spawnEnemy(EnemyType.MOUSE, 2);
+        this.showText("Welle 1", 700, 25);
+        killableEnemies = 7;
     }
-    
+
     public void act() {
-        checkForNextWorld(this);
-    }
-    
-    public void spawnEnemy() {
-        for (int i = 1; i <= killableEnemies; i++) {            
-            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.MOUSE, 2);
+            this.showText("Welle 2", 700, 25);
+            secondWaveReady = false;
         }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.MOUSE, 2);
+            this.showText("Welle 3", 700, 25);
+            thirdWaveReady = false;
+        }
+        if (killedEnemies >= 6 && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSMOUSE, 1);
+            bossWaveReady = false;
+        }
+        checkForNextWorld(this);
     }
 }

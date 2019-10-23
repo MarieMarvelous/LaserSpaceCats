@@ -11,5 +11,6 @@ public class Rat extends Enemy {
 
     public void act() {
         movement(5, 3, 8);
+        super.act();
     }    
 }
