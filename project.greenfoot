@@ -39,31 +39,37 @@ dependency11.type=UsesDependency
 dependency12.from=Enemy
 dependency12.to=CatHero
 dependency12.type=UsesDependency
-dependency13.from=Hero
-dependency13.to=Enemy
+dependency13.from=Laser
+dependency13.to=Artefact
 dependency13.type=UsesDependency
 dependency14.from=Hero
-dependency14.to=Laser
+dependency14.to=Enemy
 dependency14.type=UsesDependency
-dependency15.from=WorldController
-dependency15.to=House
+dependency15.from=Hero
+dependency15.to=Laser
 dependency15.type=UsesDependency
 dependency16.from=WorldController
-dependency16.to=Garden
+dependency16.to=House
 dependency16.type=UsesDependency
 dependency17.from=WorldController
-dependency17.to=Sewers
+dependency17.to=Garden
 dependency17.type=UsesDependency
 dependency18.from=WorldController
-dependency18.to=CatWorld
+dependency18.to=Sewers
 dependency18.type=UsesDependency
 dependency19.from=WorldController
-dependency19.to=GuianaSpaceCenter
+dependency19.to=CatWorld
 dependency19.type=UsesDependency
 dependency2.from=GuianaSpaceCenter
 dependency2.to=CatHero
 dependency2.type=UsesDependency
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+dependency20.from=WorldController
+dependency20.to=GuianaSpaceCenter
+dependency20.type=UsesDependency
+>>>>>>> Stashed changes
 dependency3.from=GuianaSpaceCenter
 dependency3.to=Mouse
 dependency3.type=UsesDependency
@@ -161,10 +167,15 @@ dependency9.type=UsesDependency
 editor.fx.0.height=737
 editor.fx.0.width=814
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 editor.fx.0.x=708
 editor.fx.0.y=12
+=======
+editor.fx.0.x=680
+editor.fx.0.y=40
+>>>>>>> Stashed changes
 height=838
-package.numDependencies=19
+package.numDependencies=20
 package.numTargets=34
 =======
 editor.fx.0.x=360
@@ -187,7 +198,11 @@ readme.width=47
 readme.x=10
 readme.y=10
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 simulation.speed=10
+=======
+simulation.speed=15
+>>>>>>> Stashed changes
 =======
 simulation.speed=15
 >>>>>>> Stashed changes
@@ -489,6 +504,6 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1550
-world.lastInstantiated=House
+world.lastInstantiated=CatWorld
 xPosition=0
 yPosition=0
