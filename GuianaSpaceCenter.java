@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 
 public class GuianaSpaceCenter extends CatWorld {
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
 
     public GuianaSpaceCenter() {
         super();
@@ -17,6 +19,14 @@ public class GuianaSpaceCenter extends CatWorld {
     }
     
     public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.APE, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.APE, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
         checkForNextWorld(this);
     }
     

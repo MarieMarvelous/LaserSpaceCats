@@ -35,7 +35,7 @@ public class CatWorld extends World {
     }
     
     public void spawnSingleEnemy(Enemy enemy) {
-        this.addObject(enemy, Greenfoot.getRandomNumber(1550) + 25, 870);
+        this.addObject(enemy, Greenfoot.getRandomNumber(550) + 25, 270);
     }
     
     public void spawnEnemy(EnemyType type, int amount) {

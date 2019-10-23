@@ -17,17 +17,17 @@ public class Garden extends CatWorld {
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
         spawnEnemy(EnemyType.RAT, 2);
-        killableEnemies = 6;
+        killableEnemies = 4;
 
     }
 
     public void act() {
         if (killedEnemies >= 2 && secondWaveReady) {
-            spawnEnemy(EnemyType.RAT, 2);
+            spawnEnemy(EnemyType.SQUIRREL, 2);
             secondWaveReady = false;
         }
         if (killedEnemies >= 4 && thirdWaveReady) {
-            spawnEnemy(EnemyType.RAT, 2);
+            spawnEnemy(EnemyType.SQUIRREL, 2);
             thirdWaveReady = false;
         }//Beide if-methoden
         

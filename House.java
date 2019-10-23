@@ -9,13 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean bossWaveReady = true;
 
     public House() {
         super();
         addObject(new CatHero(), 50, 50);
         spawnEnemy(EnemyType.MOUSE, 2);
         this.showText("Welle 1", 700, 25);
-        killableEnemies = 6;
+        killableEnemies = 7;
     }
 
     public void act() {
@@ -28,6 +29,10 @@ public class House extends CatWorld {
             spawnEnemy(EnemyType.MOUSE, 2);
             this.showText("Welle 3", 700, 25);
             thirdWaveReady = false;
+        }
+        if (killedEnemies >= 6 && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSMOUSE, 1);
+            bossWaveReady = false;
         }
         checkForNextWorld(this);
     }
