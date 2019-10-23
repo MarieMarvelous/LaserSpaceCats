@@ -8,17 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 
 public class GuianaSpaceCenter extends CatWorld {
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
 
     public GuianaSpaceCenter() {
-        //this.prepare();
+        super();
+        addObject(new CatHero(), 50, 50);
+        killableEnemies = 2;
+        spawnedEnemy();        
     }
     
-    private void prepare() {
-        //Spawn Objects in World
-        addObject(new CatHero(),667,506);
-
-        //enemies
-        addObject(new Mouse(),703,499);
-        addObject(new Rat(),979,325);
+    public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.APE, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.APE, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
+        checkForNextWorld(this);
     }
+    
+    public void spawnedEnemy() {
+        for (int i = 1; i <= killableEnemies; i++) {            
+            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
+        }
+    }
+    
 }
