@@ -10,7 +10,7 @@ public class CatWorld extends World {
     public CatWorld() {
         super(800, 450, 1);
         Greenfoot.setSpeed(50);
-        prepare();
+
     }
 
     public void act() {
@@ -21,13 +21,6 @@ public class CatWorld extends World {
             //Greenfoot.delay(250);
             WorldController.switchToNextWorld(this);
         }
-
-        //real act()
-        //do Something everyone does \o/
-    }
-
-    private void prepare() {
-
     }
 
     public void checkForNextWorld(World world) {
