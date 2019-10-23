@@ -30,13 +30,13 @@ public class CatHero extends Hero {
             setImage(imagef2);
         }
             else {
-                if (getImage() == imagef4) {
+                if (getImage() == imagef2) {
                     setImage(imagef4);
                 }
                     else {
-                        setImage(imagef4);
+                        setImage(imagef2);
                     }
-        }
+            }
     } 
 }
     
