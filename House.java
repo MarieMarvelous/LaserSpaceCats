@@ -23,7 +23,8 @@ public class House extends CatWorld {
     public void spawnEnemy() {
         for (int i = 1; i <= killableEnemies; i++) {            
             //addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
-            addObject(new Ape(), 300,300);
+            addObject(new Mouse(), 0,0);
+            
         }
     }
 }
