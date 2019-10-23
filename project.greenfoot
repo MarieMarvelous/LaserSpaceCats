@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.BossDog.image=Doggo.png
 class.BossMouse.image=mouse.png
 class.CatHero.image=CatHero.png
 class.Garden.image=granite-light.jpg

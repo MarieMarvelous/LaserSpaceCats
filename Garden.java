@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Garden extends CatWorld {  
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean bossWaveReady = true;
 
 
     public Garden() {
@@ -30,6 +31,10 @@ public class Garden extends CatWorld {
             spawnEnemy(EnemyType.SQUIRREL, 2);
             thirdWaveReady = false;
         }//Beide if-methoden
+        if (killedEnemies >= 6 && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSDOG, 1);
+            bossWaveReady = false;
+        }
         
         checkForNextWorld(this);
     }
