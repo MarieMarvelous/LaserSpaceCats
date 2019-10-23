@@ -17,12 +17,12 @@ public class Laser extends Projectile {
         return SPEED;
     }      
     // Wenn der Laser auf ein Artefact trifft, soll der Laser despawnen
-    //public void despawnWeapon(){
-        //if(isTouching(Artefact.class)){
-           // getWorld().removeObjects(getIntersectingObjects(Laser.class));
-           // getWorld().removeObject(this);
-            //}
-       // }
+    public void despawnWeapon(){
+        if(isTouching(Artefact.class)){
+            getWorld().removeObjects(getIntersectingObjects(Laser.class));
+            getWorld().removeObject(this);
+            }
+       }
     
     public void act() {
         super.act();

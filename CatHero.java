@@ -11,5 +11,24 @@ public class CatHero extends Hero {
         super.movement("a", "d", "w", "s", SPEED);
         super.checkCollision();
         
+<<<<<<< HEAD
     }    
+=======
+        
+        if (getImage() == imagef1) {
+            setImage(imagef2);
+        }
+        else {
+            if (getImage() == imagef4) {
+                setImage(imagef4);
+            }
+            else {
+                setImage(imagef4);
+            }
+        }
+    } 
+    
+   
+    
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 }

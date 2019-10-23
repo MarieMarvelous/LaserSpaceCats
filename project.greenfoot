@@ -1,12 +1,40 @@
 #Greenfoot project file
+<<<<<<< HEAD
 class.BossMouse.image=mouse.png
 class.CatHero.image=CatHero.png
 class.Garden.image=granite-light.jpg
 class.GuianaSpaceCenter.image=recycpap.jpg
+=======
+class.Ape.image=monkey.png
+class.Banana.image=Banana.png
+class.BossDog.image=Doggo.png
+class.BossMouse.image=pigeon.png
+class.BossNapoleon.image=Hawkins.png
+class.BossScientist.image=Scientist.png
+class.BossSlime.image=Slime1.png
+<<<<<<< Updated upstream
+class.Bush.image=Bush.png
+=======
+>>>>>>> Stashed changes
+class.CatHero.image=Cat-f-1.png
+class.Dinosaur.image=Dinosaur1.png
+class.Flowers.image=Flower.png
+class.Garden.image=grasstexture.jpg
+class.GuianaSpaceCenter.image=Mosaik-Structure.jpg
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 class.House.image=kitchen-floor.jpg
 class.Laser.image=LaserBeam.png
 class.Mouse.image=mouse.png
 class.Rat.image=rat.png
+<<<<<<< HEAD
+=======
+class.Sewers.image=Stone-floor.png
+class.Squirrel.image=squirrel.png
+<<<<<<< Updated upstream
+class.TreeGroup.image=Tree_Group.png
+=======
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency1.from=CatWorld
 dependency1.to=Enemy
 dependency1.type=UsesDependency
@@ -19,30 +47,66 @@ dependency11.type=UsesDependency
 dependency12.from=CatWorld
 dependency12.to=BossNapoleon
 dependency12.type=UsesDependency
+<<<<<<< HEAD
 dependency13.from=CatWorld
 dependency13.to=WorldController
+=======
+dependency13.from=Laser
+dependency13.to=Artefact
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency13.type=UsesDependency
+<<<<<<< HEAD
 dependency14.from=GuianaSpaceCenter
 dependency14.to=CatHero
+=======
+dependency14.from=Hero
+dependency14.to=Enemy
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency14.type=UsesDependency
+<<<<<<< HEAD
 dependency15.from=GuianaSpaceCenter
 dependency15.to=Mouse
+=======
+dependency15.from=Hero
+dependency15.to=Laser
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency15.type=UsesDependency
+<<<<<<< HEAD
 dependency16.from=GuianaSpaceCenter
 dependency16.to=EnemyType
+=======
+dependency16.from=WorldController
+dependency16.to=House
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency16.type=UsesDependency
+<<<<<<< HEAD
 dependency17.from=Moon
 dependency17.to=CatHero
+=======
+dependency17.from=WorldController
+dependency17.to=Garden
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency17.type=UsesDependency
+<<<<<<< HEAD
 dependency18.from=Moon
 dependency18.to=Mouse
+=======
+dependency18.from=WorldController
+dependency18.to=Sewers
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency18.type=UsesDependency
+<<<<<<< HEAD
 dependency19.from=Moon
 dependency19.to=EnemyType
+=======
+dependency19.from=WorldController
+dependency19.to=CatWorld
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency19.type=UsesDependency
 dependency2.from=CatWorld
 dependency2.to=EnemyType
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Garden
 dependency20.to=CatHero
 dependency20.type=UsesDependency
@@ -74,6 +138,16 @@ dependency29.from=Enemy
 dependency29.to=Laser
 dependency29.type=UsesDependency
 dependency3.from=CatWorld
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+dependency20.from=WorldController
+dependency20.to=GuianaSpaceCenter
+dependency20.type=UsesDependency
+>>>>>>> Stashed changes
+dependency3.from=GuianaSpaceCenter
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency3.to=Mouse
 dependency3.type=UsesDependency
 dependency30.from=Enemy
@@ -109,8 +183,86 @@ dependency39.type=UsesDependency
 dependency4.from=CatWorld
 dependency4.to=Rat
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency5.from=CatWorld
 dependency5.to=Squirrel
+=======
+dependency5.from=Garden
+dependency5.to=CatHero
+=======
+dependency20.from=Garden
+dependency20.to=CatHero
+dependency20.type=UsesDependency
+dependency21.from=Garden
+dependency21.to=Rat
+dependency21.type=UsesDependency
+dependency22.from=Garden
+dependency22.to=EnemyType
+dependency22.type=UsesDependency
+dependency23.from=Sewers
+dependency23.to=CatHero
+dependency23.type=UsesDependency
+dependency24.from=Sewers
+dependency24.to=Mouse
+dependency24.type=UsesDependency
+dependency25.from=Sewers
+dependency25.to=EnemyType
+dependency25.type=UsesDependency
+dependency26.from=House
+dependency26.to=CatHero
+dependency26.type=UsesDependency
+dependency27.from=House
+dependency27.to=EnemyType
+dependency27.type=UsesDependency
+dependency28.from=artefact
+dependency28.to=Laser
+dependency28.type=UsesDependency
+dependency29.from=Enemy
+dependency29.to=Banana
+dependency29.type=UsesDependency
+dependency3.from=CatWorld
+dependency3.to=Mouse
+dependency3.type=UsesDependency
+dependency30.from=Enemy
+dependency30.to=Laser
+dependency30.type=UsesDependency
+dependency31.from=Enemy
+dependency31.to=CatWorld
+dependency31.type=UsesDependency
+dependency32.from=Hero
+dependency32.to=Enemy
+dependency32.type=UsesDependency
+dependency33.from=Hero
+dependency33.to=Laser
+dependency33.type=UsesDependency
+dependency34.from=WorldController
+dependency34.to=House
+dependency34.type=UsesDependency
+dependency35.from=WorldController
+dependency35.to=Garden
+dependency35.type=UsesDependency
+dependency36.from=WorldController
+dependency36.to=Sewers
+dependency36.type=UsesDependency
+dependency37.from=WorldController
+dependency37.to=GuianaSpaceCenter
+dependency37.type=UsesDependency
+dependency38.from=WorldController
+dependency38.to=Moon
+dependency38.type=UsesDependency
+dependency39.from=WorldController
+dependency39.to=Ending
+dependency39.type=UsesDependency
+dependency4.from=CatWorld
+dependency4.to=Rat
+dependency4.type=UsesDependency
+dependency40.from=WorldController
+dependency40.to=CatWorld
+dependency40.type=UsesDependency
+dependency5.from=CatWorld
+dependency5.to=Squirrel
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 dependency5.type=UsesDependency
 dependency6.from=CatWorld
 dependency6.to=Ape
@@ -124,6 +276,7 @@ dependency8.type=UsesDependency
 dependency9.from=CatWorld
 dependency9.to=BossDog
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=735
 editor.fx.0.width=697
 editor.fx.0.x=-7
@@ -135,6 +288,28 @@ editor.fx.1.y=0
 height=735
 package.numDependencies=39
 package.numTargets=31
+=======
+editor.fx.0.height=737
+editor.fx.0.width=814
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+editor.fx.0.x=708
+editor.fx.0.y=12
+=======
+editor.fx.0.x=680
+editor.fx.0.y=40
+>>>>>>> Stashed changes
+height=838
+package.numDependencies=20
+package.numTargets=34
+=======
+editor.fx.0.x=360
+editor.fx.0.y=28
+height=838
+package.numDependencies=40
+package.numTargets=35
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -148,7 +323,19 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=50
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+simulation.speed=10
+=======
+simulation.speed=15
+>>>>>>> Stashed changes
+=======
+simulation.speed=15
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target1.height=50
 target1.name=BossNapoleon
 target1.showInterface=false
@@ -178,42 +365,80 @@ target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=Tree
+=======
+<<<<<<< Updated upstream
+target13.name=Bush
+=======
+target13.name=Enemy
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target13.showInterface=false
-target13.type=ClassTarget
+target13.type=AbstractTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< HEAD
 target14.name=EnemyType
+=======
+<<<<<<< Updated upstream
+target14.name=Enemy
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target14.showInterface=false
+<<<<<<< HEAD
 target14.type=EnumTarget
+=======
+target14.type=AbstractTarget
+=======
+target14.name=Tree
+target14.showInterface=false
+target14.type=ClassTarget
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
-target15.name=CatHero
+target15.name=EnemyType
 target15.showInterface=false
-target15.type=ClassTarget
+target15.type=EnumTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
-target16.name=BossDog
+target16.name=CatHero
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< HEAD
 target17.name=Garden
+=======
+<<<<<<< Updated upstream
+target17.name=Nature
+=======
+target17.name=BossDog
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
+<<<<<<< HEAD
 target18.name=Flower
+=======
+<<<<<<< Updated upstream
+target18.name=Trees
+=======
+target18.name=Nature
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=80
@@ -234,7 +459,15 @@ target2.width=130
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=Sewers
+=======
+<<<<<<< Updated upstream
+target20.name=Fauna
+=======
+target20.name=Flower
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=80
@@ -248,28 +481,60 @@ target21.width=80
 target21.x=0
 target21.y=0
 target22.height=50
+<<<<<<< HEAD
 target22.name=Plants
+=======
+<<<<<<< Updated upstream
+target22.name=TreeGroup
+=======
+target22.name=CatWorld
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=80
 target22.x=0
 target22.y=0
 target23.height=50
+<<<<<<< HEAD
 target23.name=Banana
+=======
+<<<<<<< Updated upstream
+target23.name=CatWorld
+=======
+target23.name=Sewers
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=80
 target23.x=0
 target23.y=0
 target24.height=50
+<<<<<<< HEAD
 target24.name=Projectile
+=======
+<<<<<<< Updated upstream
+target24.name=Sewers
+=======
+target24.name=House
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target24.showInterface=false
 target24.type=AbstractTarget
 target24.width=80
 target24.x=0
 target24.y=0
 target25.height=50
+<<<<<<< HEAD
 target25.name=Mouse
+=======
+<<<<<<< Updated upstream
+target25.name=House
+=======
+target25.name=Plants
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=80
@@ -324,6 +589,50 @@ target31.type=ClassTarget
 target31.width=80
 target31.x=0
 target31.y=0
+<<<<<<< HEAD
+=======
+target32.height=50
+target32.name=BossMouse
+target32.showInterface=false
+target32.type=ClassTarget
+target32.width=80
+target32.x=0
+target32.y=0
+target33.height=50
+<<<<<<< Updated upstream
+target33.name=Squirrel
+=======
+target33.name=Ending
+>>>>>>> Stashed changes
+target33.showInterface=false
+target33.type=ClassTarget
+target33.width=80
+target33.x=0
+target33.y=0
+target34.height=50
+<<<<<<< Updated upstream
+target34.name=SceneryDecoration
+target34.showInterface=false
+target34.type=ClassTarget
+target34.width=120
+target34.x=0
+target34.y=0
+=======
+target34.name=Squirrel
+target34.showInterface=false
+target34.type=ClassTarget
+target34.width=80
+target34.x=0
+target34.y=0
+target35.height=50
+target35.name=SceneryDecoration
+target35.showInterface=false
+target35.type=ClassTarget
+target35.width=120
+target35.x=0
+target35.y=0
+>>>>>>> Stashed changes
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 target4.height=50
 target4.name=WorldController
 target4.showInterface=false
@@ -367,7 +676,13 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=714
 world.lastInstantiated=CatWorld
 xPosition=659
+=======
+width=1550
+world.lastInstantiated=CatWorld
+xPosition=0
+>>>>>>> branch 'origin/leandra' of https://github.com/MarieMarvelous/LaserSpaceCats.git
 yPosition=0
