@@ -5,5 +5,5 @@
  * @version (a version number or a date)
  */
 public enum EnemyType {
-    MOUSE, RAT, SQUIRREL;
+    MOUSE, RAT, SQUIRREL, APE, DINOSAUR, BOSSMOUSE, BOSSDOG, BOSSSLIME, BOSSSCIENTIST, BOSSNAPOLEON ;
 }
