@@ -6,7 +6,10 @@ class.BossMouse.image=pigeon.png
 class.BossNapoleon.image=Hawkins.png
 class.BossScientist.image=Scientist.png
 class.BossSlime.image=Slime1.png
+<<<<<<< Updated upstream
 class.Bush.image=Bush.png
+=======
+>>>>>>> Stashed changes
 class.CatHero.image=Cat-f-1.png
 class.Dinosaur.image=Dinosaur1.png
 class.Flowers.image=Flower.png
@@ -20,7 +23,10 @@ class.Mushrooms.image=Mushrooms.png
 class.Rat.image=rat.png
 class.Sewers.image=Stone-floor.png
 class.Squirrel.image=squirrel.png
+<<<<<<< Updated upstream
 class.TreeGroup.image=Tree_Group.png
+=======
+>>>>>>> Stashed changes
 dependency1.from=CatWorld
 dependency1.to=WorldController
 dependency1.type=UsesDependency
@@ -57,6 +63,7 @@ dependency19.type=UsesDependency
 dependency2.from=GuianaSpaceCenter
 dependency2.to=CatHero
 dependency2.type=UsesDependency
+<<<<<<< Updated upstream
 dependency3.from=GuianaSpaceCenter
 dependency3.to=Mouse
 dependency3.type=UsesDependency
@@ -65,6 +72,79 @@ dependency4.to=Rat
 dependency4.type=UsesDependency
 dependency5.from=Garden
 dependency5.to=CatHero
+=======
+dependency20.from=Garden
+dependency20.to=CatHero
+dependency20.type=UsesDependency
+dependency21.from=Garden
+dependency21.to=Rat
+dependency21.type=UsesDependency
+dependency22.from=Garden
+dependency22.to=EnemyType
+dependency22.type=UsesDependency
+dependency23.from=Sewers
+dependency23.to=CatHero
+dependency23.type=UsesDependency
+dependency24.from=Sewers
+dependency24.to=Mouse
+dependency24.type=UsesDependency
+dependency25.from=Sewers
+dependency25.to=EnemyType
+dependency25.type=UsesDependency
+dependency26.from=House
+dependency26.to=CatHero
+dependency26.type=UsesDependency
+dependency27.from=House
+dependency27.to=EnemyType
+dependency27.type=UsesDependency
+dependency28.from=artefact
+dependency28.to=Laser
+dependency28.type=UsesDependency
+dependency29.from=Enemy
+dependency29.to=Banana
+dependency29.type=UsesDependency
+dependency3.from=CatWorld
+dependency3.to=Mouse
+dependency3.type=UsesDependency
+dependency30.from=Enemy
+dependency30.to=Laser
+dependency30.type=UsesDependency
+dependency31.from=Enemy
+dependency31.to=CatWorld
+dependency31.type=UsesDependency
+dependency32.from=Hero
+dependency32.to=Enemy
+dependency32.type=UsesDependency
+dependency33.from=Hero
+dependency33.to=Laser
+dependency33.type=UsesDependency
+dependency34.from=WorldController
+dependency34.to=House
+dependency34.type=UsesDependency
+dependency35.from=WorldController
+dependency35.to=Garden
+dependency35.type=UsesDependency
+dependency36.from=WorldController
+dependency36.to=Sewers
+dependency36.type=UsesDependency
+dependency37.from=WorldController
+dependency37.to=GuianaSpaceCenter
+dependency37.type=UsesDependency
+dependency38.from=WorldController
+dependency38.to=Moon
+dependency38.type=UsesDependency
+dependency39.from=WorldController
+dependency39.to=Ending
+dependency39.type=UsesDependency
+dependency4.from=CatWorld
+dependency4.to=Rat
+dependency4.type=UsesDependency
+dependency40.from=WorldController
+dependency40.to=CatWorld
+dependency40.type=UsesDependency
+dependency5.from=CatWorld
+dependency5.to=Squirrel
+>>>>>>> Stashed changes
 dependency5.type=UsesDependency
 dependency6.from=Garden
 dependency6.to=WorldController
@@ -80,11 +160,19 @@ dependency9.to=Banana
 dependency9.type=UsesDependency
 editor.fx.0.height=737
 editor.fx.0.width=814
+<<<<<<< Updated upstream
 editor.fx.0.x=708
 editor.fx.0.y=12
 height=838
 package.numDependencies=19
 package.numTargets=34
+=======
+editor.fx.0.x=360
+editor.fx.0.y=28
+height=838
+package.numDependencies=40
+package.numTargets=35
+>>>>>>> Stashed changes
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -98,7 +186,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< Updated upstream
 simulation.speed=10
+=======
+simulation.speed=15
+>>>>>>> Stashed changes
 target1.height=50
 target1.name=BossNapoleon
 target1.showInterface=false
@@ -128,42 +220,60 @@ target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< Updated upstream
 target13.name=Bush
+=======
+target13.name=Enemy
+>>>>>>> Stashed changes
 target13.showInterface=false
-target13.type=ClassTarget
+target13.type=AbstractTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< Updated upstream
 target14.name=Enemy
 target14.showInterface=false
 target14.type=AbstractTarget
+=======
+target14.name=Tree
+target14.showInterface=false
+target14.type=ClassTarget
+>>>>>>> Stashed changes
 target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
-target15.name=CatHero
+target15.name=EnemyType
 target15.showInterface=false
-target15.type=ClassTarget
+target15.type=EnumTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
-target16.name=BossDog
+target16.name=CatHero
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< Updated upstream
 target17.name=Nature
+=======
+target17.name=BossDog
+>>>>>>> Stashed changes
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
+<<<<<<< Updated upstream
 target18.name=Trees
+=======
+target18.name=Nature
+>>>>>>> Stashed changes
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=80
@@ -184,7 +294,11 @@ target2.width=130
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< Updated upstream
 target20.name=Fauna
+=======
+target20.name=Flower
+>>>>>>> Stashed changes
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=80
@@ -198,28 +312,44 @@ target21.width=90
 target21.x=0
 target21.y=0
 target22.height=50
+<<<<<<< Updated upstream
 target22.name=TreeGroup
+=======
+target22.name=CatWorld
+>>>>>>> Stashed changes
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=80
 target22.x=0
 target22.y=0
 target23.height=50
+<<<<<<< Updated upstream
 target23.name=CatWorld
+=======
+target23.name=Sewers
+>>>>>>> Stashed changes
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=80
 target23.x=0
 target23.y=0
 target24.height=50
+<<<<<<< Updated upstream
 target24.name=Sewers
+=======
+target24.name=House
+>>>>>>> Stashed changes
 target24.showInterface=false
 target24.type=ClassTarget
 target24.width=80
 target24.x=0
 target24.y=0
 target25.height=50
+<<<<<<< Updated upstream
 target25.name=House
+=======
+target25.name=Plants
+>>>>>>> Stashed changes
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=80
@@ -282,19 +412,39 @@ target32.width=80
 target32.x=0
 target32.y=0
 target33.height=50
+<<<<<<< Updated upstream
 target33.name=Squirrel
+=======
+target33.name=Ending
+>>>>>>> Stashed changes
 target33.showInterface=false
 target33.type=ClassTarget
 target33.width=80
 target33.x=0
 target33.y=0
 target34.height=50
+<<<<<<< Updated upstream
 target34.name=SceneryDecoration
 target34.showInterface=false
 target34.type=ClassTarget
 target34.width=120
 target34.x=0
 target34.y=0
+=======
+target34.name=Squirrel
+target34.showInterface=false
+target34.type=ClassTarget
+target34.width=80
+target34.x=0
+target34.y=0
+target35.height=50
+target35.name=SceneryDecoration
+target35.showInterface=false
+target35.type=ClassTarget
+target35.width=120
+target35.x=0
+target35.y=0
+>>>>>>> Stashed changes
 target4.height=50
 target4.name=WorldController
 target4.showInterface=false
