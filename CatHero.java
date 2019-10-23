@@ -10,6 +10,6 @@ public class CatHero extends Hero {
         super.act();
         super.movement("a", "d", "w", "s", SPEED);
         super.checkCollision();
-        
+
     }    
 }

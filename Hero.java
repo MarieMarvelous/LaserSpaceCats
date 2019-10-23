@@ -8,7 +8,6 @@ public class Hero extends Actor {
     public int cooldown;
     public static int defaultCooldown;
     
-    
     public Hero(int health) {
         this.health=health;
         this.canShootAgain = true;
@@ -73,4 +72,6 @@ public class Hero extends Actor {
         
         return 90 - (int) (Math.atan2(deltaX, deltaY) * 57.3);
     }
+    
+
 }
