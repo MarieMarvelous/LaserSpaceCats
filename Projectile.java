@@ -10,9 +10,11 @@ public abstract class Projectile extends Entity {
             getWorld().removeObject(this);
         }
         
-        //if (isTouching(Artefact.class)) {
-        //   getWorld().removeObjects(getIntersectingObjects(Projectile.class));
-        //   getWorld().removeObject(this);
-        //}
+            else {  
+                if (isTouching(Artefact.class)) {
+                getWorld().removeObjects(getIntersectingObjects(Projectile.class));
+                getWorld().removeObject(this);
+            }
     }
+   }   
 }
