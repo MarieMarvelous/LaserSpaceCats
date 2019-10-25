@@ -10,8 +10,6 @@ public class CatWorld extends World {
     public CatWorld() {
         super(800, 450, 1);
         Greenfoot.setSpeed(50);
-
-        this.prepare();
     }
 
     public void act() {
@@ -19,10 +17,6 @@ public class CatWorld extends World {
         if(Greenfoot.isKeyDown("enter")){
             WorldController.switchToNextWorld(this);
         }
-
-    }
-    
-    private void prepare() {
 
     }
 
