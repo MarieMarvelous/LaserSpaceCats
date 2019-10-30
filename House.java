@@ -17,6 +17,10 @@ public class House extends CatWorld {
         spawnEnemy(EnemyType.MOUSE, 2);
         this.showText("Welle 1", 700, 25);
         killableEnemies = 7;
+        //Leveldesign starts here
+        addObject(new Shelf2(), 200, 30);
+        addObject(new ShelfKitchen(), 260, 30);
+        addObject(new Couch(), 260, 400);
     }
 
     public void act() {
