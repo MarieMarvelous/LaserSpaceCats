@@ -10,7 +10,33 @@ public class Mouse extends Enemy {
     }
     
     public void act() {
-        movement(5, 4, 10);
+        randomMovement(5, 4, 10);
         super.act();
-    }    
+    }
+    public void Hitbox() {
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX(),getY()-10);
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Mouse.class)) {
+            setLocation(getX(),getY()-10);
+        }
+    }
 }
