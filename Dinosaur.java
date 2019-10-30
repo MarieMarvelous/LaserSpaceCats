@@ -12,6 +12,8 @@ public class Dinosaur extends Enemy {
     }
     public void act() 
     {
-        // Add your action code here.
+       // movement(5, 3, 8);
+        randomMovement(8, 5, 8);
+        super.act();
     }    
 }

@@ -11,7 +11,8 @@ public class Squirrel extends Enemy {
         return 5;
     }
     public void act() {
-        movement(5, 3, 8);
+        // movement(5, 3, 8);
+        randomMovement(5, 3, 8);
         super.act();
     }    
 }

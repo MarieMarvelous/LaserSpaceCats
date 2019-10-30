@@ -14,7 +14,10 @@ public class Ape extends Enemy {
     }
     
     public void act() {
-        runTowardsCatHero();
+        
+        // movement(5, 3, 8);
+        randomMovement(7, 5, 8);
+        super.act();
         //shootBanana();
         //shootCatHero();
         //shootBanana();

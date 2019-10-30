@@ -6,6 +6,8 @@ public abstract class Entity extends Actor implements Lootable {
 
     }  
     
+    
+  
     public void move(int amount) {
         double angle = Math.toRadians(getRotation() );
         int x = (int) Math.round(getX() + Math.cos(angle) * amount);
