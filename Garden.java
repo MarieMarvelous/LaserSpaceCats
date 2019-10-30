@@ -16,6 +16,29 @@ public class Garden extends CatWorld {
     public Garden() {
         super();
         //Leveldesign
+        addObject(new StonePattern(), 777, 426);
+        addObject(new StonePattern(), 777, 376);
+        addObject(new StonePattern(), 727, 376);
+        addObject(new StonePattern(), 727, 426);
+        addObject(new StonePattern(), 777, 326);
+        addObject(new StonePattern(), 777, 276);
+        addObject(new StonePattern(), 727, 276);
+        addObject(new StonePattern(), 727, 326);
+        addObject(new StonePattern(), 777, 226);
+        addObject(new StonePattern(), 777, 176);
+        addObject(new StonePattern(), 727, 176);
+        addObject(new StonePattern(), 727, 226);
+        addObject(new StonePattern(), 777, 126);
+        addObject(new StonePattern(), 777, 76);
+        addObject(new StonePattern(), 727, 76);
+        addObject(new StonePattern(), 727, 126);
+        addObject(new StonePattern(), 777, 26);
+        addObject(new StonePattern(), 777, 0);
+        addObject(new StonePattern(), 727, 0);
+        addObject(new StonePattern(), 727, 26);
+        
+        
+        
         addObject(new Flowers(), 40, 398);
         addObject(new Flowers(), 580, 198);
         addObject(new Flowers(), 340, 98);

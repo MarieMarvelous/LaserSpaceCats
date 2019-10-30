@@ -9,8 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sewers extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
-
-
+ 
     public Sewers() {
         super();
         killableEnemies = 3;
