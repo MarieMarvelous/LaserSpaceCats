@@ -22,7 +22,32 @@ public abstract class Enemy extends Entity {
         image.scale(width, height);
         setImage(image);
     } 
-    
+    public void Hitbox() {
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
+    }
     public void randomMovement(int randomForward, int randomTurn, int turn) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         
