@@ -23,13 +23,22 @@ public abstract class Enemy extends Entity {
         setImage(image);
     } 
     
-    public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
-        move(Greenfoot.getRandomNumber(zufallVorwaerts));
-        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
-            turn(-drehung);
+    public void randomMovement(int randomForward, int randomTurn, int turn) {
+        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+        
+        if(Greenfoot.getRandomNumber(100) < 10) {
+            turnTowards(cat.getX(), cat.getY());
         }
-        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
-            turn(drehung);
+        
+        move(Greenfoot.getRandomNumber(10));
+        if(Greenfoot.getRandomNumber(10) <=randomTurn) {
+            turn(-turn);
+        }
+        if(Greenfoot.getRandomNumber(10) >=randomTurn) {
+            turn(turn);
+        }
+        if (isTouching(Artefact.class)) {
+            move(-randomForward);
         }
     }
     

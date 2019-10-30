@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Hero
+comment1.params=health
+comment1.target=Hero(int)
+comment2.params=left\ right\ up\ down\ speed
+comment2.target=void\ movement(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ checkCollision()
+comment5.params=angle
+comment5.target=void\ shootLaser(int)
+comment6.params=
+comment6.target=void\ checkForShooting()
+comment7.params=mouse
+comment7.target=int\ getMouseDirection(greenfoot.MouseInfo)
+numComments=8

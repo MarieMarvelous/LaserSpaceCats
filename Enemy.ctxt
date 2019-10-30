@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Enemy
+comment1.params=
+comment1.target=int\ giveDamage()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkForLaserCollision()
+comment4.params=width\ height
+comment4.target=void\ resizeImage(int,\ int)
+comment5.params=randomForward\ randomTurn\ turn
+comment5.target=void\ randomMovement(int,\ int,\ int)
+comment6.params=
+comment6.target=void\ runTowardsCatHero()
+comment7.params=
+comment7.target=void\ shootBanana()
+comment8.params=clss
+comment8.target=boolean\ canSee(java.lang.Class)
+numComments=9
