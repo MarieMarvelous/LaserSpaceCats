@@ -15,6 +15,26 @@ public class Garden extends CatWorld {
 
     public Garden() {
         super();
+        //Leveldesign
+        addObject(new Flowers(), 40, 398);
+        addObject(new Flowers(), 580, 198);
+        addObject(new Flowers(), 340, 98);
+        addObject(new Mushrooms(), 280, 398);
+        addObject(new Fence1(), 700, 40);
+        addObject(new Fence1(), 700, 110);
+        addObject(new Fence1(), 700, 180);
+        addObject(new Fence1(), 700, 250);
+        addObject(new Fence1(), 700, 320);
+        addObject(new Fence1(), 700, 390);
+        addObject(new Fence1(), 700, 460);
+        
+        addObject(new Mushrooms(), 127, 155);
+        addObject(new Mushrooms(), 79, 160);
+        addObject(new Mushrooms(), 120, 140);
+        addObject(new Mushrooms(), 70, 150);
+        addObject(new TreeGroup(), 155, 65);
+        
+        
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
         spawnEnemy(EnemyType.SQUIRREL, 2);
