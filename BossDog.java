@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BossDog extends Enemy {
     public int giveDamage() {
-        return 5;
+        return damage;
     }
     
     public BossDog() {
+        damage = 5;
+        tempDamage = damage;
     }
     
     public void act() {

@@ -7,7 +7,12 @@ public abstract class Enemy extends Entity {
     public void act (){
         super.act();
         checkForLaserCollision();
+        //checkForCatCollision();
+        countFrames();       
     }    
+    
+    public Enemy() {
+    }
     
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
@@ -24,6 +29,7 @@ public abstract class Enemy extends Entity {
     } 
     
     public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
+        if (framesToCount == 0) {
         move(Greenfoot.getRandomNumber(zufallVorwaerts));
         if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
             turn(-drehung);
@@ -32,13 +38,16 @@ public abstract class Enemy extends Entity {
             turn(drehung);
         }
     }
+    }
     
     
     public void runTowardsCatHero () {
+        if (framesToCount == 0) {
         move(3);
         if (getWorld().getObjects(CatHero.class).isEmpty()) return; 
         Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
         turnTowards(CatHero.getX(), CatHero.getY()); 
+    }
     }
    
     public void shootBanana() { 
@@ -52,6 +61,29 @@ public abstract class Enemy extends Entity {
         Actor actor = getOneObjectAtOffset(0, 0, clss);
         return actor != null;        
     }
+    
+        public void checkForCatCollision() {
+            if (isTouching(CatHero.class) && framesToCount == 0) {
+                CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+                turnTowards(catHero.getX(), catHero.getY());
+                
+                
+                System.out.println("CatHero.isMoved = " + catHero.isMoved);
+                if (catHero.isMoved == false) {
+                   //System.out.println("isTouching(CatHero) = ");
+                   catHero.checkCollision(); 
+                }
+                startFrameCounting(60);
+                move(-60);
+            }
+        }
+        
+        public void drawBack() {
+            CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+                turnTowards(catHero.getX(), catHero.getY());
+                startFrameCounting(60);
+                move(-60);
+        }
     
     /*public void shootCatHero() {
         if (canSee (CatHero.class))  //läuft los wenn Ape CatHero sieht. Object in Range?
