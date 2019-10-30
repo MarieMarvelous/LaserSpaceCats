@@ -10,7 +10,8 @@ public class Mouse extends Enemy {
     }
     
     public void act() {
-        movement(5, 4, 10);
+        // movement(5, 3, 8);
+        randomMovement(5, 4, 8);
         super.act();
     }    
 }

@@ -10,7 +10,8 @@ public class Rat extends Enemy {
     }
 
     public void act() {
-        movement(5, 3, 8);
+       // movement(5, 3, 8);
+        randomMovement(5, 3, 8);
         super.act();
     }    
 }

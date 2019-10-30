@@ -32,7 +32,27 @@ public abstract class Enemy extends Entity {
             turn(drehung);
         }
     }
-    
+   
+  
+     public void randomMovement(int zufallVorwaerts, int zufallDrehung, int drehung) {
+         
+        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+        if(Greenfoot.getRandomNumber(100) < 10) {
+        turnTowards(cat.getX(), cat.getY());
+        }
+        move(Greenfoot.getRandomNumber(zufallVorwaerts));
+        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
+            turn(-drehung);
+        }
+        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
+            turn(drehung);
+        }
+
+         
+         
+        }
+  
+  
     
     public void runTowardsCatHero () {
         move(3);
