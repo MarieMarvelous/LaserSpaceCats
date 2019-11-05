@@ -12,6 +12,8 @@ public class BossSlime extends Enemy {
     }
     public void act() 
     {
-        // Add your action code here.
+        // movement(5, 3, 8);
+        randomMovement(15, 13, 8);
+        super.act();
     }    
 }

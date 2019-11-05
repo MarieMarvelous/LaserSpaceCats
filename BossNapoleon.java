@@ -12,6 +12,8 @@ public class BossNapoleon extends Enemy {
     }
     public void act() 
     {
-        // Add your action code here.
+        // movement(5, 3, 8);
+        randomMovement(12, 2, 6);
+        super.act();
     }    
 }
