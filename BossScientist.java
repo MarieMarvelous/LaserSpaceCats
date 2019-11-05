@@ -7,8 +7,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class BossScientist extends Enemy {
+    
+    public BossScientist() {
+        damage = 10;
+        tempDamage = damage;
+    }
     public int giveDamage() {
-        return 5;
+        return damage;
     }
     public void act() 
     {

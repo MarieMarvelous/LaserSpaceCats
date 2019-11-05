@@ -7,6 +7,7 @@ public class Hero extends Actor {
     public boolean canShootAgain;
     public int cooldown;
     public static int defaultCooldown;
+    public boolean isMoved;
     
     
     public Hero(int health) {
@@ -14,6 +15,7 @@ public class Hero extends Actor {
         this.canShootAgain = true;
         this.defaultCooldown = 10;
         this.cooldown = this.defaultCooldown;
+        this.isMoved = false;
     }
     
      public void movement(String left, String right, String up, String down, int speed) {
@@ -22,29 +24,34 @@ public class Hero extends Actor {
             if (isTouching(Artefact.class)) {
                 setLocation(getX()+speed, getY());
             }
+            isMoved = true;
         }
         if(Greenfoot.isKeyDown(right)) {
             setLocation(getX()+speed, getY());
             if (isTouching(Artefact.class)) {
                 setLocation(getX()-speed, getY());
             }
+            isMoved = true;
         }
         if(Greenfoot.isKeyDown(up)) {
             setLocation(getX(), getY()-speed);
             if (isTouching(Artefact.class)) {
                 setLocation(getX(), getY()+speed);
             }
+            isMoved = true;
         }
         if(Greenfoot.isKeyDown(down)) {
             setLocation(getX(), getY()+speed);
             if (isTouching(Artefact.class)) {
                 setLocation(getX(), getY()-speed);
             }
+            isMoved = true;
         }
         checkForShooting();
     }
     
     public void act() {
+        isMoved = false;
         if (cooldown > 0) {
             cooldown--;
         } else {
@@ -58,6 +65,7 @@ public class Hero extends Actor {
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
                 health-=enemy.giveDamage();
+                enemy.drawBack();
             }
         }
         String leben = String.valueOf(health);

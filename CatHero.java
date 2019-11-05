@@ -10,7 +10,7 @@ public class CatHero extends Hero {
     private GreenfootImage imagef4;
        
     public CatHero() {
-        super(10000000);
+        super(100);
  
         imagef1 = new GreenfootImage("Cat-f-1.png"); 
         imagef2 = new GreenfootImage("Cat-f-2.png");
