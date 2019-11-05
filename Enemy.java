@@ -73,7 +73,7 @@ public abstract class Enemy extends Entity {
     }
    
   
-     public void randomMovement(int zufallVorwaerts, int zufallDrehung, int drehung) {
+    /* public void randomMovement(int zufallVorwaerts, int zufallDrehung, int drehung) {
          
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         if(Greenfoot.getRandomNumber(100) < 5) {
@@ -89,7 +89,7 @@ public abstract class Enemy extends Entity {
 
          
          
-        }
+        }*/
         
     public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
         if (framesToCount == 0) {
@@ -102,7 +102,7 @@ public abstract class Enemy extends Entity {
         }
     }
   
-  
+}
     
     public void runTowardsCatHero () {
         move(3);

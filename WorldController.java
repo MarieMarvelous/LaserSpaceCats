@@ -53,19 +53,19 @@ public class WorldController {
         return world;
     }
     
-    private static World createTestWorld() {
+    /*private static World createTestWorld() {
         TestWorld world = new TestWorld();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
-    }
+    }*/
 
     public static void switchToNextWorld(World world) {
         if (world instanceof CatWorld) {
-            World testWorld = createTestWorld();
+           /* World testWorld = createTestWorld();
             //testWorld.showText("TestWorld", 200, 200);
         }
-        if (world instanceof TestWorld) {
+        if (world instanceof TestWorld) {*/
             World house = createHouse();
             house.showText("house", 200, 200);
         }

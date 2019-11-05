@@ -22,14 +22,9 @@ public class CatWorld extends World {
     }
 
     public void checkForNextWorld(World world) {
-        if (world instanceof TestWorld) {
-            System.out.println("Test");
-        }
-        else {
         if (killedEnemies >= killableEnemies) {
             WorldController.switchToNextWorld(world);
         }
-    }
 
     }
     
