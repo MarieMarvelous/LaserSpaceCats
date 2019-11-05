@@ -18,16 +18,28 @@ public class Hero extends Actor {
     
      public void movement(String left, String right, String up, String down, int speed) {
         if(Greenfoot.isKeyDown(left)) {
-            move(-speed);
+            setLocation(getX()-speed, getY());
+            if (isTouching(Artefact.class)) {
+                setLocation(getX()+speed, getY());
+            }
         }
         if(Greenfoot.isKeyDown(right)) {
-            move(speed);
+            setLocation(getX()+speed, getY());
+            if (isTouching(Artefact.class)) {
+                setLocation(getX()-speed, getY());
+            }
         }
         if(Greenfoot.isKeyDown(up)) {
             setLocation(getX(), getY()-speed);
+            if (isTouching(Artefact.class)) {
+                setLocation(getX(), getY()+speed);
+            }
         }
         if(Greenfoot.isKeyDown(down)) {
-            setLocation(getX(), getY()+speed);   
+            setLocation(getX(), getY()+speed);
+            if (isTouching(Artefact.class)) {
+                setLocation(getX(), getY()-speed);
+            }
         }
         checkForShooting();
     }

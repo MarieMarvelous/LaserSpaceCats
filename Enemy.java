@@ -22,14 +22,48 @@ public abstract class Enemy extends Entity {
         image.scale(width, height);
         setImage(image);
     } 
-    
-    public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
-        move(Greenfoot.getRandomNumber(zufallVorwaerts));
-        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
-            turn(-drehung);
+    public void Hitbox() {
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
         }
-        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
-            turn(drehung);
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
+    }
+    public void randomMovement(int randomForward, int randomTurn, int turn) {
+        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+        
+        if(Greenfoot.getRandomNumber(100) < 10) {
+            turnTowards(cat.getX(), cat.getY());
+        }
+        
+        move(Greenfoot.getRandomNumber(10));
+        if(Greenfoot.getRandomNumber(10) <=randomTurn) {
+            turn(-turn);
+        }
+        if(Greenfoot.getRandomNumber(10) >=randomTurn) {
+            turn(turn);
+        }
+        if (isTouching(Artefact.class)) {
+            move(-randomForward);
         }
     }
     

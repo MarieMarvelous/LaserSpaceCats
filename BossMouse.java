@@ -15,7 +15,7 @@ public class BossMouse extends Enemy {
         return 5;
     }
     public void act() {
-        movement(25, 5, 20);
+        randomMovement(25, 5, 20);
         super.act();
     }    
 }
