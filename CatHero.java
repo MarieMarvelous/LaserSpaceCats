@@ -23,42 +23,34 @@ public class CatHero extends Hero {
         super.act();
         super.movement("a", "d", "w", "s", SPEED);
         super.checkCollision();
-<<<<<<< HEAD
-<<<<<<< HEAD
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()+10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX()-10,getY());
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()+10);
+        }
+        if (this.isTouching(Enemy.class)) {
+            setLocation(getX(),getY()-10);
+        }
 
-    }    
-=======
+     
         
-=======
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()-10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()+10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()+10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()-10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()-10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()+10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()+10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()-10);
-        }
-    
->>>>>>> develop
-        
-        
-        if (getImage() == imagef1) {
+       if (getImage() == imagef1) {
             setImage(imagef2);
         }
             else {
@@ -69,7 +61,7 @@ public class CatHero extends Hero {
                         setImage(imagef2);
                     }
             }
-    } 
->>>>>>> develop
+    }
 }
+
     
