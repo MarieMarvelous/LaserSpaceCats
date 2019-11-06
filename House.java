@@ -10,6 +10,7 @@ public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
+    private static boolean gotItem = false;
 
     public House() {
         super();
