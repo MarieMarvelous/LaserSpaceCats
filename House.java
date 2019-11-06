@@ -10,7 +10,6 @@ public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
-    private static boolean gotItem = false;
 
     public House() {
         super();
@@ -25,6 +24,7 @@ public class House extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        addObject(new Glasses(), 500, 500);
     }
 
     public void act() {
@@ -44,10 +44,6 @@ public class House extends CatWorld {
         }
         checkForNextWorld(this);
     }
-    
-    /*public void checkForItemTouched(){
-        if(CatHero.isTouching(Oma_Brille.class)){
-            gotItem = true;
-    }*/
+
 }
 

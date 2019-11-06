@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CatWorld extends World {
     public static int killableEnemies;
     public static int killedEnemies = 0;
-
+    
     public CatWorld() {
 
         super(1500, 800, 1);
