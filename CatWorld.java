@@ -8,7 +8,9 @@ public class CatWorld extends World {
     public static int killedEnemies = 0;
 
     public CatWorld() {
-        super(1600, 900, 1);
+
+        super(1500, 800, 1);
+
         Greenfoot.setSpeed(50);
     }
 

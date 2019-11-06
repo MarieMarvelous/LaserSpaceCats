@@ -15,6 +15,9 @@ public class Moon extends CatWorld {
         addObject(new CatHero(), 50, 50);
         killableEnemies = 4;
         spawnedEnemy();
+        //addHealthbar
+        Healthbar healthbar = new Healthbar();
+        addObject(healthbar,296,68);
     }
     
     public void act() {

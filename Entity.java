@@ -27,10 +27,10 @@ public abstract class Entity extends Actor implements Lootable {
         
         if (framesToCount != 0) {
             framesToCount--;
-            damage = 0;
+            // damage = 0;
         }
         else {
-            damage = tempDamage;
+            // damage = tempDamage;
         }
     }
     

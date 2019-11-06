@@ -59,7 +59,10 @@ public class Garden extends CatWorld {
         addObject(new CatHero(),400,225);
         spawnEnemy(EnemyType.SQUIRREL, 2);
         killableEnemies = 7;
-
+        
+        //addHealthbar
+        Healthbar healthbar = new Healthbar();
+        addObject(healthbar,296,68);
     }
 
     public void act() {
