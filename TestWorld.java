@@ -17,8 +17,8 @@ public class TestWorld extends CatWorld
     {
         killableEnemies = 1;
         killedEnemies = 0;
+        addObject(new BossNapoleon(), 500, 500);
         
-        addObject(new Ape(), 50, 50);
         addObject(new CatHero(), 100, 100);
         //addHealthbar
         Healthbar healthbar = new Healthbar();

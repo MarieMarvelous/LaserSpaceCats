@@ -11,13 +11,11 @@ public class CatHero extends Hero {
        
     public CatHero() {
         super(100);
- 
         imagef1 = new GreenfootImage("Cat-f-1.png"); 
         imagef2 = new GreenfootImage("Cat-f-2.png");
         imagef3 = new GreenfootImage("Cat-f-3.png");
         imagef4 = new GreenfootImage("Cat-f-4.png");
         setImage(imagef1);
-       
     }     
     public void act() {
         super.act();
