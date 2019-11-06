@@ -11,10 +11,12 @@ public class BossNapoleon extends Enemy {
         int laser2 = 180;
         int laser3 = 270;
         int laser4 = 0;
+        
         int laser5 = 135;
         int laser6 = 225;
         int laser7 = 315;
         int laser8 = 45;
+        
     public BossNapoleon() {
         damage = 15;
         tempDamage = damage;
@@ -27,9 +29,11 @@ public class BossNapoleon extends Enemy {
         // movement(5, 3, 8);
         //randomMovement(12, 2, 6);
         //super.act();
+            
+        
         //kreuzdrehungrechts();
         //kreuzdrehunglinks();
-        xkreuz();
+        //xkreuz();
     }
     public void xkreuz(){
         shootLaser(laser5); 
