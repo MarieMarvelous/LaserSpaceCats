@@ -7,7 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Sewers extends CatWorld {
-
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
+ 
     public Sewers() {
         super();
         killableEnemies = 3;
@@ -16,6 +18,14 @@ public class Sewers extends CatWorld {
     }
     
     public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.RAT, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.RAT, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
         checkForNextWorld(this);
     }
     

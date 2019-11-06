@@ -6,8 +6,16 @@ public abstract class Projectile extends Entity {
 
     public void act() {
         move(getSpeed());
-        if(isAtEdge()) {
+         if(isAtEdge()) {
             getWorld().removeObject(this);
         }
+        
+            else {  
+                if (isTouching(Artefact.class)) {
+                getWorld().removeObjects(getIntersectingObjects(Projectile.class));
+                getWorld().removeObject(this);
+            }
     }
+   }   
 }
+

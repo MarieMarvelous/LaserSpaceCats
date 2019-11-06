@@ -7,6 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Moon extends CatWorld {
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
 
     public Moon() {
     super();
@@ -16,6 +18,14 @@ public class Moon extends CatWorld {
     }
     
     public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.DINOSAUR, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.DINOSAUR, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
         checkForNextWorld(this);
     }
     

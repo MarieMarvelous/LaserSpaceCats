@@ -8,19 +8,15 @@ public class CatWorld extends World {
     public static int killedEnemies = 0;
 
     public CatWorld() {
-        super(1600, 900, 1);
+        super(800, 450, 1);
         Greenfoot.setSpeed(50);
-        this.prepare();
     }
 
     public void act() {
-        this.showText("Press \"Enter\" ", 800, 400);
+        this.showText("Press \"Enter\" ", 400, 250);
         if(Greenfoot.isKeyDown("enter")){
             WorldController.switchToNextWorld(this);
         }
-    }
-    
-    private void prepare() {
 
     }
 
@@ -35,7 +31,7 @@ public class CatWorld extends World {
     }
     
     public void spawnSingleEnemy(Enemy enemy) {
-        this.addObject(enemy, Greenfoot.getRandomNumber(1550) + 25, 870);
+        this.addObject(enemy, Greenfoot.getRandomNumber(550) + 25, 270);
     }
     
     public void spawnEnemy(EnemyType type, int amount) {
@@ -47,7 +43,29 @@ public class CatWorld extends World {
                 case RAT:
                     spawnSingleEnemy(new Rat());
                     break;
-                default:
+                case SQUIRREL:
+                    spawnSingleEnemy(new Squirrel());
+                    break;
+                case APE:
+                    spawnSingleEnemy(new Ape());
+                    break;
+                case DINOSAUR:
+                    spawnSingleEnemy(new Dinosaur());
+                    break;
+                case BOSSMOUSE:
+                    spawnSingleEnemy(new BossMouse());
+                    break;
+                case BOSSDOG:
+                    spawnSingleEnemy(new BossDog());
+                    break;
+                case BOSSSLIME:
+                    spawnSingleEnemy(new BossSlime());
+                    break;
+                case BOSSSCIENTIST:
+                    spawnSingleEnemy(new BossScientist());
+                    break;
+                case BOSSNAPOLEON:
+                    spawnSingleEnemy(new BossNapoleon());
                     break;
             }
         }

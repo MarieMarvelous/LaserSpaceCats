@@ -7,19 +7,78 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-public class Garden extends CatWorld {    
+public class Garden extends CatWorld {  
+    private static boolean secondWaveReady = true;
+    private static boolean thirdWaveReady = true;
+    private static boolean bossWaveReady = true;
 
 
     public Garden() {
         super();
+        //Leveldesign
+        addObject(new StonePattern(), 777, 426);
+        addObject(new StonePattern(), 777, 376);
+        addObject(new StonePattern(), 727, 376);
+        addObject(new StonePattern(), 727, 426);
+        addObject(new StonePattern(), 777, 326);
+        addObject(new StonePattern(), 777, 276);
+        addObject(new StonePattern(), 727, 276);
+        addObject(new StonePattern(), 727, 326);
+        addObject(new StonePattern(), 777, 226);
+        addObject(new StonePattern(), 777, 176);
+        addObject(new StonePattern(), 727, 176);
+        addObject(new StonePattern(), 727, 226);
+        addObject(new StonePattern(), 777, 126);
+        addObject(new StonePattern(), 777, 76);
+        addObject(new StonePattern(), 727, 76);
+        addObject(new StonePattern(), 727, 126);
+        addObject(new StonePattern(), 777, 26);
+        addObject(new StonePattern(), 777, 0);
+        addObject(new StonePattern(), 727, 0);
+        addObject(new StonePattern(), 727, 26);
+        
+        
+        
+        addObject(new Flowers(), 40, 398);
+        addObject(new Flowers(), 580, 198);
+        addObject(new Flowers(), 340, 98);
+        addObject(new Mushrooms(), 280, 398);
+        addObject(new Fence1(), 700, 40);
+        addObject(new Fence1(), 700, 110);
+        addObject(new Fence1(), 700, 180);
+        addObject(new Fence1(), 700, 250);
+        addObject(new Fence1(), 700, 320);
+        addObject(new Fence1(), 700, 390);
+        addObject(new Fence1(), 700, 460);
+        
+        addObject(new Mushrooms(), 127, 155);
+        addObject(new Mushrooms(), 79, 160);
+        addObject(new Mushrooms(), 120, 140);
+        addObject(new Mushrooms(), 70, 150);
+        addObject(new TreeGroup(), 155, 65);
+        
+        
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
-        killableEnemies = 4;
-        spawnedEnemy();
+        spawnEnemy(EnemyType.SQUIRREL, 2);
+        killableEnemies = 7;
 
     }
 
     public void act() {
+        if (killedEnemies >= 2 && secondWaveReady) {
+            spawnEnemy(EnemyType.SQUIRREL, 2);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 4 && thirdWaveReady) {
+            spawnEnemy(EnemyType.SQUIRREL, 2);
+            thirdWaveReady = false;
+        }//Beide if-methoden
+        if (killedEnemies >= 6 && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSDOG, 1);
+            bossWaveReady = false;
+        }
+        
         checkForNextWorld(this);
     }
     
