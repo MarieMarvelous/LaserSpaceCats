@@ -17,13 +17,15 @@ public class CatWorld extends World {
         if(Greenfoot.isKeyDown("enter")){
             WorldController.switchToNextWorld(this);
         }
-
+        //Wieder entfernen
+        
     }
 
     public void checkForNextWorld(World world) {
         if (killedEnemies >= killableEnemies) {
             WorldController.switchToNextWorld(world);
         }
+
     }
     
     public static void registerKill() {

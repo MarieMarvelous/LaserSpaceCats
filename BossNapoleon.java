@@ -7,11 +7,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class BossNapoleon extends Enemy {
+    
+    public BossNapoleon() {
+        damage = 15;
+        tempDamage = damage;
+    }
     public int giveDamage() {
-        return 15;
+        return damage;
     }
     public void act() 
     {
-        // Add your action code here.
+        // movement(5, 3, 8);
+        randomMovement(12, 2, 6);
+        super.act();
     }    
 }
