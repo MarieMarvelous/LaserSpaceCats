@@ -13,7 +13,7 @@ public class Moon extends CatWorld {
     public Moon() {
     super();
         addObject(new CatHero(), 50, 50);
-        killableEnemies = 2;
+        killableEnemies = 4;
         spawnedEnemy();
     }
     
