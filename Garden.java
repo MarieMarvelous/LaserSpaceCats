@@ -11,7 +11,7 @@ public class Garden extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
-
+    
 
     public Garden() {
         super();
@@ -72,7 +72,7 @@ public class Garden extends CatWorld {
             thirdWaveReady = false;
         }//Beide if-methoden
         if (killedEnemies >= 6 && bossWaveReady) {
-            spawnEnemy(EnemyType.BOSSDOG, 1);
+            spawnEnemy(EnemyType.BOSSDOG, 1);            
             bossWaveReady = false;
         }
         
