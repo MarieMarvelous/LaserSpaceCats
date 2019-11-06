@@ -24,6 +24,9 @@ public class CatHero extends Hero {
 
 
     if (this.isTouching(Enemy.class)) {
+
+        if (this.isTouching(Enemy.class)) {
+
             setLocation(getX()-10,getY());
         }
         if (this.isTouching(Enemy.class)) {
@@ -47,11 +50,9 @@ public class CatHero extends Hero {
         if (this.isTouching(Enemy.class)) {
             setLocation(getX(),getY()-10);
         }
-    
 
         
-        
-        if (getImage() == imagef1) {
+       if (getImage() == imagef1) {
             setImage(imagef2);
         }
             else {
@@ -62,8 +63,9 @@ public class CatHero extends Hero {
                         setImage(imagef2);
                     }
             }
-    } 
+
+    }
 }
 
-
     
+}
