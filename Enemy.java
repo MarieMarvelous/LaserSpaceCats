@@ -55,7 +55,7 @@ public abstract class Enemy extends Entity {
     }
     public void randomMovement(int randomForward, int randomTurn, int turn) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-        
+        if (framesToCount == 0) {
         if(Greenfoot.getRandomNumber(100) < 10) {
             turnTowards(cat.getX(), cat.getY());
         }
@@ -71,24 +71,7 @@ public abstract class Enemy extends Entity {
             move(-randomForward);
         }
     }
-  
-    /*public void randomMovement(int zufallVorwaerts, int zufallDrehung, int drehung) {
-         
-        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-        if(Greenfoot.getRandomNumber(100) < 5) {
-        turnTowards(cat.getX(), cat.getY());
-        }
-        move(Greenfoot.getRandomNumber(zufallVorwaerts));
-        if(Greenfoot.getRandomNumber(10) <=zufallDrehung){
-            turn(-drehung);
-        }
-        if(Greenfoot.getRandomNumber(10) >zufallDrehung){
-            turn(drehung);
-        }
 
-         
-         
-        }*/
         
     /*public void movement(int zufallVorwaerts, int zufallDrehung, int drehung) {
         if (framesToCount == 0) {
@@ -126,22 +109,29 @@ public abstract class Enemy extends Entity {
         if (isTouching(CatHero.class) && framesToCount == 0) {
             CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
             turnTowards(catHero.getX(), catHero.getY());
-                
-                
-            System.out.println("CatHero.isMoved = " + catHero.isMoved);
-            if (catHero.isMoved == false) {
+            	System.out.println("CatHero.isMoved = " + catHero.isMoved);
+	}
+        if (catHero.isMoved == false) {
                //System.out.println("isTouching(CatHero) = ");
                catHero.checkCollision(); 
+                System.out.println("CatHero.isMoved = " + catHero.isMoved);
+                if (catHero.isMoved == false) {
+                   //System.out.println("isTouching(CatHero) = ");
+                   catHero.checkCollision(); 
+                }
+                startFrameCounting(30);
+                move(-60);
             }
             startFrameCounting(60);
             move(-60);
         }
         }
+}
         
-        public void drawBack() {
+	public void drawBack() {
             CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
                 turnTowards(catHero.getX(), catHero.getY());
-                startFrameCounting(60);
+                startFrameCounting(30);
                 move(-60);
         }
     
