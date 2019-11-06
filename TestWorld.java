@@ -20,6 +20,9 @@ public class TestWorld extends CatWorld
         
         addObject(new Ape(), 50, 50);
         addObject(new CatHero(), 100, 100);
+        //addHealthbar
+        Healthbar healthbar = new Healthbar();
+        addObject(healthbar,296,68);
     }
     public void act() {
         if(Greenfoot.isKeyDown("g")) {

@@ -21,6 +21,9 @@ public class House extends CatWorld {
         addObject(new Shelf2(), 200, 30);
         addObject(new ShelfKitchen(), 260, 30);
         addObject(new Couch(), 260, 400);
+        //addHealthbar
+        Healthbar healthbar = new Healthbar();
+        addObject(healthbar,296,68);
     }
 
     public void act() {
