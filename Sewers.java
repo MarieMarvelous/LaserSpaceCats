@@ -18,6 +18,8 @@ public class Sewers extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        
+        addObject(new SunGlasses(), 600, 600);
     }
     
     public void act() {

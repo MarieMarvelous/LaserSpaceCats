@@ -55,6 +55,8 @@ public class Garden extends CatWorld {
         addObject(new TreeGroup(), 155, 65);
         addObject(new Mushrooms(), 200, 131);
         
+        addObject(new TinArmor(), 300, 800);
+        
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
         spawnEnemy(EnemyType.SQUIRREL, 2);

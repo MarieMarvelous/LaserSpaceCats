@@ -18,6 +18,8 @@ public class Moon extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        
+        addObject(new Keycard(), 500, 100);
     }
     
     public void act() {

@@ -20,6 +20,8 @@ public class GuianaSpaceCenter extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        
+        addObject(new Spacehelm(), 400, 700);
     }
     
     public void act() {

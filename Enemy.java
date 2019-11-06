@@ -55,6 +55,7 @@ public abstract class Enemy extends Entity {
     }
 
     public void randomMovement(int randomForward, int randomTurn, int turn) {
+        if (framesToCount == 0) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         if(Greenfoot.getRandomNumber(100) < 10) {
             turnTowards(cat.getX(), cat.getY());
@@ -69,6 +70,7 @@ public abstract class Enemy extends Entity {
         if (isTouching(Artefact.class)) {
             move(-randomForward);
         }
+    }
     }  
 
     public void runTowardsCatHero () {
@@ -91,13 +93,13 @@ public abstract class Enemy extends Entity {
         return actor != null;        
     }
 
-    public void checkForCatCollision() {
+    /* public void checkForCatCollision() {
         if (isTouching(CatHero.class) && framesToCount == 0) {
             CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
             turnTowards(catHero.getX(), catHero.getY());
             System.out.println("CatHero.isMoved = " + catHero.isMoved);
         }
-    }
+    } */
 
     /*if (catHero.isMoved == false) {
     //System.out.println("isTouching(CatHero) = ");
@@ -111,6 +113,8 @@ public abstract class Enemy extends Entity {
 
     move(-60);
     }*/
+    
+    // ab "if (catHero.isMoved == false) {" wieder auskommentieren!
 
     public void drawBack() {
         CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
