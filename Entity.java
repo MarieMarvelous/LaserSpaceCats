@@ -4,6 +4,7 @@ public abstract class Entity extends Actor implements Lootable {
     int tempDamage;
     int framesToCount;
     public int damage;
+    
     public void act() {
 
     }  
