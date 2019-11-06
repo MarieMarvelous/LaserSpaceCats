@@ -118,25 +118,25 @@ public abstract class Enemy extends Entity {
         banana.setRotation(getRotation()); 
         shotTimer = 50; //je höher desto langsamer kommen die Bananen
     }
-        public boolean canSee(Class clss) {
+    public boolean canSee(Class clss) {
         Actor actor = getOneObjectAtOffset(0, 0, clss);
         return actor != null;        
     }
     
-        public void checkForCatCollision() {
-            if (isTouching(CatHero.class) && framesToCount == 0) {
-                CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-                turnTowards(catHero.getX(), catHero.getY());
+    public void checkForCatCollision() {
+        if (isTouching(CatHero.class) && framesToCount == 0) {
+            CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+            turnTowards(catHero.getX(), catHero.getY());
                 
                 
-                System.out.println("CatHero.isMoved = " + catHero.isMoved);
-                if (catHero.isMoved == false) {
-                   //System.out.println("isTouching(CatHero) = ");
-                   catHero.checkCollision(); 
-                }
-                startFrameCounting(60);
-                move(-60);
+            System.out.println("CatHero.isMoved = " + catHero.isMoved);
+            if (catHero.isMoved == false) {
+               //System.out.println("isTouching(CatHero) = ");
+               catHero.checkCollision(); 
             }
+            startFrameCounting(60);
+            move(-60);
+        }
         }
         
         public void drawBack() {

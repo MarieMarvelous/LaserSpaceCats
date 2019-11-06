@@ -17,6 +17,25 @@ public class BossNapoleon extends Enemy {
         int laser7 = 315;
         int laser8 = 45;
         
+        int laser9 = 22;
+        int laser10 = 45;
+        int laser11 = 67;
+        int laser12 = 90; 
+        int laser13 = 112;
+        int laser14 = 135;
+        int laser15 = 157;
+        int laser16 = 180;
+        int laser17 = 202;
+        int laser18 = 225;
+        int laser19 = 247;
+        int laser20 = 270;
+        int laser21 = 292;
+        int laser22 = 315;
+        int laser23 = 337;
+        int laser24 = 360;
+       
+        public int cooldown;
+        public static int defaultCooldown;
     public BossNapoleon() {
         damage = 15;
         tempDamage = damage;
@@ -34,6 +53,27 @@ public class BossNapoleon extends Enemy {
         //kreuzdrehungrechts();
         //kreuzdrehunglinks();
         //xkreuz();
+        //kreis();
+    }
+    public void kreis(){
+        shootLaser(laser9); 
+        shootLaser(laser10);
+        shootLaser(laser11);
+        shootLaser(laser12);
+        shootLaser(laser13); 
+        shootLaser(laser14);
+        shootLaser(laser15);
+        shootLaser(laser16);
+        shootLaser(laser17); 
+        shootLaser(laser18);
+        shootLaser(laser19);
+        shootLaser(laser20);
+        shootLaser(laser21); 
+        shootLaser(laser22);
+        shootLaser(laser23);
+        shootLaser(laser24);
+        
+        
     }
     public void xkreuz(){
         shootLaser(laser5); 
