@@ -41,4 +41,10 @@ public class House extends CatWorld {
         }
         checkForNextWorld(this);
     }
+    
+    /*public void checkForItemTouched(){
+        if(CatHero.isTouching(Oma_Brille.class)){
+            gotItem = true;
+    }*/
 }
+
