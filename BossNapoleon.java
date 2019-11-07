@@ -52,7 +52,7 @@ public class BossNapoleon extends Enemy {
         
         //kreuzdrehungrechts();
         //kreuzdrehunglinks();
-        //xkreuz();
+        xkreuz();
         //kreis();
     }
     public void kreis(){
@@ -103,6 +103,6 @@ public class BossNapoleon extends Enemy {
     }
     public void shootLaser(int angle) 
     {
-        getWorld().addObject(new Laser(angle), this.getX(), this.getY());
+        getWorld().addObject(new Banana(angle), this.getX(), this.getY());
     }   
 }

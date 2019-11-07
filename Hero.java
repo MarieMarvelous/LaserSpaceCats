@@ -95,7 +95,6 @@ public class Hero extends Actor {
     }
     public void updateHealthbar()
     {
-
         switch(health){
         case 100:
             Healthbar healthbar20 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
