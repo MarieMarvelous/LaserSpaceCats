@@ -37,7 +37,7 @@ public class BossNapoleon extends Enemy {
         public int cooldown;
         public static int defaultCooldown;
     public BossNapoleon() {
-        damage = 15;
+        damage = 1;
         tempDamage = damage;
     }
     public int giveDamage() {
@@ -51,8 +51,8 @@ public class BossNapoleon extends Enemy {
             
         
         //kreuzdrehungrechts();
-        //kreuzdrehunglinks();
-        xkreuz();
+        kreuzdrehunglinks();
+        //xkreuz();
         //kreis();
     }
     public void kreis(){
