@@ -10,6 +10,7 @@ public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
+    
 
     public House() {
         super();
@@ -23,7 +24,7 @@ public class House extends CatWorld {
         addObject(new Couch(), 260, 400);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
-        addObject(healthbar,296,68);
+        addObject(healthbar,275,75);
         addObject(new Glasses(), 500, 500);
     }
 
