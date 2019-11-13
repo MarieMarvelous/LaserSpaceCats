@@ -13,6 +13,7 @@ public class BossDog extends Enemy {
     
     public BossDog() {
         damage = 5;
+        health = 8;
         tempDamage = damage;
     }
     

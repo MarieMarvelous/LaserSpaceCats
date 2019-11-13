@@ -10,6 +10,7 @@ public class BossScientist extends Enemy {
     
     public BossScientist() {
         damage = 10;
+        health = 4;
         tempDamage = damage;
     }
     public int giveDamage() {

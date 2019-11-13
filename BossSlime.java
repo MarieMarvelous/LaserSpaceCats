@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BossSlime extends Enemy {
     public BossSlime() {
         damage = 5;
+        health = 12;
         tempDamage = damage;
     }
     public int giveDamage() {

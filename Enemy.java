@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public abstract class Enemy extends Entity {
     public abstract int giveDamage();
     private int shotTimer;
+    int health;
     public void act (){
         super.act();
         checkForLaserCollision();
@@ -16,8 +17,11 @@ public abstract class Enemy extends Entity {
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
-            getWorld().removeObject(this);
-            CatWorld.registerKill();
+            health -= Laser.DAMAGE;
+            if(health <= 0) {
+                getWorld().removeObject(this);
+                CatWorld.registerKill();
+        }
         }
     }
 

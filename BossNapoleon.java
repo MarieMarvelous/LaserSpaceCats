@@ -38,6 +38,7 @@ public class BossNapoleon extends Enemy {
         public static int defaultCooldown;
     public BossNapoleon() {
         damage = 1;
+        health = 10;
         tempDamage = damage;
     }
     public int giveDamage() {

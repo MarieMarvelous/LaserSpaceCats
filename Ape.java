@@ -10,6 +10,7 @@ public class Ape extends Enemy {
     
     public Ape() {
         damage = 5;
+        health = 4;
         tempDamage = damage;
     }
 

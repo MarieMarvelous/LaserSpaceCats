@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Laser extends Projectile {
     private static final int SPEED = 15;
+    public static final int DAMAGE = 2;
     
     public Laser(int angle) {
         int adaptedAngle = angle;
