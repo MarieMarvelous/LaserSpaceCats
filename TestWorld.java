@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TestWorld extends CatWorld
 {
-
     /**
      * Constructor for objects of class TestWorld.
      * 
@@ -18,15 +17,30 @@ public class TestWorld extends CatWorld
         killableEnemies = 1;
         killedEnemies = 0;
         addObject(new BossNapoleon(), 500, 500);
-        
+
         addObject(new CatHero(), 100, 100);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        
+        //TunnelVision
+        tunnelVision tunnelVision = new tunnelVision();
+        addObject(tunnelVision,1141,364);
+        prepare();
     }
+
     public void act() {
         if(Greenfoot.isKeyDown("g")) {
             WorldController.switchToNextWorld(this);
         }
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+
     }
 }
