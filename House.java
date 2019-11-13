@@ -10,7 +10,9 @@ public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
-
+    private static boolean itemSpawned = false;
+    private static int x;
+    private static int y;
     public House() {
         super();
         addObject(new CatHero(), 50, 50);
@@ -24,10 +26,11 @@ public class House extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
-        addObject(new Glasses(), 500, 500);
+        
     }
 
     public void act() {
+      
         if (killedEnemies >= 2 && secondWaveReady) {
             spawnEnemy(EnemyType.MOUSE, 2);
             this.showText("Welle 2", 700, 25);
@@ -41,9 +44,32 @@ public class House extends CatWorld {
         if (killedEnemies >= 6 && bossWaveReady) {
             spawnEnemy(EnemyType.BOSSMOUSE, 1);
             bossWaveReady = false;
+       
         }
-        checkForNextWorld(this);
-    }
+  /*          
+        if(bossWaveReady == false) {
+            if(killedEnemies <7) {
+            BossMouse Boss = getObjects(BossMouse.class).get(0);
+            x= Boss.getX();
+            y= Boss.getY();
+        }
+            
+            
+            
+        }
+        
+        if(killedEnemies >=7 && !(itemSpawned)) {
+            
+      
+            itemDrop(EnemyType.BOSSMOUSE, x, y);
+            itemSpawned = true;
+        
+        }
+    
+    */
+}   
+       // checkForNextWorld(this);
+    
 
 }
 

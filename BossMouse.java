@@ -10,7 +10,7 @@ public class BossMouse extends Enemy {
     public BossMouse() {
     resizeImage(60, 60);
     damage = 5;
-    health = 6;
+    health = 10;
     tempDamage = damage;
     }
         
@@ -18,6 +18,8 @@ public class BossMouse extends Enemy {
         return damage;
     }
     public void act() {
+        
+        
         randomMovement(25, 5, 20);
         super.act();
     }    

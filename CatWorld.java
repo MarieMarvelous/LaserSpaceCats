@@ -22,12 +22,21 @@ public class CatWorld extends World {
         //Wieder entfernen
         
     }
+    
+    public void itemDrop(EnemyType BossType, int x, int y) {
+        switch(BossType) {
+            case BOSSMOUSE: 
+            Glasses Brille = new Glasses();
+            addObject(Brille, 300,300);    
+        }
+    }
+
 
     public void checkForNextWorld(World world) {
-        if (killedEnemies >= killableEnemies) {
+  /*      if (killedEnemies >= killableEnemies)  {
             WorldController.switchToNextWorld(world);
         }
-
+  */
     }
     
     public static void registerKill() {
