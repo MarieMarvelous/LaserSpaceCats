@@ -37,7 +37,7 @@ public class BossNapoleon extends Enemy {
         public int cooldown;
         public static int defaultCooldown;
     public BossNapoleon() {
-        damage = 15;
+        damage = 1;
         tempDamage = damage;
     }
     public int giveDamage() {
@@ -51,7 +51,7 @@ public class BossNapoleon extends Enemy {
             
         
         //kreuzdrehungrechts();
-        //kreuzdrehunglinks();
+        kreuzdrehunglinks();
         //xkreuz();
         //kreis();
     }
@@ -103,6 +103,6 @@ public class BossNapoleon extends Enemy {
     }
     public void shootLaser(int angle) 
     {
-        getWorld().addObject(new Laser(angle), this.getX(), this.getY());
+        getWorld().addObject(new Banana(angle), this.getX(), this.getY());
     }   
 }
