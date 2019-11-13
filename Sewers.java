@@ -20,6 +20,10 @@ public class Sewers extends CatWorld {
         addObject(healthbar,296,68);
         
         addObject(new SunGlasses(), 600, 600);
+        
+        //TunnelVision
+        TunnelVision tunnelVision = new TunnelVision();
+        addObject(tunnelVision,1141,364);
     }
     
     public void act() {

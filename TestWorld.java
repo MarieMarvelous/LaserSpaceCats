@@ -23,6 +23,10 @@ public class TestWorld extends CatWorld
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+        
+        //TunnelVision
+        TunnelVision tunnelVision = new TunnelVision();
+        addObject(tunnelVision,1141,364);
     }
     public void act() {
         if(Greenfoot.isKeyDown("g")) {

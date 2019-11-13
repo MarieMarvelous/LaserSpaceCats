@@ -93,14 +93,14 @@ public class BossNapoleon extends Enemy {
         laser4++;
     }
     public void kreuzdrehunglinks(){
-        shootLaser(laser1); 
-        shootLaser(laser2);
-        shootLaser(laser3);
-        shootLaser(laser4);
-        laser1--;
-        laser2--;
-        laser3--;
-        laser4--;
+        shootLaser(laser5); 
+        shootLaser(laser6);
+        shootLaser(laser7);
+        shootLaser(laser8);
+        laser5++;
+        laser6++;
+        laser7++;
+        laser8++;
     }
     public void shootLaser(int angle) 
     {

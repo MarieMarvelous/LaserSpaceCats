@@ -58,6 +58,7 @@ public class Hero extends Actor {
             canShootAgain = true;
         }
         updateHealthbar();
+        getWorld().setPaintOrder(Healthbar.class);
     } 
     
     public void checkCollision(){
@@ -194,7 +195,7 @@ public class Hero extends Actor {
             getWorld().getObjects(Healthbar.class);
             healthbar1.setImage("1hearts.png");
             break;
-        case 0:
+        case 1: //ist auf 1 und nicht auf 0 da wenn auf 0 dann game over bevor herzen auf null
             Healthbar healthbar0 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
             getWorld().getObjects(Healthbar.class);
             healthbar0.setImage("0hearts.png");
