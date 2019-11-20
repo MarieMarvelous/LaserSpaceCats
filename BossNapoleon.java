@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class BossNapoleon here.
  * 
@@ -49,10 +48,8 @@ public class BossNapoleon extends Enemy {
         // movement(5, 3, 8);
         //randomMovement(12, 2, 6);
         //super.act();
-            
-        
         //kreuzdrehungrechts();
-        kreuzdrehunglinks();
+        //kreuzdrehunglinks();
         //xkreuz();
         //kreis();
     }

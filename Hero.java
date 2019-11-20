@@ -24,6 +24,9 @@ public class Hero extends Actor {
                 setLocation(getX()+speed, getY());
             }
             isMoved = true;
+            
+            Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
+            setLocation(CatHero.getX(), CatHero.getY());
         }
         if(Greenfoot.isKeyDown(right)) {
             setLocation(getX()+speed, getY());
@@ -31,7 +34,7 @@ public class Hero extends Actor {
                 setLocation(getX()-speed, getY());
             }
             isMoved = true;
-        }
+                    }
         if(Greenfoot.isKeyDown(up)) {
             setLocation(getX(), getY()-speed);
             if (isTouching(Artefact.class)) {
@@ -94,6 +97,8 @@ public class Hero extends Actor {
         
         return 90 - (int) (Math.atan2(deltaX, deltaY) * 57.3);
     }
+    
+
     public void updateHealthbar()
     {
         switch(health){
@@ -102,6 +107,7 @@ public class Hero extends Actor {
             healthbar20.setImage("20hearts.png");
             break;   
         case 95:
+            
             Healthbar healthbar19 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
             healthbar19.setImage("19hearts.png");
             break;
@@ -111,93 +117,75 @@ public class Hero extends Actor {
             break;
         case 85:
             Healthbar healthbar17 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar17.setImage("17hearts.png");
             break;
         case 80:
             Healthbar healthbar16 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar16.setImage("16hearts.png");
             break; 
         case 75:
             Healthbar healthbar15 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar15.setImage("15hearts.png");
             break;
         case 70:
             Healthbar healthbar14 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar14.setImage("14hearts.png");
             break;
         case 65:
             Healthbar healthbar13 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar13.setImage("13hearts.png");
             break;
         case 60:
             Healthbar healthbar12 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar12.setImage("12hearts.png");
             break;     
         case 55:
             Healthbar healthbar11 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar11.setImage("11hearts.png");
             break;
         case 50:
             Healthbar healthbar10 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar10.setImage("10hearts.png");
             break;
             
         case 45:
             Healthbar healthbar9 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar9.setImage("9hearts.png");
             break;
         case 400:
             Healthbar healthbar8 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar8.setImage("8hearts.png");
             break;
         case 35:
             Healthbar healthbar7 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar7.setImage("7hearts.png");
             break;
         case 30:
             Healthbar healthbar6 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar6.setImage("6hearts.png");
             break;
         case 250:
             Healthbar healthbar5 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar5.setImage("5hearts.png");
             break;
         case 20:
             Healthbar healthbar4 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar4.setImage("4hearts.png");
             break;
         case 15:
             Healthbar healthbar3 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar3.setImage("3hearts.png");
             break;
         case 10:
             Healthbar healthbar2 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar2.setImage("2hearts.png");
             break;
         case 5:
             Healthbar healthbar1 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar1.setImage("1hearts.png");
             break;
         case 1: //ist auf 1 und nicht auf 0 da wenn auf 0 dann game over bevor herzen auf null
             Healthbar healthbar0 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
-            getWorld().getObjects(Healthbar.class);
             healthbar0.setImage("0hearts.png");
             break;
         }
