@@ -35,7 +35,7 @@ public abstract class Entity extends Actor implements Lootable {
     }
     
     public void startFrameCounting(int amount) {
-        framesToCount += amount;
+        framesToCount = amount;
     }
 
 }
