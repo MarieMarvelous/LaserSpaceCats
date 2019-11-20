@@ -14,11 +14,34 @@ public abstract class Enemy extends Entity {
     public Enemy() {
     }
 
+    
+    
+  /*  public void itemDrop(EnemyType BossType, int x, int y) {
+        switch(BossType) {
+            case BOSSMOUSE: 
+            Glasses Brille = new Glasses();
+            getWorld().addObject(Brille, x, y);    
+        }      
+    }*/
+    
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
             health -= Laser.DAMAGE;
             if(health <= 0) {
+                if(this instanceof BossMouse) {
+                    getWorld().addObject(new Glasses(), getX(), getY());
+                }
+                if(this instanceof BossDog ) {
+                    getWorld().addObject(new TinArmor(), getX(), getY());
+                }
+                if(this instanceof BossSlime) {
+                    getWorld().addObject(new SunGlasses(), getX(), getY());
+                }
+             /*   if(this instanceof BossScientist) {
+                    getWorld().addObject(, getX(), getY());
+                }*/
+                
                 getWorld().removeObject(this);
                 CatWorld.registerKill();
         }

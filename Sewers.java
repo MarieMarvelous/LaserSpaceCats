@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sewers extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean bossWaveReady = true; 
  
     public Sewers() {
         super();
@@ -34,13 +35,19 @@ public class Sewers extends CatWorld {
         if (killedEnemies >= 4 && thirdWaveReady) {
             spawnEnemy(EnemyType.RAT, 2);
             thirdWaveReady = false;
-        }//Beide if-methoden
-        checkForNextWorld(this);
+        }
+        if(killedEnemies >= 6 && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSSLIME, 1);
+            bossWaveReady = false;
+        }
+        
+        //Beide if-methoden
+      //  checkForNextWorld(this);
     }
     
     public void spawnedEnemy() {
-        for (int i = 1; i <= killableEnemies; i++) {            
-            addObject(new Mouse(), Greenfoot.getRandomNumber(750) + 25, 400);
+        for (int i = 0; i <= 2; i++) {            
+            addObject(new Rat(), Greenfoot.getRandomNumber(750) + 25, 400);
         }
     }
 }

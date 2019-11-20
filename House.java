@@ -10,8 +10,10 @@ public class House extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean bossWaveReady = true;
+    private static boolean itemSpawned = false;
+    private static int x;
+    private static int y;
     
-
     public House() {
         super();
         addObject(new CatHero(), 50, 50);
