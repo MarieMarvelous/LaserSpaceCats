@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class blankspace here.
+ * Write a description of class MiddleMiddle here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class blankspace extends Artefact
+public class MiddleMiddle extends Housepieces
 {
     /**
-     * Act - do whatever the blankspace wants to do. This method is called whenever
+     * Act - do whatever the MiddleMiddle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
