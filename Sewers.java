@@ -13,6 +13,7 @@ public class Sewers extends CatWorld {
  
     public Sewers() {
         super();
+        
         killableEnemies = 3;
         addObject(new CatHero(), 50, 50);
         spawnedEnemy();
@@ -37,13 +38,17 @@ public class Sewers extends CatWorld {
             thirdWaveReady = false;
         }
         if(killedEnemies >= 6 && bossWaveReady) {
-            spawnEnemy(EnemyType.BOSSSLIME, 1);
+            //spawnEnemy(EnemyType.BOSSSLIME, 1);
+            addObject(new BossSlime(),590,530 );
             bossWaveReady = false;
         }
+        
         
         //Beide if-methoden
       //  checkForNextWorld(this);
     }
+    
+ 
     
     public void spawnedEnemy() {
         for (int i = 0; i <= 2; i++) {            

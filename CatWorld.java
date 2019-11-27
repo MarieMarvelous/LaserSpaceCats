@@ -8,15 +8,17 @@ public class CatWorld extends World {
     public static int killedEnemies = 0;
     
     public CatWorld() {
-		super(1600, 800, 1);
+	super(1600, 800, 1);
         Greenfoot.setSpeed(50);
     }
 
     public void act() {
-        this.showText("Press \"Enter\" ", 400, 250);
+        //this.showText("Press \"Enter\" ", 400, 250);
         if(Greenfoot.isKeyDown("enter")){
             WorldController.switchToNextWorld(this);
-        }        
+        }  
+        //WorldController.switchToNextWorld(this);
+                
     }
     
     public void itemDrop(EnemyType BossType, int x, int y) {

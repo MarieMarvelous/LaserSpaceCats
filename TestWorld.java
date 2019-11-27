@@ -26,8 +26,7 @@ public class TestWorld extends CatWorld
         
         //TunnelVision
         tunnelVision tunnelVision = new tunnelVision();
-        addObject(tunnelVision,1141,364);
-       
+        addObject(tunnelVision,1141,364);       
     }
     public void act() {
         if(Greenfoot.isKeyDown("g")) {
