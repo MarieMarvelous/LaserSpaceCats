@@ -13,9 +13,12 @@ public class Garden extends CatWorld {
     private static boolean fourthWaveReady = true;
     private static boolean fithWaveReady = true;
     private static boolean bossWaveReady = true;
-
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    
     public Garden() {
         super();
+        //Sound
+        backgroundMusic.playLoop();
         //Leveldesign
         addObject(new StonePattern(), 777, 426);
         addObject(new StonePattern(), 777, 376);

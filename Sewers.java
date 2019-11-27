@@ -12,10 +12,11 @@ public class Sewers extends CatWorld {
     private static boolean fourthWaveReady = true;
     private static boolean fithWaveReady = true;
     private static boolean bossWaveReady = true; 
- 
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     public Sewers() {
         super();
-        
+        //Sound
+        backgroundMusic.playLoop();
         killableEnemies = 3;
         addObject(new CatHero(), 50, 50);
         spawnedEnemy(1);

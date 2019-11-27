@@ -22,8 +22,13 @@ public class House extends CatWorld {
     private static int x;
     private static int y;
     
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    
     public House() {
         super();
+        //Sound
+        backgroundMusic.playLoop();
+        
         addObject(new CatHero(), 751, 542);
         this.showText("Welle 1", 700, 25);
         //Leveldesign starts here
@@ -109,10 +114,7 @@ if (firstWaveReady) {
             this.showText("Welle 5", 700, 25);
             eigthWaveReady = false;
         }
-        
-        
-            
-        
+
         if (killedEnemies >= 53 && bossWaveReady) {
             addObject(new BossMouse(), 691, 571);
             this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
