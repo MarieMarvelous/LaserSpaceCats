@@ -23,7 +23,7 @@ public class Sewers extends CatWorld {
         addObject(new SunGlasses(), 600, 600);
         
         //TunnelVision
-        TunnelVision tunnelVision = new TunnelVision();
+        tunnelVision tunnelVision = new tunnelVision();
         addObject(tunnelVision,1141,364);
     }
     
