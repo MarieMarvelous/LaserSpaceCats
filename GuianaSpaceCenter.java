@@ -13,9 +13,13 @@ public class GuianaSpaceCenter extends CatWorld {
 
     public GuianaSpaceCenter() {
         super();
-        addObject(new CatHero(), 50, 50);
+        addObject(new CatHero(), 1388, 780);
         killableEnemies = 2;
         spawnedEnemy();   
+        //Leveldesign startet hier
+        addObject(new Left(), 26, 401);
+        
+        
         
         //addHealthbar
         Healthbar healthbar = new Healthbar();
