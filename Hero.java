@@ -184,10 +184,14 @@ public class Hero extends Actor {
             Healthbar healthbar1 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
             healthbar1.setImage("1hearts.png");
             break;
-        case 1: //ist auf 1 und nicht auf 0 da wenn auf 0 dann game over bevor herzen auf null
+        case 2: //ist auf 1 und nicht auf 0 da wenn auf 0 dann game over bevor herzen auf null
             Healthbar healthbar0 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
             healthbar0.setImage("0hearts.png");
             break;
+        case 1: //ist auf 1 und nicht auf 0 da wenn auf 0 dann game over bevor herzen auf null
+            Healthbar healthbar21 = (Healthbar) getWorld().getObjects(Healthbar.class).get(0);
+            healthbar21.setImage("0hearts.png");
+            break;    
         }
 
     }

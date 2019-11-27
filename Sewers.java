@@ -13,6 +13,7 @@ public class Sewers extends CatWorld {
  
     public Sewers() {
         super();
+        
         killableEnemies = 3;
         addObject(new CatHero(), 50, 50);
         spawnedEnemy();
@@ -23,7 +24,7 @@ public class Sewers extends CatWorld {
         addObject(new SunGlasses(), 600, 600);
         
         //TunnelVision
-        TunnelVision tunnelVision = new TunnelVision();
+        tunnelVision tunnelVision = new tunnelVision();
         addObject(tunnelVision,1141,364);
     }
     
@@ -44,6 +45,8 @@ public class Sewers extends CatWorld {
         //Beide if-methoden
       //  checkForNextWorld(this);
     }
+    
+ 
     
     public void spawnedEnemy() {
         for (int i = 0; i <= 2; i++) {            
