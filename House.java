@@ -16,7 +16,7 @@ public class House extends CatWorld {
     
     public House() {
         super();
-        addObject(new CatHero(), 900, 400);
+        addObject(new CatHero(), 751, 542);
         spawnEnemy(EnemyType.MOUSE, 2);
         this.showText("Welle 1", 700, 25);
         killableEnemies = 7;
@@ -32,7 +32,6 @@ public class House extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,275,75);
-        addObject(new Glasses(), 500, 500);
     }
 
     public void act() {
