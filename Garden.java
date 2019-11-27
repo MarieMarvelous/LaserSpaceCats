@@ -10,10 +10,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Garden extends CatWorld {  
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean fourthWaveReady = true;
+    private static boolean fithWaveReady = true;
     private static boolean bossWaveReady = true;
-
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    
     public Garden() {
         super();
+        //Sound
+        backgroundMusic.playLoop();
         //Leveldesign
         addObject(new StonePattern(), 777, 426);
         addObject(new StonePattern(), 777, 376);
@@ -56,8 +61,7 @@ public class Garden extends CatWorld {
         
         //Spawn Objects in World
         addObject(new CatHero(),400,225);
-        spawnEnemy(EnemyType.SQUIRREL, 2);
-        killableEnemies = 7;
+        spawnEnemy(EnemyType.SQUIRREL, 1);
 
         //addHealthbar
         Healthbar healthbar = new Healthbar();
@@ -65,20 +69,26 @@ public class Garden extends CatWorld {
     }
 
     public void act() {
-        if (killedEnemies >= 2 && secondWaveReady) {
+        if (killedEnemies >= 1 && secondWaveReady) {
             spawnEnemy(EnemyType.SQUIRREL, 2);
             secondWaveReady = false;
         }
-        if (killedEnemies >= 4 && thirdWaveReady) {
-            spawnEnemy(EnemyType.SQUIRREL, 2);
+        if (killedEnemies >= 3 && thirdWaveReady) {
+            spawnEnemy(EnemyType.SQUIRREL, 3);
             thirdWaveReady = false;
-        }//Beide if-methoden
-        if (killedEnemies >= 6 && bossWaveReady) {
+        }
+        if (killedEnemies >= 6 && fourthWaveReady) {
+            spawnEnemy(EnemyType.SQUIRREL, 5);
+            fourthWaveReady = false;
+        }
+        if (killedEnemies >= 11 && fithWaveReady) {
+            spawnEnemy(EnemyType.SQUIRREL, 8);
+            fithWaveReady = false;
+        }
+        if (killedEnemies >= 19 && bossWaveReady) {
             spawnEnemy(EnemyType.BOSSDOG, 1);
             bossWaveReady = false;
         }
-
-        checkForNextWorld(this);
     }
 
     public void spawnedEnemy() {

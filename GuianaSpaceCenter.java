@@ -10,12 +10,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GuianaSpaceCenter extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
-
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     public GuianaSpaceCenter() {
         super();
-        addObject(new CatHero(), 50, 50);
+        //Sound
+        backgroundMusic.playLoop();
+        addObject(new CatHero(), 1388, 780);
         killableEnemies = 2;
         spawnedEnemy();   
+        //Leveldesign startet hier
+        addObject(new Left(), 26, 401);
+        
+        
         
         //addHealthbar
         Healthbar healthbar = new Healthbar();
