@@ -14,7 +14,10 @@ public class CatWorld extends World {
 
     public void act() {
         //this.showText("Press \"Enter\" ", 400, 250);
-        WorldController.switchToNextWorld(this);
+        if(Greenfoot.isKeyDown("enter")){
+            WorldController.switchToNextWorld(this);
+        }  
+        //WorldController.switchToNextWorld(this);
                 
     }
     

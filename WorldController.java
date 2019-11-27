@@ -10,13 +10,7 @@ public class WorldController {
 
     public WorldController() {
     }
-    
-    private static World createMenu() {
-        Menu world = new Menu();
-        Greenfoot.setWorld(world);
-        return world;
-    }
-
+        
     private static World createHouse() {
         House world = new House();
         Greenfoot.setWorld(world);
@@ -72,6 +66,8 @@ public class WorldController {
             //testWorld.showText("TestWorld", 200, 200);
         }
         if (world instanceof TestWorld) {*/
+            
+            
             World house = createHouse();
             house.showText("house", 200, 200);
         }

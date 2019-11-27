@@ -38,9 +38,11 @@ public class Sewers extends CatWorld {
             thirdWaveReady = false;
         }
         if(killedEnemies >= 6 && bossWaveReady) {
-            spawnEnemy(EnemyType.BOSSSLIME, 1);
+            //spawnEnemy(EnemyType.BOSSSLIME, 1);
+            addObject(new BossSlime(),590,530 );
             bossWaveReady = false;
         }
+        
         
         //Beide if-methoden
       //  checkForNextWorld(this);
