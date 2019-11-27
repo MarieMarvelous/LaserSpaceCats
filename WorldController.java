@@ -10,6 +10,12 @@ public class WorldController {
 
     public WorldController() {
     }
+    
+    private static World createMenu() {
+        Menu world = new Menu();
+        Greenfoot.setWorld(world);
+        return world;
+    }
 
     private static World createHouse() {
         House world = new House();
