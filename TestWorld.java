@@ -25,9 +25,14 @@ public class TestWorld extends CatWorld
         addObject(healthbar,296,68);
         
         //TunnelVision
+<<<<<<< Updated upstream
         tunnelVision tunnelVision = new tunnelVision();
         addObject(tunnelVision,1141,364);
         //prepare();
+=======
+        //tunnelVision tunnelVision = new tunnelVision();
+        //addObject(tunnelVision,1141,364);       
+>>>>>>> Stashed changes
     }
     public void act() {
         if(Greenfoot.isKeyDown("g")) {
