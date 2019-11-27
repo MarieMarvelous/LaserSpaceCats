@@ -19,13 +19,7 @@ public class CatWorld extends World {
         }        
     }
     
-    public void itemDrop(EnemyType BossType, int x, int y) {
-        switch(BossType) {
-            case BOSSMOUSE: 
-            Glasses Brille = new Glasses();
-            addObject(Brille, 300,300);    
-        }
-    }
+
 
 
     public void checkForNextWorld(World world) {

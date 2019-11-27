@@ -1,4 +1,5 @@
 
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class House here.
@@ -7,19 +8,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class House extends CatWorld {
+    
+    private static boolean firstWaveReady = true;
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean fourthWaveReady = true;
+    private static boolean fithWaveReady = true;
+    private static boolean sixtWaveReady = true;
+    private static boolean seventhWaveReady = true;
+    private static boolean sixthWaveReady = true;
+    private static boolean eigthWaveReady = true;
+    
     private static boolean bossWaveReady = true;
-    private static boolean itemSpawned = false;
+
     private static int x;
     private static int y;
     
     public House() {
         super();
         addObject(new CatHero(), 900, 400);
-        spawnEnemy(EnemyType.MOUSE, 2);
+        
+ 
         this.showText("Welle 1", 700, 25);
-        killableEnemies = 7;
+
+        
         //Leveldesign starts here
         addObject(new Shelf2(), 200, 30);
         addObject(new ShelfKitchen(), 260, 30);
@@ -32,25 +44,71 @@ public class House extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,275,75);
-        addObject(new Glasses(), 500, 500);
+ 
     }
 
     public void act() {
-        if (killedEnemies >= 2 && secondWaveReady) {
-            spawnEnemy(EnemyType.MOUSE, 2);
+        
+        if (firstWaveReady) {
+            spawnedEnemy(4, 20, 200);
+            this.showText("Welle 1", 700, 25);
+            firstWaveReady = false;
+        }
+        
+        if (killedEnemies >= 4 && secondWaveReady) {
+            spawnedEnemy(3, 20, 200);
             this.showText("Welle 2", 700, 25);
             secondWaveReady = false;
         }
-        if (killedEnemies >= 4 && thirdWaveReady) {
-            spawnEnemy(EnemyType.MOUSE, 2);
+        if (killedEnemies >= 7 && thirdWaveReady) {
+            spawnedEnemy(5, 30,600);
             this.showText("Welle 3", 700, 25);
             thirdWaveReady = false;
         }
-        if (killedEnemies >= 6 && bossWaveReady) {
-            spawnEnemy(EnemyType.BOSSMOUSE, 1);
+        
+        if (killedEnemies >= 12 && fourthWaveReady) {
+            spawnedEnemy(7, 800,200);
+            this.showText("Welle 4", 700, 25);
+            fourthWaveReady = false;
+        }
+        
+        if (killedEnemies >= 19 && fithWaveReady) {
+            spawnedEnemy(8, 1000,700);
+            this.showText("Welle 5", 700, 25);
+            fithWaveReady = false;
+        }
+        if (killedEnemies >= 27 && sixthWaveReady) {
+            spawnedEnemy(8, 30,600);
+            this.showText("Welle 6", 700, 25);
+            sixthWaveReady = false;
+        }
+        if (killedEnemies >= 35 && seventhWaveReady) {
+            spawnedEnemy(8, 800,200);
+            this.showText("Welle 7", 700, 25);
+            seventhWaveReady = false;
+        }
+        if (killedEnemies >= 43 && eigthWaveReady) {
+            spawnedEnemy(10, 100,700);
+            this.showText("Welle 5", 700, 25);
+            eigthWaveReady = false;
+        }
+        
+        
+            
+        
+        if (killedEnemies >= 53 && bossWaveReady) {
+            addObject(new BossMouse(), 691, 571);
+            this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
             bossWaveReady = false;
         }
-        checkForNextWorld(this);
+        
+ 
+    }
+    
+    public void spawnedEnemy(int n, int xMin, int yMin) {
+        for (int i = 0; i < n; i++) {            
+            addObject(new Mouse(), Greenfoot.getRandomNumber(100)+xMin, Greenfoot.getRandomNumber(50)+yMin);
+        }
     }
 
 }
