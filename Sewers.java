@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sewers extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
+    private static boolean fourthWaveReady = true;
+    private static boolean fithWaveReady = true;
     private static boolean bossWaveReady = true; 
  
     public Sewers() {
@@ -29,30 +31,43 @@ public class Sewers extends CatWorld {
     }
     
     public void act() {
-        if (killedEnemies >= 2 && secondWaveReady) {
+        if (killedEnemies >= 1 && secondWaveReady) {
             spawnEnemy(EnemyType.RAT, 2);
+            this.showText("Welle 2", 700, 25);
             secondWaveReady = false;
         }
-        if (killedEnemies >= 4 && thirdWaveReady) {
-            spawnEnemy(EnemyType.RAT, 2);
+        if (killedEnemies >= 3 && thirdWaveReady) {
+            spawnEnemy(EnemyType.RAT, 3);
+            this.showText("Welle 3", 700, 25);
             thirdWaveReady = false;
         }
-        if(killedEnemies >= 6 && bossWaveReady) {
-            //spawnEnemy(EnemyType.BOSSSLIME, 1);
-            addObject(new BossSlime(),590,530 );
-            bossWaveReady = false;
+        
+        if (killedEnemies >= 6 && fourthWaveReady) {
+            spawnEnemy(EnemyType.RAT, 5);
+            this.showText("Welle 4", 700, 25);
+            fourthWaveReady = false;
         }
         
+        if (killedEnemies >= 11 && fithWaveReady) {
+            spawnEnemy(EnemyType.RAT, 8);
+            this.showText("Welle 5", 700, 25);
+            fithWaveReady = false;
+        }
+            
         
-        //Beide if-methoden
-      //  checkForNextWorld(this);
+        if (killedEnemies >= 19  && bossWaveReady) {
+            spawnEnemy(EnemyType.BOSSSLIME, 1);
+            this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+            bossWaveReady = false;
+        }
     }
     
- 
-    
-    public void spawnedEnemy() {
+    public void spawnedEnemy(int n) {
         for (int i = 0; i <= 2; i++) {            
             addObject(new Rat(), Greenfoot.getRandomNumber(750) + 25, 400);
         }
     }
+ 
+    
+   
 }

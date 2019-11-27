@@ -23,7 +23,7 @@ public class TestWorld extends CatWorld
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
-        
+     
         //TunnelVision
         tunnelVision tunnelVision = new tunnelVision();
         addObject(tunnelVision,1141,364);       
