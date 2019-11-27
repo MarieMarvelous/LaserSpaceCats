@@ -18,7 +18,7 @@ public class Sewers extends CatWorld {
         
         killableEnemies = 3;
         addObject(new CatHero(), 50, 50);
-        spawnedEnemy();
+        spawnedEnemy(1);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
