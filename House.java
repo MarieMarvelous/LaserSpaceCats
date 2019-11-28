@@ -1,4 +1,3 @@
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class House here.
@@ -36,7 +35,6 @@ public class House extends CatWorld {
         addObject(new ShelfKitchen(), 260, 30);
         addObject(new Couch(), 260, 400);
         addObject(new UpperLeftPiece(), 294, 62);
-        addObject(new UpperMiddle(), 707, 97);
         addObject(new UpperRightPiece(), 1209, 66);
         addObject(new Bed(), 1058, 172);
         addObject(new Bed(), 1245, 172);
@@ -44,7 +42,7 @@ public class House extends CatWorld {
         addObject(new UpperLeftCorner(), 1446, 163);
         addObject(new UnderKitchen(), 237, 790);
         addObject(new UnderKitchenDownLeft(), 22, 782);
-        addObject(new KitchenDownLeft(), 13, 747);
+        addObject(new KitchenDownLeft(), 13, 746);
         addObject(new HouseMiddleDown(), 753, 780);
         addObject(new HouseWallRight(), 1327, 363);
         addObject(new HouseWallRightLong(), 1586, 490);
