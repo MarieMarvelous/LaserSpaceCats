@@ -119,7 +119,6 @@ dependency21.from=TestWorld
 dependency21.to=Healthbar
 dependency21.type=UsesDependency
 dependency22.from=TestWorld
-
 dependency22.to=tunnelVision
 dependency22.type=UsesDependency
 dependency23.from=TestWorld
@@ -147,7 +146,6 @@ dependency3.from=CatWorld
 dependency3.to=Mouse
 dependency3.type=UsesDependency
 dependency30.from=House
-
 dependency30.to=Bed
 dependency30.type=UsesDependency
 dependency31.from=House
@@ -181,7 +179,6 @@ dependency4.from=CatWorld
 dependency4.to=Rat
 dependency4.type=UsesDependency
 dependency40.from=House
-
 dependency40.to=HouseDoorDownLeft
 dependency40.type=UsesDependency
 dependency41.from=House
@@ -215,7 +212,6 @@ dependency5.from=CatWorld
 dependency5.to=Squirrel
 dependency5.type=UsesDependency
 dependency50.from=House
-
 dependency50.to=HouseKitchenTable
 dependency50.type=UsesDependency
 dependency51.from=House
@@ -249,7 +245,6 @@ dependency6.from=CatWorld
 dependency6.to=Ape
 dependency6.type=UsesDependency
 dependency60.from=GuianaSpaceCenter
-
 dependency60.to=Healthbar
 dependency60.type=UsesDependency
 dependency61.from=GuianaSpaceCenter
@@ -311,12 +306,10 @@ dependency78.to=Rat
 dependency78.type=UsesDependency
 dependency79.from=Sewers
 dependency79.to=EnemyType
-
 dependency79.type=UsesDependency
 dependency8.from=CatWorld
 dependency8.to=BossMouse
 dependency8.type=UsesDependency
-
 dependency80.from=Enemy
 dependency80.to=BossMouse
 dependency80.type=UsesDependency
@@ -346,13 +339,11 @@ dependency88.to=Laser
 dependency88.type=UsesDependency
 dependency89.from=Enemy
 dependency89.to=CatWorld
-
 dependency89.type=UsesDependency
 dependency9.from=CatWorld
 dependency9.to=BossDog
 dependency9.type=UsesDependency
 dependency90.from=Enemy
-
 dependency90.to=Artefact
 dependency90.type=UsesDependency
 dependency91.from=BossNapoleon
@@ -384,8 +375,8 @@ dependency99.to=CatHero
 dependency99.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
-editor.fx.0.x=1014
-editor.fx.0.y=195
+editor.fx.0.x=850
+editor.fx.0.y=23
 height=1040
 package.numDependencies=107
 package.numTargets=92
@@ -1051,4 +1042,4 @@ version=3.0.0
 width=1932
 world.lastInstantiated=CatWorld
 xPosition=0
-yPosition=78
+yPosition=0

@@ -81,7 +81,7 @@ if (firstWaveReady) {
             secondWaveReady = false;
         }
         if (killedEnemies >= 7 && thirdWaveReady) {
-            spawnedEnemy(5, 30,600);
+            spawnedEnemy(5, 90,500);
             this.showText("Welle 3", 700, 25);
             thirdWaveReady = false;
         }
