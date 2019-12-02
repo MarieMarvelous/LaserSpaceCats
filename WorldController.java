@@ -10,14 +10,21 @@ public class WorldController {
 
     public WorldController() {
     }
-        
+
+    private static World createStoryScreen() {
+        StoryScreen world = new StoryScreen();
+        Greenfoot.setWorld(world);
+        CatWorld.killedEnemies = 0;
+        return world;
+    }
+
     private static World createHouse() {
         House world = new House();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
-    
+
     private static World createGarden() {
         Garden world = new Garden();
         Greenfoot.setWorld(world);
@@ -31,43 +38,45 @@ public class WorldController {
         CatWorld.killedEnemies = 0;
         return world;
     }
-    
+
     private static World createGuianaSpaceCenter() {
         GuianaSpaceCenter world = new GuianaSpaceCenter();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
-    
+
     private static World createMoon() {
         Moon world = new Moon();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
-    
+
     private static World createEnding() {
         Ending world = new Ending();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
-    
+
     /*private static World createTestWorld() {
-        TestWorld world = new TestWorld();
-        Greenfoot.setWorld(world);
-        CatWorld.killedEnemies = 0;
-        return world;
+    TestWorld world = new TestWorld();
+    Greenfoot.setWorld(world);
+    CatWorld.killedEnemies = 0;
+    return world;
     }*/
 
     public static void switchToNextWorld(World world) {
         if (world instanceof CatWorld) {
-           /* World testWorld = createTestWorld();
-            //testWorld.showText("TestWorld", 200, 200);
+            World StoryScreen = createStoryScreen();
         }
-        if (world instanceof TestWorld) {*/
-            
-            
+
+        /*if (world instanceof CatWorld) {
+        World testWorld = createTestWorld();
+        //testWorld.showText("TestWorld", 200, 200);
+        }*/
+        if (world instanceof StoryScreen) {
             World house = createHouse();
             house.showText("house", 200, 200);
         }

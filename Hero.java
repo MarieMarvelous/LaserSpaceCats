@@ -9,7 +9,7 @@ public class Hero extends Actor {
     public int cooldown;
     public static int defaultCooldown;
     public boolean isMoved;
-    
+
     public Hero(int health) {
         this.maximalHealth = 100;
         this.health=health;
@@ -18,17 +18,14 @@ public class Hero extends Actor {
         this.cooldown = this.defaultCooldown;
         this.isMoved = false;
     }
-    
-     public void movement(String left, String right, String up, String down, int speed) {
+
+    public void movement(String left, String right, String up, String down, int speed) {
         if(Greenfoot.isKeyDown(left)) {
             setLocation(getX()-speed, getY());
             if (isTouching(Artefact.class)) {
                 setLocation(getX()+speed, getY());
             }
             isMoved = true;
-            
-            Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
-            setLocation(CatHero.getX(), CatHero.getY());
         }
         if(Greenfoot.isKeyDown(right)) {
             setLocation(getX()+speed, getY());
@@ -36,7 +33,7 @@ public class Hero extends Actor {
                 setLocation(getX()-speed, getY());
             }
             isMoved = true;
-                    }
+        }
         if(Greenfoot.isKeyDown(up)) {
             setLocation(getX(), getY()-speed);
             if (isTouching(Artefact.class)) {
@@ -53,7 +50,7 @@ public class Hero extends Actor {
         }
         checkForShooting();
     }
-    
+
     public void act() {
         isMoved = false;
         if (cooldown > 0) {
@@ -65,7 +62,7 @@ public class Hero extends Actor {
         updateHealthbar();
         getWorld().setPaintOrder(Healthbar.class);
     } 
-    
+
     public void checkCollision(){
         if(isTouching(Enemy.class)){
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
@@ -81,6 +78,7 @@ public class Hero extends Actor {
             getWorld().showText("Game Over", 400, 225);
         }
     }
+
     public void shootLaser(int angle) {
         if (canShootAgain) {
             Greenfoot.playSound("lasersound3.mp3");
@@ -88,19 +86,20 @@ public class Hero extends Actor {
             canShootAgain = false;
         }
     }    
+
     public void checkForShooting() {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if (mouse != null && Greenfoot.getMouseInfo().getButton() == 1) {
             shootLaser(getMouseDirection(mouse));
         }
     }    
+
     public int getMouseDirection(MouseInfo mouse) {
         double deltaX = mouse.getX() - this.getX();
         double deltaY = mouse.getY() - this.getY();
-        
+
         return 90 - (int) (Math.atan2(deltaX, deltaY) * 57.3);
     }
-    
 
     public void updateHealthbar()
     {
@@ -109,7 +108,6 @@ public class Hero extends Actor {
         int hearts = (int) Math.round(20.0 * percentageHealth);
         String imageName = hearts + "hearts.png";
         healthbar.setImage(imageName);
-
 
     }
 }

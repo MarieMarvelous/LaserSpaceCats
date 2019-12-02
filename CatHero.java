@@ -2,13 +2,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class CatHero extends Hero {
     public static final int SPEED=5;
-    
+
     // Hierrüber wird der Kater beim Laufen animiert
-    private GreenfootImage imagef1;
-    private GreenfootImage imagef2;    
-    private GreenfootImage imagef3;
-    private GreenfootImage imagef4;
-       
+    private final GreenfootImage imagef1;
+    private final GreenfootImage imagef2;    
+    private final GreenfootImage imagef3;
+    private final GreenfootImage imagef4;
+
     public CatHero() {
         super(100);
         imagef1 = new GreenfootImage("Cat-f-1.png"); 
@@ -17,55 +17,23 @@ public class CatHero extends Hero {
         imagef4 = new GreenfootImage("Cat-f-4.png");
         setImage(imagef1);
     }     
+
     public void act() {
         super.act();
         super.movement("a", "d", "w", "s", SPEED);
-        super.checkCollision();
+        super.checkCollision();         
 
+        GreenfootImage current = getImage();
 
-    if (this.isTouching(Enemy.class)) {
-
-        if (this.isTouching(Enemy.class)) {
-
-            setLocation(getX()-10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()+10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()+10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX()-10,getY());
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()-10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()+10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()+10);
-        }
-        if (this.isTouching(Enemy.class)) {
-            setLocation(getX(),getY()-10);
-        }
-
-        
-       if (getImage() == imagef1) {
+        if (current == imagef1) {
             setImage(imagef2);
+        } else if (current == imagef2) {
+            setImage(imagef3);
+        } else if (current == imagef3) {
+            setImage(imagef4);
+        } else {
+            setImage(imagef1);
         }
-            else {
-                if (getImage() == imagef2) {
-                    setImage(imagef4);
-                }
-                    else {
-                        setImage(imagef2);
-                    }
-            }
-
     }
-}
 
-    
 }
