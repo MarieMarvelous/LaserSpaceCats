@@ -9,10 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StoryScreen extends CatWorld {
     ScrollingStartScreen startStory = new ScrollingStartScreen();
     BlackImage fading = new BlackImage();
-    GreenfootSound thunderStorm = new GreenfootSound("thunderstrike.mp3");
 
     public StoryScreen() {
-        thunderStorm.playLoop();
+        SoundController.startSound(SoundType.THUNDERSTORM, true);
         addObject(startStory, 800, 1600);
         fading.setTransparency(0);
         addObject(fading, 800, 400);
@@ -24,7 +23,8 @@ public class StoryScreen extends CatWorld {
         } else if (fading.getTransparency() < 255) { 
             fading.setTransparency(fading.getTransparency() +1) ;
         } else {
-            WorldController.switchToNextWorld(this);
+            SoundController.stopSound(SoundType.THUNDERSTORM);
+            WorldController.switchToNextWorld(this);  
         }
     }
 }

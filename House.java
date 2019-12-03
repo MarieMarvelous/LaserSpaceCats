@@ -21,13 +21,14 @@ public class House extends CatWorld {
     private static boolean itemSpawned = false;
     private static int x;
     private static int y;
-
-    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
-
+    
     public House() {
         super();
         //Sound
-        backgroundMusic.playLoop();
+        SoundController.startSound(SoundType.BACKGROUND_MUSIC, true);
+        //SoundController.startSound(SoundType.THUNDERSTORM, true);
+        SoundController.setVolume(SoundType.THUNDERSTORM, 0);
+        
 
         addObject(new CatHero(), 751, 542);
         this.showText("Welle 1", 700, 25);
