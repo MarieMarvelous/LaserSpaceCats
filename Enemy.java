@@ -147,7 +147,7 @@ public abstract class Enemy extends Entity {
         CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
         turnTowards(catHero.getX(), catHero.getY());
         startFrameCounting(30);
-        move(-60);
+        move(-5);
     }
 
     /*public void shootCatHero() {

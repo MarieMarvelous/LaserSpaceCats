@@ -9,8 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StoryScreen extends CatWorld {
     ScrollingStartScreen startStory = new ScrollingStartScreen();
     BlackImage fading = new BlackImage();
+    GreenfootSound thunderStorm = new GreenfootSound("thunderstrike.mp3");
 
     public StoryScreen() {
+        thunderStorm.playLoop();
         addObject(startStory, 800, 1600);
         fading.setTransparency(0);
         addObject(fading, 800, 400);
