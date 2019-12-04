@@ -65,6 +65,12 @@ public class House extends CatWorld {
         addObject(new HouseWallUpLeft(), 294, 61);
         addObject(new HouseWallUpRight(), 1210, 66);
         addObject(new HouseKitchenZeile(), 306, 366);
+        //addObject(new HouseChildsBed(), 755, 93);
+        //addObject(new HouseBedding(), 753, 125);
+        addObject(new HouseBedding2(), 752, 121);
+        addObject(new HouseMittelteilOben(), 637, 84);
+        addObject(new HouseWallElement(), 1013, 497);
+        addObject(new HouseWallElement2(), 470, 352);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,275,75);
