@@ -30,8 +30,7 @@ public class House extends CatWorld {
         addObject(new Shelf2(), 200, 30);
         addObject(new ShelfKitchen(), 260, 30);
         addObject(new Couch(), 260, 400);
-        addObject(new UpperLeftPiece(), 294, 62);
-        addObject(new UpperMiddle(), 707, 97);
+        addObject(new UpperLeftPiece(), 294, 62);;
         addObject(new UpperRightPiece(), 1209, 66);
         addObject(new Bed(), 1058, 172);
         addObject(new Bed(), 1245, 172);
