@@ -8,13 +8,36 @@ public class CatHero extends Hero {
     private final GreenfootImage imagef2;    
     private final GreenfootImage imagef3;
     private final GreenfootImage imagef4;
+    private final GreenfootImage imagef5;
+    private final GreenfootImage imagef6;
+    private final GreenfootImage imagef7;
+    private final GreenfootImage imagef8;
+    private final GreenfootImage imagef9;
+    private final GreenfootImage imagef10;
+    private final GreenfootImage imagef11;
+    private final GreenfootImage imagef12;
 
     public CatHero() {
         super(100);
+        //Level 1
         imagef1 = new GreenfootImage("Cat-f-1.png"); 
         imagef2 = new GreenfootImage("Cat-f-2.png");
         imagef3 = new GreenfootImage("Cat-f-3.png");
         imagef4 = new GreenfootImage("Cat-f-4.png");
+        //Level 2
+        imagef5 = new GreenfootImage("catherobrille1");
+        imagef6 = new GreenfootImage("catherobrille2");
+        //Level 3
+        imagef7 = new GreenfootImage("catheroarmor1");
+        imagef8 = new GreenfootImage("catheroarmor2");
+        //Level 4
+        imagef9 = new GreenfootImage("catherosonnenbrille1");
+        imagef10 = new GreenfootImage("catherosonnenbrille2");
+        // Level 5
+        imagef11 = new GreenfootImage("catherospace1");
+        imagef12 = new GreenfootImage("catherospace1");
+        
+        
         setImage(imagef1);
     }     
 
