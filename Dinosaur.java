@@ -7,11 +7,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Dinosaur extends Enemy {
+    public Dinosaur() {
+        damage = 5;
+        health = 6;
+        tempDamage = damage;
+    }
     public int giveDamage() {
-        return 5;
+        return damage;
     }
     public void act() 
     {
-        // Add your action code here.
+       // movement(5, 3, 8);
+        randomMovement(8, 5, 8);
+        super.act();
     }    
 }

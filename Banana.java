@@ -16,6 +16,8 @@ public class Banana extends Projectile {
         GreenfootImage image = this.getImage();
         image.scale(15, 15);
         this.setImage(image);
+        
+        damage = 1;
     }
 
     public int getSpeed() {

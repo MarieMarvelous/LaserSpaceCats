@@ -7,11 +7,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Squirrel extends Enemy {
+    
+    public Squirrel() {
+        damage = 5;
+        tempDamage = damage;
+    }
     public int giveDamage() {
-        return 5;
+        return damage;
     }
     public void act() {
-        movement(5, 3, 8);
+        randomMovement(5, 3, 8);
         super.act();
     }    
 }

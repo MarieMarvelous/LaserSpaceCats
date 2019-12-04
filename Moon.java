@@ -9,12 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Moon extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
-
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     public Moon() {
     super();
+        //Sound
+        backgroundMusic.playLoop();
         addObject(new CatHero(), 50, 50);
-        killableEnemies = 2;
+        killableEnemies = 4;
         spawnedEnemy();
+        //addHealthbar
+        Healthbar healthbar = new Healthbar();
+        addObject(healthbar,296,68);
+        
+        addObject(new Keycard(), 500, 100);
     }
     
     public void act() {
