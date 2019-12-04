@@ -394,11 +394,12 @@ public class Garden extends CatWorld {
         addObject(rain42,134,80);
         Rain rain43 = new Rain();
         addObject(rain43,432,68);
-        removeObject(rain2);
-        removeObject(rain31);
-        removeObject(rain32);
         rain4.setLocation(849,174);
         rain2 = new Rain();
         addObject(rain2,849,174);
+        Rain rain45 = new Rain();
+        addObject(rain45,808,86);
+        Rain rain46 = new Rain();
+        addObject(rain46,490,734);
     }
 }
