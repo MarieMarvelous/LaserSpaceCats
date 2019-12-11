@@ -12,12 +12,9 @@ public class Mouse extends Enemy {
     }
     
     public void act() {
-        randomMovement(5, 4, 10);
+        randomMovement(2, 50, 2);
         super.act();
-        if (Greenfoot.isKeyDown("r")) {
-            CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-            turnTowards(catHero.getX(), catHero.getY());
-        }
+
     }
     
 }

@@ -45,25 +45,34 @@ public abstract class Enemy extends Entity {
         image.scale(width, height);
         setImage(image);
     } 
-
+    
+    
     public void randomMovement(int randomForward, int randomTurn, int turn) {
+        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+        
         if (framesToCount == 0) {
-            CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-            if(Greenfoot.getRandomNumber(100) < 10) {
-                turnTowards(cat.getX(), cat.getY());
-            }
-            move(Greenfoot.getRandomNumber(10));
-            if(Greenfoot.getRandomNumber(10) <=randomTurn) {
-                turn(-turn);
-            }
-            if(Greenfoot.getRandomNumber(10) >=randomTurn) {
-                turn(turn);
+            if (!getObjectsInRange(400, CatHero.class).isEmpty()) {
+                if(Greenfoot.getRandomNumber(100) <= 90) {
+                    turnTowards(cat.getX(), cat.getY());
+                    move(5);
+                }
+            } else {
+                if(Greenfoot.getRandomNumber(100) <= randomTurn) {
+                    turn(-turn);
+                } else {
+                    if (Greenfoot.getRandomNumber(100) <= randomTurn) {
+                        turn(turn);
+                    }
+                }
+                move(randomForward);
             }
             if (isTouching(Artefact.class)) {
-                move(-randomForward);
+                move(-2);
             }
         }
-    }  
+    }
+        
+      
 
     public void runTowardsCatHero () {
         move(1);
