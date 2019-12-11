@@ -12,7 +12,7 @@ public class Mouse extends Enemy {
     }
     
     public void act() {
-        randomMovement(2, 50, 2);
+        randomMovement(2, 50, 20);
         super.act();
 
     }

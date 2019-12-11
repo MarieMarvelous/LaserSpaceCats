@@ -106,12 +106,12 @@ public class House extends CatWorld {
             }
 
             if (killedEnemies >= 19 && fithWaveReady) {
-                spawnedEnemy(8, 1000,700);
+                spawnedEnemy(8, 1300,700);
                 this.showText("Welle 5", 700, 25);
                 fithWaveReady = false;
             }
             if (killedEnemies >= 27 && sixthWaveReady) {
-                spawnedEnemy(8, 30,600);
+                spawnedEnemy(8, 150,600);
                 this.showText("Welle 6", 700, 25);
                 sixthWaveReady = false;
             }

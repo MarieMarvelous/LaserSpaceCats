@@ -58,10 +58,10 @@ public abstract class Enemy extends Entity {
                 }
             } else {
                 if(Greenfoot.getRandomNumber(100) <= randomTurn) {
-                    turn(-turn);
+                    turn(-  Greenfoot.getRandomNumber(turn));
                 } else {
                     if (Greenfoot.getRandomNumber(100) <= randomTurn) {
-                        turn(turn);
+                        turn(Greenfoot.getRandomNumber(turn));
                     }
                 }
                 move(randomForward);
