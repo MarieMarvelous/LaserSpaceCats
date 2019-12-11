@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class SewersPart11 here.
+ * Write a description of class SewerParts19 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SewersPart11 extends SewerPieces
+public class SewerParts19 extends SewerParts
 {
     /**
-     * Act - do whatever the SewersPart11 wants to do. This method is called whenever
+     * Act - do whatever the SewerParts19 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
