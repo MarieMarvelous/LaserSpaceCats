@@ -30,7 +30,9 @@ public abstract class Enemy extends Entity {
                     getWorld().addObject(new Glasses(), getX(), getY());
                 }
                 if(this instanceof BossDog ) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);
                     getWorld().addObject(new TinArmor(), getX(), getY());
+                    getWorld().removeObject(bosshealthbar);
                 }
                 if(this instanceof BossSlime) {
                     getWorld().addObject(new SunGlasses(), getX(), getY());
@@ -77,7 +79,7 @@ public abstract class Enemy extends Entity {
         int hearts = (int) Math.round(6.0 * percentageHealth);
         String imageName = hearts + "opponent.png";
         bosshealthbar.setImage(imageName);
-
+    
     }
     public void runTowardsCatHero () {
         move(1);

@@ -19,9 +19,10 @@ public class BossDog extends Enemy {
     
     public void act() {
         randomMovement(9, 4, 10);
+        updateBosshealthbar();
+        getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();
-        //updateBosshealthbar();
-        //getWorld().setPaintOrder(Bosshealthbar.class);
+        
     }
 
 }
