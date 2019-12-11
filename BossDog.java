@@ -14,7 +14,7 @@ public class BossDog extends Enemy {
     }
     
     public BossDog() {
-        super(50);
+        super(5);
     }
     
     public void act() {

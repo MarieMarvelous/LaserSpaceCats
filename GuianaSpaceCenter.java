@@ -12,6 +12,7 @@ public class GuianaSpaceCenter extends CatWorld {
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    Bosshealthbar bosshealthbar = new Bosshealthbar();
     public GuianaSpaceCenter() {
         super();
         //Sound
@@ -73,6 +74,7 @@ public class GuianaSpaceCenter extends CatWorld {
         if (killedEnemies >= 4 && thirdWaveReady) {
             spawnEnemy(EnemyType.APE, 2);
             thirdWaveReady = false;
+            
         }//Beide if-methoden
         checkForNextWorld(this);
     }

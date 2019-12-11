@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BossSlime extends Enemy {
     public BossSlime() {
-        super(50);
+        super(5);
         damage = 5;
         tempDamage = damage;
     }
@@ -19,6 +19,8 @@ public class BossSlime extends Enemy {
     {
         // movement(5, 3, 8);
         randomMovement(15, 13, 8);
+        updateBosshealthbar();
+        getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();
     }    
 }

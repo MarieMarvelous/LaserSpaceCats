@@ -17,7 +17,7 @@ public abstract class Enemy extends Entity {
     }    
 
     public Enemy(int health) {
-        this.maximalHealth = 50;
+        this.maximalHealth = health;
         this.health=health;
     }
 
@@ -27,19 +27,30 @@ public abstract class Enemy extends Entity {
             health -= Laser.DAMAGE;
             if(health <= 0) {
                 if(this instanceof BossMouse) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new Glasses(), getX(), getY());
                 }
                 if(this instanceof BossDog ) {
-                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);
-                    getWorld().addObject(new TinArmor(), getX(), getY());
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
                     getWorld().removeObject(bosshealthbar);
+                    getWorld().addObject(new TinArmor(), getX(), getY());
                 }
                 if(this instanceof BossSlime) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new SunGlasses(), getX(), getY());
                 }
-                /*   if(this instanceof BossScientist) {
-                getWorld().addObject(, getX(), getY());
-                }*/
+                if(this instanceof BossScientist) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
+                    getWorld().addObject(new Spacehelm(), getX(), getY());
+                }
+                if(this instanceof BossNapoleon) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
+                    getWorld().addObject(new Keycard(), getX(), getY());
+                }
 
                 getWorld().removeObject(this);
                 
