@@ -19,7 +19,6 @@ public class Sewers extends CatWorld {
         backgroundMusic.playLoop();
         killableEnemies = 3;
         addObject(new CatHero(), 50, 50);
-        spawnedEnemy(1);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
@@ -63,12 +62,12 @@ public class Sewers extends CatWorld {
         }
     }
     
-    public void spawnedEnemy(int n) {
-        for (int i = 0; i <= 2; i++) {            
-            addObject(new Rat(), Greenfoot.getRandomNumber(750) + 25, 400);
+    public void spawnedEnemy(int n, int xMin, int yMin) {
+        for (int i = 0; i < n; i++) {            
+            addObject(new Rat(), Greenfoot.getRandomNumber(750) + xMin, Greenfoot.getRandomNumber(400) + yMin);
         }
     }
- 
+    
     
    
 }

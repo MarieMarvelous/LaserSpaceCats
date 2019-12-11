@@ -8,10 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 
 public class Garden extends CatWorld {  
+    private static boolean firstWaveReady = true;
     private static boolean secondWaveReady = true;
     private static boolean thirdWaveReady = true;
     private static boolean fourthWaveReady = true;
     private static boolean fithWaveReady = true;
+    private static boolean sixthWaveReady = true;
+    private static boolean seventhWaveReady = true;
+    private static boolean eightWaveReady = true;
     private static boolean bossWaveReady = true;
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
 
@@ -57,11 +61,10 @@ public class Garden extends CatWorld {
         addObject(new TreeGroup(), 155, 65);
         addObject(new Mushrooms(), 200, 131);*/
 
-        addObject(new TinArmor(), 300, 800);
+
 
         //Spawn Objects in World
         addObject(new CatHero(),895,245);
-        spawnEnemy(EnemyType.SQUIRREL, 1);
 
         //addHealthbar
         Healthbar healthbar = new Healthbar();
@@ -70,31 +73,62 @@ public class Garden extends CatWorld {
     }
 
     public void act() {
-        if (killedEnemies >= 1 && secondWaveReady) {
-            spawnEnemy(EnemyType.SQUIRREL, 2);
-            secondWaveReady = false;
-        }
-        if (killedEnemies >= 3 && thirdWaveReady) {
-            spawnEnemy(EnemyType.SQUIRREL, 3);
-            thirdWaveReady = false;
-        }
-        if (killedEnemies >= 6 && fourthWaveReady) {
-            spawnEnemy(EnemyType.SQUIRREL, 5);
-            fourthWaveReady = false;
-        }
-        if (killedEnemies >= 11 && fithWaveReady) {
-            spawnEnemy(EnemyType.SQUIRREL, 8);
-            fithWaveReady = false;
-        }
-        if (killedEnemies >= 19 && bossWaveReady) {
-            spawnEnemy(EnemyType.BOSSDOG, 1);
-            bossWaveReady = false;
-        }
+        
+        if (firstWaveReady) {
+                spawnedEnemy(4, 20, 200);
+                this.showText("Welle 1", 700, 25);
+                firstWaveReady = false;
+            }
+            if (killedEnemies >= 4 && secondWaveReady) {
+                spawnedEnemy(3, 20, 200);
+                this.showText("Welle 2", 700, 25);
+                secondWaveReady = false;
+            }
+            if (killedEnemies >= 7 && thirdWaveReady) {
+                spawnedEnemy(5, 90,500);
+                this.showText("Welle 3", 700, 25);
+                thirdWaveReady = false;
+            }
+
+            if (killedEnemies >= 12 && fourthWaveReady) {
+                spawnedEnemy(7, 800,200);
+                this.showText("Welle 4", 700, 25);
+                fourthWaveReady = false;
+            }
+
+            if (killedEnemies >= 19 && fithWaveReady) {
+                spawnedEnemy(8, 1300,700);
+                this.showText("Welle 5", 700, 25);
+                fithWaveReady = false;
+            }
+            if (killedEnemies >= 27 && sixthWaveReady) {
+                spawnedEnemy(8, 150,600);
+                this.showText("Welle 6", 700, 25);
+                sixthWaveReady = false;
+            }
+            if (killedEnemies >= 35 && seventhWaveReady) {
+                spawnedEnemy(8, 800,200);
+                this.showText("Welle 7", 700, 25);
+                seventhWaveReady = false;
+            }
+            if (killedEnemies >= 43 && eightWaveReady) {
+                spawnedEnemy(10, 100,700);
+                this.showText("Welle 8", 700, 25);
+                eightWaveReady = false;
+            }
+
+            if (killedEnemies >= 53 && bossWaveReady) {
+                addObject(new BossDog(), 691, 571);
+                this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+                bossWaveReady = false;
+            }
+       
+
     }
 
-    public void spawnedEnemy() {
-        for (int i = 1; i <= killableEnemies; i++) {            
-            addObject(new Rat(), Greenfoot.getRandomNumber(750) + 25, 400);
+    public void spawnedEnemy(int n, int xMin, int yMin) {
+        for (int i = 0; i < n; i++) {            
+            addObject(new Squirrel(), Greenfoot.getRandomNumber(200)+xMin, Greenfoot.getRandomNumber(200)+yMin);
         }
     }
 
