@@ -61,6 +61,12 @@ public class Hero extends Actor {
         }
         updateHealthbar();
         getWorld().setPaintOrder(Healthbar.class);
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.stop();
+        }
+        if(Greenfoot.isKeyDown("r")){
+            Greenfoot.start();
+        }
     } 
 
     public void checkCollision(){

@@ -60,7 +60,7 @@ public class Garden extends CatWorld {
         addObject(new TinArmor(), 300, 800);
 
         //Spawn Objects in World
-        addObject(new CatHero(),895,245);
+        addObject(new CatHero(),885,260);
         spawnEnemy(EnemyType.SQUIRREL, 1);
 
         //addHealthbar
