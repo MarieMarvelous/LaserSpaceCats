@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public abstract class Enemy extends Entity {
     private int shotTimer;
-    int health;
+    public int health;
+    public int maximalHealth;
+  
 
     public abstract int giveDamage();
 
@@ -11,9 +13,12 @@ public abstract class Enemy extends Entity {
         checkForLaserCollision();
         //checkForCatCollision();
         countFrames();
+
     }    
 
-    public Enemy() {
+    public Enemy(int health) {
+        this.maximalHealth = 50;
+        this.health=health;
     }
 
     public void checkForLaserCollision() {
@@ -35,6 +40,7 @@ public abstract class Enemy extends Entity {
                 }*/
 
                 getWorld().removeObject(this);
+                
                 CatWorld.registerKill();
             }
         }
@@ -64,7 +70,15 @@ public abstract class Enemy extends Entity {
             }
         }
     }  
+    public void updateBosshealthbar()
+    {
+        Bosshealthbar bosshealthbar  = (Bosshealthbar) getWorld().getObjects(Bosshealthbar.class).get(0);
+        double percentageHealth = (health / (1.0 * maximalHealth)) + 0.02;
+        int hearts = (int) Math.round(6.0 * percentageHealth);
+        String imageName = hearts + "opponent.png";
+        bosshealthbar.setImage(imageName);
 
+    }
     public void runTowardsCatHero () {
         move(1);
         if (getWorld().getObjects(CatHero.class).isEmpty()) return; 

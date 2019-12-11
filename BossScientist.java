@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BossScientist extends Enemy {
     
     public BossScientist() {
+        super(50);
         damage = 10;
-        health = 4;
         tempDamage = damage;
     }
     public int giveDamage() {

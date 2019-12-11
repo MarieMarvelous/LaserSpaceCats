@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rat extends Enemy {
     public Rat() {
+        super(5);
         resizeImage(30, 30);
         damage = 5;
         tempDamage = damage;

@@ -22,6 +22,8 @@ public class House extends CatWorld {
     private static int x;
     private static int y;
     
+    Bosshealthbar bosshealthbar = new Bosshealthbar();
+    
     public House() {
         super();
         //Sound
@@ -74,6 +76,8 @@ public class House extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,275,75);
+        Bosshealthbar bosshealthbar = new Bosshealthbar();
+        
 
         fading.setTransparency(255);
         addObject(fading, 800, 400);
@@ -129,6 +133,7 @@ public class House extends CatWorld {
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossMouse(), 691, 571);
                 this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+                addObject(bosshealthbar,700,75);
                 bossWaveReady = false;
             }        
         }

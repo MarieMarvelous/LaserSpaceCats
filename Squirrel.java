@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Squirrel extends Enemy {
     
     public Squirrel() {
+        super(1);
         damage = 5;
         tempDamage = damage;
     }
