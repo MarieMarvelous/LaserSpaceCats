@@ -19,8 +19,7 @@ public class House extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     private static boolean itemSpawned = false;
-    private static int x;
-    private static int y;
+
     
     public House() {
         super();
