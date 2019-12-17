@@ -11,9 +11,6 @@ public class CatWorld extends World {
     public CatWorld() {
         super(1600, 800, 1);
         Greenfoot.setSpeed(50);
-        
-
-        //prepare();
     }
 
     public void act() {
@@ -76,15 +73,5 @@ public class CatWorld extends World {
                 break;
             }
         }
-    }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-        
-        
     }
 }
