@@ -28,6 +28,35 @@ public class Sewers extends CatWorld {
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
+
+        addObject(new SunGlasses(), 600, 600);
+
+        //TunnelVision
+        // tunnelVision tunnelVision = new tunnelVision();
+        // addObject(tunnelVision,1141,364);
+
+        //Map-Design
+        addObject(new SewerParts1(), 305, 396);
+        addObject(new SewerParts2(), 223, 585);
+        addObject(new SewerParts3(), 832, 91);
+        addObject(new SewerParts4(), 308, 241);
+        //addObject(new SewerParts5(), 24, 208);
+        addObject(new SewerParts6(), 459, 556);
+        addObject(new SewerParts7(), 588, 556);
+        addObject(new SewerParts8(), 1029, 604);
+        addObject(new SewerParts9(), 864, 763);
+        addObject(new SewerParts10(), 1314, 720);
+        addObject(new SewerParts11(), 1591, 557);
+        addObject(new SewerParts12(), 746, 435);
+        addObject(new SewerParts13(), 1002, 434);
+        addObject(new SewerParts14(), 678, 176);
+        addObject(new SewerParts15(), 1050, 174);
+        addObject(new SewerParts16(), 1581, 171);
+        addObject(new SewerParts17(), 604, 695);
+        addObject(new SewerParts17(), 1481, 695);
+        addObject(new SewerParts18(), 1509, 385);
+        addObject(new SewerParts19(), 1442, 314);
+        addObject(new SewerParts20(), 1465, 291);
         
         //TunnelVision
         tunnelVision tunnelVision = new tunnelVision();
