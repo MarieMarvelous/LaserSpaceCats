@@ -64,6 +64,7 @@ public class Sewers extends CatWorld {
     }
     
     public void act() {
+        setPaintOrder(Healthbar.class, tunnelVision.class);
         if (firstWaveReady) {
                 spawnedEnemy(4, 20, 200);
                 this.showText("Welle 1", 700, 25);

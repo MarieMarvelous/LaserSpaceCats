@@ -15,10 +15,15 @@ public class tunnelVision extends HUD
     public void act() 
     {
         updateTunnelVision();
+        
     }    
     
     public void updateTunnelVision(){
+        
         Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
         setLocation(CatHero.getX(), CatHero.getY());    
     }
+    
+   
+    
 }

@@ -65,7 +65,7 @@ public class Garden extends CatWorld {
 
 
         //Spawn Objects in World
-        addObject(new CatHero(),895,245);
+        addObject(new CatHero(),885,260);
 
         //addHealthbar
         Healthbar healthbar = new Healthbar();

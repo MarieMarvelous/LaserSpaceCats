@@ -11,17 +11,20 @@ public class CatWorld extends World {
     public CatWorld() {
         super(1600, 800, 1);
         Greenfoot.setSpeed(50);
+        
+
+        //prepare();
     }
 
     public void act() {
         //this.showText("Press \"Enter\" ", 400, 250);
+
         if(Greenfoot.isKeyDown("enter")){
-            WorldController.switchToNextWorld(this);
+                WorldController.switchToNextWorld(this);
         }  
-        //WorldController.switchToNextWorld(this);
+        
 
     }
-
 
     public void checkForNextWorld(World world) {
         /*      if (killedEnemies >= killableEnemies)  {
@@ -75,4 +78,13 @@ public class CatWorld extends World {
         }
     }
 
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        
+        
+    }
 }
