@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public abstract class Enemy extends Entity {
     private int shotTimer;
-    int health;
+    public int health;
+    public int maximalHealth;
+  
 
     public abstract int giveDamage();
 
@@ -13,7 +15,9 @@ public abstract class Enemy extends Entity {
         countFrames();
     }    
 
-    public Enemy() {
+    public Enemy(int health) {
+        this.maximalHealth = health;
+        this.health=health;
     }
 
     public void checkForLaserCollision() {
@@ -22,17 +26,30 @@ public abstract class Enemy extends Entity {
             health -= Laser.DAMAGE;
             if(health <= 0) {
                 if(this instanceof BossMouse) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new Glasses(), getX(), getY());
                 }
                 if(this instanceof BossDog ) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new TinArmor(), getX(), getY());
                 }
                 if(this instanceof BossSlime) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new SunGlasses(), getX(), getY());
                 }
-                /*   if(this instanceof BossScientist) {
-                getWorld().addObject(, getX(), getY());
-                }*/
+                if(this instanceof BossScientist) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
+                    getWorld().addObject(new Spacehelm(), getX(), getY());
+                }
+                if(this instanceof BossNapoleon) {
+                    Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
+                    getWorld().removeObject(bosshealthbar);
+                    getWorld().addObject(new Keycard(), getX(), getY());
+                }
 
                 getWorld().removeObject(this);
                 CatWorld.registerKill();
@@ -47,33 +64,35 @@ public abstract class Enemy extends Entity {
     } 
     
     
-    public void randomMovement(int randomForward, int randomTurn, int turn) {
-        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-        
+     public void randomMovement(int randomForward, int randomTurn, int turn) {
         if (framesToCount == 0) {
-            if (!getObjectsInRange(450, CatHero.class).isEmpty()) {
-                if(Greenfoot.getRandomNumber(100) <= 90) {
-                    turnTowards(cat.getX(), cat.getY());
-                    move(Greenfoot.getRandomNumber(15));
-                }
-            } else {
-                if(Greenfoot.getRandomNumber(100) <= randomTurn) {
-                    turn(-  Greenfoot.getRandomNumber(turn));
-                } else {
-                    if (Greenfoot.getRandomNumber(100) <= randomTurn) {
-                        turn(Greenfoot.getRandomNumber(turn));
-                    }
-                }
-                move(randomForward);
+            CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+            if(Greenfoot.getRandomNumber(100) < 10) {
+                turnTowards(cat.getX(), cat.getY());
+            }
+            move(Greenfoot.getRandomNumber(10));
+            if(Greenfoot.getRandomNumber(10) <=randomTurn) {
+                turn(-turn);
+            }
+            if(Greenfoot.getRandomNumber(10) >=randomTurn) {
+                turn(turn);
             }
             if (isTouching(Artefact.class)) {
-                move(-2);
+                move(-randomForward);
             }
         }
     }
         
       
-
+    public void updateBosshealthbar()
+    {
+        Bosshealthbar bosshealthbar  = (Bosshealthbar) getWorld().getObjects(Bosshealthbar.class).get(0);
+        double percentageHealth = (health / (1.0 * maximalHealth)) + 0.02;
+        int hearts = (int) Math.round(6.0 * percentageHealth);
+        String imageName = hearts + "opponent.png";
+        bosshealthbar.setImage(imageName);
+    
+    }
     public void runTowardsCatHero () {
         move(1);
         if (getWorld().getObjects(CatHero.class).isEmpty()) return; 

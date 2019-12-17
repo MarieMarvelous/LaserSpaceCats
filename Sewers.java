@@ -19,6 +19,7 @@ public class Sewers extends CatWorld {
     private static boolean bossWaveReady = true;
    
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    Bosshealthbar bosshealthbar = new Bosshealthbar();
     public Sewers() {
         super();
         //Sound
@@ -80,6 +81,7 @@ public class Sewers extends CatWorld {
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossSlime(), 691, 571);
                 this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+                addObject(bosshealthbar,700,75);
                 bossWaveReady = false;
             }        
 }

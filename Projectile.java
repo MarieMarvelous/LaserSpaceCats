@@ -10,12 +10,12 @@ public abstract class Projectile extends Entity {
             getWorld().removeObject(this);
         }
         
-            else {  
+           /** else {  
                 if (isTouching(Artefact.class)) {
                 getWorld().removeObjects(getIntersectingObjects(Projectile.class));
                 getWorld().removeObject(this);
             }
-    }
+    } **/
    }   
 }
 

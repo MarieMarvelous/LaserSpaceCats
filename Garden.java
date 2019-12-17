@@ -17,6 +17,7 @@ public class Garden extends CatWorld {
     private static boolean seventhWaveReady = true;
     private static boolean eightWaveReady = true;
     private static boolean bossWaveReady = true;
+    Bosshealthbar bosshealthbar = new Bosshealthbar();
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
 
     public Garden() {
@@ -120,6 +121,7 @@ public class Garden extends CatWorld {
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossDog(), 691, 571);
                 this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+                addObject(bosshealthbar,700,75);
                 bossWaveReady = false;
             }
        

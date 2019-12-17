@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BossScientist extends Enemy {
     
     public BossScientist() {
+        super(5);
         damage = 10;
-        health = 4;
         tempDamage = damage;
     }
     public int giveDamage() {
@@ -20,6 +20,8 @@ public class BossScientist extends Enemy {
     {
         // movement(5, 3, 8);
         randomMovement(5, 3, 8);
+        updateBosshealthbar();
+        getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();
     }    
 }

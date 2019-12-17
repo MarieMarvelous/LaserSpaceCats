@@ -20,6 +20,7 @@ public class GuianaSpaceCenter extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    Bosshealthbar bosshealthbar = new Bosshealthbar();
     public GuianaSpaceCenter() {
         super();
         //Sound
@@ -119,6 +120,7 @@ public class GuianaSpaceCenter extends CatWorld {
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossScientist(), 691, 571);
                 this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
+                addObject(bosshealthbar,700,75);
                 bossWaveReady = false;
             }
     }
