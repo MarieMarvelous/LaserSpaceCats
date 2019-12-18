@@ -120,8 +120,8 @@ public class Garden extends CatWorld {
 
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossDog(), 691, 571);
-                this.showText("!!! ACHTUNG BOSS WELLE !!!", 700, 25);
-                addObject(bosshealthbar,700,75);
+                this.showText("!!! ACHTUNG BOSS WELLE !!!", 800, 25);
+                addObject(bosshealthbar,800,100);
                 bossWaveReady = false;
             }
        
@@ -437,5 +437,12 @@ public class Garden extends CatWorld {
         addObject(rain45,808,86);
         Rain rain46 = new Rain();
         addObject(rain46,490,734);
+        removeObject(rain39);
+        removeObject(gardenBaumkrone);
+        rain38.setLocation(1509,515);
+        removeObject(rain38);
+
+        GardenBaumkrone gardenBaumkrone2 = new GardenBaumkrone();
+        addObject(gardenBaumkrone2,1509,515);
     }
 }
