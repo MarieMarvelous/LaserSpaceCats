@@ -49,12 +49,12 @@ public abstract class Enemy extends Entity {
     
     public void randomMovement(int randomForward, int randomTurn, int turn) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-        
+        int mf = Greenfoot.getRandomNumber(10);
         if (framesToCount == 0) {
             if (!getObjectsInRange(450, CatHero.class).isEmpty()) {
                 if(Greenfoot.getRandomNumber(100) <= 90) {
                     turnTowards(cat.getX(), cat.getY());
-                    move(Greenfoot.getRandomNumber(15));
+                    move(mf);
                 }
             } else {
                 if(Greenfoot.getRandomNumber(100) <= randomTurn) {
@@ -67,7 +67,7 @@ public abstract class Enemy extends Entity {
                 move(randomForward);
             }
             if (isTouching(Artefact.class)) {
-                move(-2);
+                move(-mf-1);
             }
         }
     }
