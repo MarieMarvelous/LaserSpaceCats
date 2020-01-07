@@ -10,6 +10,7 @@ public class BossScientist extends Enemy {
     
     public BossScientist() {
         super(5);
+        resizeImage(72, 135);
         damage = 10;
         tempDamage = damage;
     }

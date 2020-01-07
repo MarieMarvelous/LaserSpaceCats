@@ -80,7 +80,6 @@ public class Hero extends Actor {
             }
         }
         String leben = String.valueOf(health);
-        getWorld().showText(leben, 100, 100);
         if(health <= 0){
             Greenfoot.stop();
             getWorld().showText("Game Over", 400, 225);
