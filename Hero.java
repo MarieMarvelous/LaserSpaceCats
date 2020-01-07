@@ -74,7 +74,7 @@ public class Hero extends Actor {
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
                 health-=enemy.giveDamage();
-                enemy.drawBack();
+                //enemy.drawBack();
             }
         }
         String leben = String.valueOf(health);
