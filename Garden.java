@@ -25,42 +25,6 @@ public class Garden extends CatWorld {
         //Sound
         backgroundMusic.playLoop();
         //Leveldesign
-        /*addObject(new StonePattern(), 777, 426);
-        addObject(new StonePattern(), 777, 376);
-        addObject(new StonePattern(), 727, 376);
-        addObject(new StonePattern(), 727, 426);
-        addObject(new StonePattern(), 777, 326);
-        addObject(new StonePattern(), 777, 276);
-        addObject(new StonePattern(), 727, 276);
-        addObject(new StonePattern(), 727, 326);
-        addObject(new StonePattern(), 777, 226);
-        addObject(new StonePattern(), 777, 176);
-        addObject(new StonePattern(), 727, 176);
-        addObject(new StonePattern(), 727, 226);
-        addObject(new StonePattern(), 777, 126);
-        addObject(new StonePattern(), 777, 76);
-        addObject(new StonePattern(), 727, 76);
-        addObject(new StonePattern(), 727, 126);
-        addObject(new StonePattern(), 777, 26);
-        addObject(new StonePattern(), 777, 0);
-        addObject(new StonePattern(), 727, 0);
-        addObject(new StonePattern(), 727, 26);
-
-        addObject(new Flowers(), 664, 430);
-        addObject(new Flowers(), 65, 365);
-
-        addObject(new Fence1(), 700, 40);
-        addObject(new Fence1(), 700, 110);
-        addObject(new Fence1(), 700, 180);
-        addObject(new Fence1(), 700, 250);
-        addObject(new Fence1(), 700, 320);
-        addObject(new Fence1(), 700, 390);
-        addObject(new Fence1(), 700, 460);
-
-        addObject(new Mushrooms(), 236, 100);
-        addObject(new Mushrooms(), 120, 140);
-        addObject(new TreeGroup(), 155, 65);
-        addObject(new Mushrooms(), 200, 131);*/
 
 
 
@@ -77,50 +41,41 @@ public class Garden extends CatWorld {
         
         if (firstWaveReady) {
                 spawnedEnemy(4, 20, 200);
-                this.showText("Welle 1", 700, 25);
                 firstWaveReady = false;
             }
             if (killedEnemies >= 4 && secondWaveReady) {
                 spawnedEnemy(3, 20, 200);
-                this.showText("Welle 2", 700, 25);
                 secondWaveReady = false;
             }
             if (killedEnemies >= 7 && thirdWaveReady) {
                 spawnedEnemy(5, 90,500);
-                this.showText("Welle 3", 700, 25);
                 thirdWaveReady = false;
             }
 
             if (killedEnemies >= 12 && fourthWaveReady) {
                 spawnedEnemy(7, 800,200);
-                this.showText("Welle 4", 700, 25);
                 fourthWaveReady = false;
             }
 
             if (killedEnemies >= 19 && fithWaveReady) {
                 spawnedEnemy(8, 1300,700);
-                this.showText("Welle 5", 700, 25);
                 fithWaveReady = false;
             }
             if (killedEnemies >= 27 && sixthWaveReady) {
                 spawnedEnemy(8, 150,600);
-                this.showText("Welle 6", 700, 25);
                 sixthWaveReady = false;
             }
             if (killedEnemies >= 35 && seventhWaveReady) {
                 spawnedEnemy(8, 800,200);
-                this.showText("Welle 7", 700, 25);
                 seventhWaveReady = false;
             }
             if (killedEnemies >= 43 && eightWaveReady) {
                 spawnedEnemy(10, 100,700);
-                this.showText("Welle 8", 700, 25);
                 eightWaveReady = false;
             }
 
             if (killedEnemies >= 53 && bossWaveReady) {
                 addObject(new BossDog(), 691, 571);
-                this.showText("!!! ACHTUNG BOSS WELLE !!!", 800, 25);
                 addObject(bosshealthbar,800,100);
                 bossWaveReady = false;
             }

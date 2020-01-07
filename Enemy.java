@@ -23,7 +23,7 @@ public abstract class Enemy extends Entity {
     public void checkForLaserCollision() {
         if (isTouching(Laser.class)) {
             getWorld().removeObjects(getIntersectingObjects(Laser.class));
-            health -= Laser.DAMAGE;
+            health -= Math.round(Laser.DAMAGE * WorldController.getDamageMultiplier());
             if(health <= 0) {
                 if(this instanceof BossMouse) {
                     Bosshealthbar bosshealthbar = getWorld().getObjects(Bosshealthbar.class).get(0);                    
@@ -122,10 +122,10 @@ public abstract class Enemy extends Entity {
     public void itemDrop(EnemyType BossType, int x, int y) {
         switch(BossType) {
             case BOSSMOUSE:
-                getWorld().addObject(new Glasses(), x, y); 
-                break;
+            getWorld().addObject(new Glasses(), x, y); 
+            break;
             default:
-                break;   
+            break;   
         }      
     }
 
@@ -147,18 +147,18 @@ public abstract class Enemy extends Entity {
     startFrameCounting(30);
 
     move(-60);
-    }
+    }*/
 
     // ab "if (catHero.isMoved == false) {" wieder auskommentieren!
 
     public void drawBack() {
-    CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-    turnTowards(catHero.getX(), catHero.getY());
-    startFrameCounting(30);
-    move(-5);
+        CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+        turnTowards(catHero.getX(), catHero.getY());
+        startFrameCounting(30);
+        move(-5);
     }
 
-    public void shootCatHero() {
+    /*public void shootCatHero() {
     if (canSee (CatHero.class))  //läuft los wenn Ape CatHero sieht. Object in Range?
     {
     getWorld().addObject(new Banana(80), this.getX(), this.getY()); 

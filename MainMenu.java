@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends CatWorld
 {
-
     /**
      * Constructor for objects of class MainMenu.
      * 
@@ -20,6 +19,10 @@ public class MainMenu extends CatWorld
         MenuStart menuStart = new MenuStart();
         addObject(menuStart,1200,356);
         setPaintOrder(MenuStart.class, MenuExit.class);
+    }
+    
+    public void act() {
+        
     }
 
 }

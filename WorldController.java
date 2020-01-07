@@ -12,12 +12,15 @@ public class WorldController {
     
     public WorldController() {
     }
+    
+    private static void createMainMenu() {
+        MainMenu world = new MainMenu();
+        Greenfoot.setWorld(world);
+    }
 
-    private static World createStoryScreen() {
+    private static void createStoryScreen() {
         StoryScreen world = new StoryScreen();
         Greenfoot.setWorld(world);
-        CatWorld.killedEnemies = 0;
-        return world;
     }
 
     private static World createHouse() {
@@ -71,13 +74,11 @@ public class WorldController {
 
     public static void switchToNextWorld(World world) {
         if (world instanceof CatWorld) {
-            World StoryScreen = createStoryScreen();
+            createMainMenu();
         }
-
-        /*if (world instanceof CatWorld) {
-        World testWorld = createTestWorld();
-        //testWorld.showText("TestWorld", 200, 200);
-        }*/
+        if (world instanceof MainMenu) {
+            createStoryScreen();
+        }
         if (world instanceof StoryScreen) {
             World house = createHouse();
             house.showText("house", 200, 200);
@@ -107,5 +108,13 @@ public class WorldController {
     
     public static void increaseHeroLife(int amount) {
         catHero.increaseMaximumHealth(amount);
+    }
+    
+    public static void increaseDamageMultiplier(double amount) {
+        catHero.increaseDamageMultiplier(amount);
+    }
+    
+    public static double getDamageMultiplier() {
+        return catHero.damageMultiplier;
     }
 }

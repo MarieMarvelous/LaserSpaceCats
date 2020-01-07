@@ -13,11 +13,11 @@ public abstract class Loot extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Loot() {
-        
+
     }
-    
+
     public abstract void onCollect();
-    
+
     public void act() 
     {
         if (isTouching(CatHero.class)) {
@@ -26,8 +26,12 @@ public abstract class Loot extends Actor
             onCollect();
         }
     }
-    
+
     public void increaseLife(int amount) {
         WorldController.increaseHeroLife(amount);
+    }
+
+    public void increaseDamageMultiplier(double amount) {
+        WorldController.increaseDamageMultiplier(amount);
     }
 }

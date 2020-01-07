@@ -13,6 +13,6 @@ public class Spacehelm extends Loot
     }
     
     public void onCollect() {
-        
+        increaseLife(25);
     }
 }

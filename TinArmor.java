@@ -13,6 +13,6 @@ public class TinArmor extends Loot
     }
     
     public void onCollect() {
-        
+        increaseLife(25);
     }
 }

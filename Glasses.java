@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Glasses extends Loot {
     public void onCollect() {
-        increaseLife(25);
+        increaseDamageMultiplier(0.5);
     }
     
     public void act() {

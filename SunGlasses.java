@@ -13,6 +13,6 @@ public class SunGlasses extends Loot
     }  
     
     public void onCollect() {
-        
+        increaseDamageMultiplier(1.5);
     }
 }

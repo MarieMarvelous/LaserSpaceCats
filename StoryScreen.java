@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StoryScreen extends CatWorld {
     ScrollingStartScreen startStory = new ScrollingStartScreen();
     BlackImage fading = new BlackImage();
+    boolean isSecondFrame = false; //Allow for scrolling with only half the speed.
 
     public StoryScreen() {
         SoundController.startSound(SoundType.THUNDERSTORM, true);
@@ -18,8 +19,14 @@ public class StoryScreen extends CatWorld {
     }
 
     public void act() {
+        
         if(startStory.getY() != 0) {
-            startStory.setLocation(startStory.getX(), startStory.getY()-1);
+            if (isSecondFrame) {
+                startStory.setLocation(startStory.getX(), startStory.getY()-1);
+                isSecondFrame = false;
+            } else {
+                isSecondFrame = true;
+            }
         } else if (fading.getTransparency() < 255) { 
             fading.setTransparency(fading.getTransparency() +1) ;
         } else {

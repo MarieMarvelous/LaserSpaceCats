@@ -9,6 +9,7 @@ public class Hero extends Actor {
     public int cooldown;
     public static int defaultCooldown;
     public boolean isMoved;
+    public double damageMultiplier;
 
     public Hero(int health) {
         this.maximalHealth = health;
@@ -17,6 +18,7 @@ public class Hero extends Actor {
         this.defaultCooldown = 10;
         this.cooldown = this.defaultCooldown;
         this.isMoved = false;
+        this.damageMultiplier = 1.0;
     }
 
     public void movement(String left, String right, String up, String down, int speed) {
@@ -74,7 +76,7 @@ public class Hero extends Actor {
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
                 health-=enemy.giveDamage();
-                //enemy.drawBack();
+                enemy.drawBack();
             }
         }
         String leben = String.valueOf(health);
@@ -120,5 +122,9 @@ public class Hero extends Actor {
     public void increaseMaximumHealth(int delta) {
         this.maximalHealth += delta;
         this.health = this.maximalHealth; //Full Heal for the sake of the level Up!
+    }
+    
+    public void increaseDamageMultiplier(double delta) {
+        this.damageMultiplier += delta;
     }
 }
