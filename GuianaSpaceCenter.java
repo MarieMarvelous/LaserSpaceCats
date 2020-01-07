@@ -21,11 +21,12 @@ public class GuianaSpaceCenter extends CatWorld {
     private static boolean bossWaveReady = true;
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     Bosshealthbar bosshealthbar = new Bosshealthbar();
-    public GuianaSpaceCenter() {
+    
+    public GuianaSpaceCenter(CatHero hero) {
         super();
         //Sound
         backgroundMusic.playLoop();
-        addObject(new CatHero(), 1388, 780);
+        addObject(hero, 1388, 780);
 
    
         //Leveldesign startet hier

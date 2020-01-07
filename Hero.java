@@ -11,7 +11,7 @@ public class Hero extends Actor {
     public boolean isMoved;
 
     public Hero(int health) {
-        this.maximalHealth = 100;
+        this.maximalHealth = health;
         this.health=health;
         this.canShootAgain = true;
         this.defaultCooldown = 10;
@@ -74,7 +74,7 @@ public class Hero extends Actor {
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
                 health-=enemy.giveDamage();
-                enemy.drawBack();
+                //enemy.drawBack();
             }
         }
         String leben = String.valueOf(health);
@@ -115,5 +115,10 @@ public class Hero extends Actor {
         String imageName = hearts + "hearts.png";
         healthbar.setImage(imageName);
 
+    }
+    
+    public void increaseMaximumHealth(int delta) {
+        this.maximalHealth += delta;
+        this.health = this.maximalHealth; //Full Heal for the sake of the level Up!
     }
 }

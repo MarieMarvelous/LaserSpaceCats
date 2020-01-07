@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Keycard extends Loot
 {
-    /**
-     * Act - do whatever the Keycard wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
+    public void act() {
         super.act();
-    }    
+    }   
+    
+    public void onCollect() {
+        
+    }
 }

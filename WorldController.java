@@ -8,6 +8,8 @@ import greenfoot.*;
  */
 public class WorldController {
 
+    private static CatHero catHero = new CatHero(); //the one and only!
+    
     public WorldController() {
     }
 
@@ -19,35 +21,35 @@ public class WorldController {
     }
 
     private static World createHouse() {
-        House world = new House();
+        House world = new House(catHero);
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createGarden() {
-        Garden world = new Garden();
+        Garden world = new Garden(catHero);
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createSewers() {
-        Sewers world = new Sewers();
+        Sewers world = new Sewers(catHero);
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createGuianaSpaceCenter() {
-        GuianaSpaceCenter world = new GuianaSpaceCenter();
+        GuianaSpaceCenter world = new GuianaSpaceCenter(catHero);
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createMoon() {
-        Moon world = new Moon();
+        Moon world = new Moon(catHero);
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
@@ -101,5 +103,9 @@ public class WorldController {
             ending.showText("Ending", 200, 200);
             Greenfoot.stop();
         }
+    }
+    
+    public static void increaseHeroLife(int amount) {
+        catHero.increaseMaximumHealth(amount);
     }
 }

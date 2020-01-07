@@ -18,11 +18,12 @@ public class Moon extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
-    public Moon() {
+    
+    public Moon(CatHero hero) {
     super();
         //Sound
         backgroundMusic.playLoop();
-        addObject(new CatHero(), 800, 500);
+        addObject(hero, 800, 500);
 
         //addHealthbar
         Healthbar healthbar = new Healthbar();

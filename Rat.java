@@ -4,7 +4,7 @@ public class Rat extends Enemy {
     public Rat() {
         super(5);
         resizeImage(30, 30);
-        damage = 5;
+        damage = 3;
         tempDamage = damage;
     }
     

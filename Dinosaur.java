@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dinosaur extends Enemy {
     public Dinosaur() {
         super(5);
+        resizeImage(60, 40);
         damage = 5;
         tempDamage = damage;
     }

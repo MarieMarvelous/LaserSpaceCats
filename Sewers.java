@@ -20,11 +20,12 @@ public class Sewers extends CatWorld {
 
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     Bosshealthbar bosshealthbar = new Bosshealthbar();
-    public Sewers() {
+    
+    public Sewers(CatHero hero) {
         super();
         //Sound
         backgroundMusic.playLoop();
-        addObject(new CatHero(), 50, 50);
+        addObject(hero, 50, 50);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);

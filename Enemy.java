@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 public abstract class Enemy extends Entity {
     private int shotTimer;
     public int health;
     public int maximalHealth;
-  
 
     public abstract int giveDamage();
 
@@ -62,8 +62,7 @@ public abstract class Enemy extends Entity {
         image.scale(width, height);
         setImage(image);
     } 
-    
-    
+
     public void randomMovement(int randomForward, int randomTurn, int turn) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         int mf = Greenfoot.getRandomNumber(10);
@@ -88,22 +87,23 @@ public abstract class Enemy extends Entity {
             }
         }
     }
-        
-      
-    public void updateBosshealthbar()
-    {
+
+    public void updateBosshealthbar() {
         Bosshealthbar bosshealthbar  = (Bosshealthbar) getWorld().getObjects(Bosshealthbar.class).get(0);
         double percentageHealth = (health / (1.0 * maximalHealth)) + 0.02;
         int hearts = (int) Math.round(6.0 * percentageHealth);
         String imageName = hearts + "opponent.png";
         bosshealthbar.setImage(imageName);
-    
     }
+
     public void runTowardsCatHero () {
         move(1);
-        if (getWorld().getObjects(CatHero.class).isEmpty()) return; 
-        Actor CatHero = (Actor)getWorld().getObjects(CatHero.class).get(0);
-        turnTowards(CatHero.getX(), CatHero.getY()); 
+        List<CatHero> catHeroes = getWorld().getObjects(CatHero.class);
+        if (catHeroes.isEmpty()) {
+            return; 
+        }
+        Actor catHero = catHeroes.get(0);
+        turnTowards(catHero.getX(), catHero.getY()); 
     }
 
     public void shootBanana() { 
@@ -114,55 +114,29 @@ public abstract class Enemy extends Entity {
         shotTimer = 50; //je höher desto langsamer kommen die Bananen
     }
 
-    public boolean canSee(Class clss) {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
+    public boolean canSee(Class cls) {
+        Actor actor = getOneObjectAtOffset(0, 0, cls);
         return actor != null;        
     }
 
-    public void Hitbox() {
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX()-10,getY());
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX()+10,getY());
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX()+10,getY());
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX()-10,getY());
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX(),getY()-10);
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX(),getY()+10);
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX(),getY()+10);
-    }
-    if (this.isTouching(Enemy.class)) {
-    setLocation(getX(),getY()-10);
-    }
+    public void itemDrop(EnemyType BossType, int x, int y) {
+        switch(BossType) {
+            case BOSSMOUSE:
+                getWorld().addObject(new Glasses(), x, y); 
+                break;
+            default:
+                break;   
+        }      
     }
 
- public void itemDrop(EnemyType BossType, int x, int y) {
-    switch(BossType) {
-    case BOSSMOUSE: 
-    Glasses Brille = new Glasses();
-    getWorld().addObject(Brille, x, y);    
-    }      
-    }
-
-    public void checkForCatCollision() {
+    /*public void checkForCatCollision() {
     if (isTouching(CatHero.class) && framesToCount == 0) {
     CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
     turnTowards(catHero.getX(), catHero.getY());
-    System.out.println("CatHero.isMoved = " + catHero.isMoved);
     }
-    } 
+    } */
 
-   /* if (catHero.isMoved == false) {
+    /* if (catHero.isMoved == false) {
     //System.out.println("isTouching(CatHero) = ");
     catHero.checkCollision(); 
     System.out.println("CatHero.isMoved = " + catHero.isMoved);
@@ -178,10 +152,10 @@ public abstract class Enemy extends Entity {
     // ab "if (catHero.isMoved == false) {" wieder auskommentieren!
 
     public void drawBack() {
-        CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-        turnTowards(catHero.getX(), catHero.getY());
-        startFrameCounting(30);
-        move(-5);
+    CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
+    turnTowards(catHero.getX(), catHero.getY());
+    startFrameCounting(30);
+    move(-5);
     }
 
     public void shootCatHero() {

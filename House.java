@@ -23,15 +23,14 @@ public class House extends CatWorld {
     
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     
-    public House() {
+    public House(CatHero hero) {
         super();
         //Sound
         SoundController.startSound(SoundType.BACKGROUND_MUSIC, true);
-        //SoundController.startSound(SoundType.THUNDERSTORM, true);
         SoundController.setVolume(SoundType.THUNDERSTORM, 0);
         
 
-        addObject(new CatHero(), 751, 542);
+        addObject(hero, 751, 542);
         //this.showText("Welle 1", 700, 25);
         //Leveldesign starts here
         addObject(new Shelf2(), 200, 30);
@@ -70,7 +69,7 @@ public class House extends CatWorld {
         //addObject(new HouseBedding(), 753, 125);
         addObject(new HouseBedding2(), 752, 121);
         addObject(new HouseMittelteilOben(), 637, 84);
-        addObject(new HouseWallElement(), 1013, 497);
+        addObject(new HouseWallElement(), 1013, 447);
         addObject(new HouseWallElement2(), 470, 352);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
