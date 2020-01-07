@@ -64,21 +64,27 @@ public abstract class Enemy extends Entity {
     } 
     
     
-     public void randomMovement(int randomForward, int randomTurn, int turn) {
+    public void randomMovement(int randomForward, int randomTurn, int turn) {
+        CatHero cat = getWorld().getObjects(CatHero.class).get(0);
+        int mf = Greenfoot.getRandomNumber(10);
         if (framesToCount == 0) {
-            CatHero cat = getWorld().getObjects(CatHero.class).get(0);
-            if(Greenfoot.getRandomNumber(100) < 10) {
-                turnTowards(cat.getX(), cat.getY());
-            }
-            move(Greenfoot.getRandomNumber(10));
-            if(Greenfoot.getRandomNumber(10) <=randomTurn) {
-                turn(-turn);
-            }
-            if(Greenfoot.getRandomNumber(10) >=randomTurn) {
-                turn(turn);
+            if (!getObjectsInRange(450, CatHero.class).isEmpty()) {
+                if(Greenfoot.getRandomNumber(100) <= 90) {
+                    turnTowards(cat.getX(), cat.getY());
+                    move(mf);
+                }
+            } else {
+                if(Greenfoot.getRandomNumber(100) <= randomTurn) {
+                    turn(-  Greenfoot.getRandomNumber(turn));
+                } else {
+                    if (Greenfoot.getRandomNumber(100) <= randomTurn) {
+                        turn(Greenfoot.getRandomNumber(turn));
+                    }
+                }
+                move(randomForward);
             }
             if (isTouching(Artefact.class)) {
-                move(-randomForward);
+                move(-mf-1);
             }
         }
     }
@@ -113,7 +119,7 @@ public abstract class Enemy extends Entity {
         return actor != null;        
     }
 
-    /*public void Hitbox() {
+    public void Hitbox() {
     if (this.isTouching(Enemy.class)) {
     setLocation(getX()-10,getY());
     }
@@ -138,25 +144,25 @@ public abstract class Enemy extends Entity {
     if (this.isTouching(Enemy.class)) {
     setLocation(getX(),getY()-10);
     }
-    }*/
+    }
 
-    /*  public void itemDrop(EnemyType BossType, int x, int y) {
+ public void itemDrop(EnemyType BossType, int x, int y) {
     switch(BossType) {
     case BOSSMOUSE: 
     Glasses Brille = new Glasses();
     getWorld().addObject(Brille, x, y);    
     }      
-    }*/
+    }
 
-    /* public void checkForCatCollision() {
+    public void checkForCatCollision() {
     if (isTouching(CatHero.class) && framesToCount == 0) {
     CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
     turnTowards(catHero.getX(), catHero.getY());
     System.out.println("CatHero.isMoved = " + catHero.isMoved);
     }
-    } */
+    } 
 
-    /*if (catHero.isMoved == false) {
+   /* if (catHero.isMoved == false) {
     //System.out.println("isTouching(CatHero) = ");
     catHero.checkCollision(); 
     System.out.println("CatHero.isMoved = " + catHero.isMoved);
@@ -167,7 +173,7 @@ public abstract class Enemy extends Entity {
     startFrameCounting(30);
 
     move(-60);
-    }*/
+    }
 
     // ab "if (catHero.isMoved == false) {" wieder auskommentieren!
 
@@ -178,7 +184,7 @@ public abstract class Enemy extends Entity {
         move(-5);
     }
 
-    /*public void shootCatHero() {
+    public void shootCatHero() {
     if (canSee (CatHero.class))  //läuft los wenn Ape CatHero sieht. Object in Range?
     {
     getWorld().addObject(new Banana(80), this.getX(), this.getY()); 
