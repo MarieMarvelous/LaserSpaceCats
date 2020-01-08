@@ -13,6 +13,6 @@ public class HealingFish extends Loot
     }
 
     public void onCollect() {
-        heal(15);
+        heal(5);
     }
 }

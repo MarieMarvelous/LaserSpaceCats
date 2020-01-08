@@ -22,10 +22,10 @@ public abstract class Loot extends Actor
     {
         if (isTouching(CatHero.class)) {
             onCollect();
-            getWorld().removeObject(this);
             if (!(this instanceof HealingFish)) {
                 WorldController.switchToNextWorld(getWorld());
             }
+            getWorld().removeObject(this);
         }
     }
     
