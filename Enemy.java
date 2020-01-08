@@ -92,12 +92,13 @@ public abstract class Enemy extends Entity {
             return false;
         } else {
             CatHero hero = catHeroInRange.get(0);
-            return !isWayBlocked(hero.getX(), hero.getY(), this.getX(), this.getY());
+            boolean wayFree = !isWayBlocked(hero.getX(), hero.getY(), this.getX(), this.getY());
+            return wayFree;
         }
     }
 
     public boolean isWayBlocked(int x1, int y1, int x2, int y2) {
-        double anstiegGerade = ((x2-x1)*1.0) / ((y2-y1)*1.0);
+        double anstiegGerade = ((y2-y1)*1.0) / ((x2-x1)*1.0);
         int currentX = x1;
         int currentY = y1;
         while (currentX != x2) {
@@ -172,7 +173,7 @@ public abstract class Enemy extends Entity {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         int mf = Greenfoot.getRandomNumber(3) + 2;
         if (framesToCount == 0) {
-            if (!getObjectsInRange(450, CatHero.class).isEmpty()) {
+            if (canSeeCatHero(400)) {
                 if(Greenfoot.getRandomNumber(100) <= 90) {
                     turnTowards(cat.getX(), cat.getY());
                     move(mf);

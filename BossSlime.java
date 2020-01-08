@@ -19,7 +19,7 @@ public class BossSlime extends Enemy {
     public void act() 
     {
         // movement(5, 3, 8);
-        randomMovement(15, 13, 8);
+        randomMovement(1, 13, 8);
         updateBosshealthbar();
         getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();

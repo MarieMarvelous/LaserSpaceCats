@@ -19,7 +19,7 @@ public class BossMouse extends Enemy {
     }
 
     public void act() {
-        randomMovement(4, 15, 15);
+        randomMovement(2, 15, 15);
         updateBosshealthbar();
         getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();

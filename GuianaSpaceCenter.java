@@ -76,42 +76,42 @@ public class GuianaSpaceCenter extends CatWorld {
 
     public void act() {
         if (firstWaveReady) {
-                spawnedEnemy(4, 20, 200);
+                spawnedEnemy(4, 471, 259);
                 firstWaveReady = false;
             }
             if (killedEnemies >= 4 && secondWaveReady) {
-                spawnedEnemy(3, 20, 200);
+                spawnedEnemy(3, 319, 579);
                 secondWaveReady = false;
             }
             if (killedEnemies >= 7 && thirdWaveReady) {
-                spawnedEnemy(5, 90,500);
+                spawnedEnemy(5, 859, 633);
                 thirdWaveReady = false;
             }
 
             if (killedEnemies >= 12 && fourthWaveReady) {
-                spawnedEnemy(7, 800,200);
+                spawnedEnemy(7, 824, 343);
                 fourthWaveReady = false;
             }
 
             if (killedEnemies >= 19 && fithWaveReady) {
-                spawnedEnemy(8, 1000,700);
+                spawnedEnemy(8, 471, 259);
                 fithWaveReady = false;
             }
             if (killedEnemies >= 27 && sixthWaveReady) {
-                spawnedEnemy(8, 30,600);
+                spawnedEnemy(8, 824, 343);
                 sixthWaveReady = false;
             }
             if (killedEnemies >= 35 && seventhWaveReady) {
-                spawnedEnemy(8, 800,200);
+                spawnedEnemy(8, 319, 579);
                 seventhWaveReady = false;
             }
             if (killedEnemies >= 43 && eigthWaveReady) {
-                spawnedEnemy(10, 100,700);
+                spawnedEnemy(10, 859, 633);
                 eigthWaveReady = false;
             }
 
             if (killedEnemies >= 53 && bossWaveReady) {
-                addObject(new BossScientist(), 691, 571);
+                addObject(new BossScientist(), 467, 429);
                 addObject(new Bosshealthbar(),800,100);
                 bossWaveReady = false;
             }

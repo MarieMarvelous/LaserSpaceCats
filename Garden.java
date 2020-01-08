@@ -19,6 +19,7 @@ public class Garden extends CatWorld {
     private static boolean bossWaveReady = true;
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    Dog dog = new Dog();
 
     public Garden() {
         super();
@@ -53,7 +54,7 @@ public class Garden extends CatWorld {
             }
 
             if (killedEnemies >= 12 && fourthWaveReady) {
-                spawnedEnemy(7, 800,200);
+                spawnedEnemy(7, 806,351);
                 fourthWaveReady = false;
             }
 
@@ -66,7 +67,7 @@ public class Garden extends CatWorld {
                 sixthWaveReady = false;
             }
             if (killedEnemies >= 35 && seventhWaveReady) {
-                spawnedEnemy(8, 800,200);
+                spawnedEnemy(8, 806,351);
                 seventhWaveReady = false;
             }
             if (killedEnemies >= 43 && eightWaveReady) {
@@ -75,6 +76,7 @@ public class Garden extends CatWorld {
             }
 
             if (killedEnemies >= 53 && bossWaveReady) {
+                removeObject(dog);
                 addObject(new BossDog(), 691, 571);
                 addObject(bosshealthbar,800,100);
                 bossWaveReady = false;
@@ -392,12 +394,10 @@ public class Garden extends CatWorld {
         addObject(rain45,808,86);
         Rain rain46 = new Rain();
         addObject(rain46,490,734);
-        removeObject(rain39);
-        removeObject(gardenBaumkrone);
         rain38.setLocation(1509,515);
-        removeObject(rain38);
 
         GardenBaumkrone gardenBaumkrone2 = new GardenBaumkrone();
         addObject(gardenBaumkrone2,1509,515);
+        addObject(dog,191,403);
     }
 }

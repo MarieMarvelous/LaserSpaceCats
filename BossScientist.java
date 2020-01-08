@@ -20,7 +20,7 @@ public class BossScientist extends Enemy {
     public void act() 
     {
         // movement(5, 3, 8);
-        randomMovement(5, 3, 8);
+        randomMovement(3, 3, 8);
         updateBosshealthbar();
         getWorld().setPaintOrder(Bosshealthbar.class);
         super.act();
