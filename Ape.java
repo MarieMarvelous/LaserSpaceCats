@@ -19,7 +19,7 @@ public class Ape extends Enemy {
     }
     
     public void act() {
-        randomMovement(4, 30, 8);
+        randomMovement(3, 30, 8);
         super.act();
     }   
 }

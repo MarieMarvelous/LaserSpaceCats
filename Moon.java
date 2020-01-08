@@ -90,6 +90,45 @@ public class Moon extends CatWorld {
      */
     private void prepare()
     {
-        
+
+        TriceratopsTurned triceratopsTurned = new TriceratopsTurned();
+        addObject(triceratopsTurned,723,138);
+        triceratopsTurned.setLocation(671,82);
+        Stone stone = new Stone();
+        addObject(stone,872,90);
+        stone.setLocation(958,173);
+        Stone stone2 = new Stone();
+        addObject(stone2,78,459);
+        stone2.setLocation(62,438);
+        Stone stone3 = new Stone();
+        addObject(stone3,940,716);
+        stone3.setLocation(998,767);
+        Stone stone4 = new Stone();
+        addObject(stone4,110,188);
+        stone4.setLocation(144,136);
+        Stone stone5 = new Stone();
+        addObject(stone5,1315,237);
+        stone5.setLocation(1294,284);
+        Stone stone6 = new Stone();
+        addObject(stone6,1295,471);
+        stone6.setLocation(1189,445);
+        Stone stone7 = new Stone();
+        addObject(stone7,557,237);
+        stone7.setLocation(594,239);
+        Stone stone8 = new Stone();
+        addObject(stone8,1461,718);
+        stone8.setLocation(1367,637);
+        Stone stone9 = new Stone();
+        addObject(stone9,705,722);
+        stone9.setLocation(751,781);
+        BrokenSpaceStation brokenSpaceStation = new BrokenSpaceStation();
+        addObject(brokenSpaceStation,1077,114);
+        BrokenSpaceStation brokenSpaceStation2 = new BrokenSpaceStation();
+        addObject(brokenSpaceStation2,1047,114);
+        brokenSpaceStation2.setLocation(373,745);
+        brokenSpaceStation.setLocation(1100,76);
+        brokenSpaceStation2.setLocation(379,737);
+        removeObject(brokenSpaceStation2);
+        brokenSpaceStation.setLocation(1054,175);
     }
 }

@@ -1,19 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TriceratopsTurned here.
+ * Write a description of class Stone here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TriceratopsTurned extends MoonObject
+public class Stone extends MoonObject
 {
-    public TriceratopsTurned() {
-    resizeImage(110, 43);
-    turn(50);
-}
+    public Stone() {
+        resizeImage(27, 27);
+    }
     /**
-     * Act - do whatever the TriceratopsTurned wants to do. This method is called whenever
+     * Act - do whatever the Stone wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

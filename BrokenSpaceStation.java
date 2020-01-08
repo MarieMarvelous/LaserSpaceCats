@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TriceratopsTurned here.
+ * Write a description of class BrokenSpaceStation here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TriceratopsTurned extends MoonObject
+public class BrokenSpaceStation extends MoonObject
 {
-    public TriceratopsTurned() {
-    resizeImage(110, 43);
-    turn(50);
-}
+    public BrokenSpaceStation() {
+        resizeImage(56, 52);
+        turn(67);
+    }
+    
     /**
-     * Act - do whatever the TriceratopsTurned wants to do. This method is called whenever
+     * Act - do whatever the BrokenSpaceStation wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
