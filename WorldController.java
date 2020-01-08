@@ -97,6 +97,14 @@ public class WorldController {
         return catHero.damageMultiplier;
     }
     
+    public static void heal(int amount) {
+        if ((catHero.health + amount) > catHero.maximalHealth) {
+            catHero.health = catHero.maximalHealth;
+        } else {
+            catHero.health += amount;
+        }
+    }
+    
     public static CatHero getCatHero() {
         return catHero;
     }

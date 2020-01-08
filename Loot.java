@@ -21,9 +21,11 @@ public abstract class Loot extends Actor
     public void act() 
     {
         if (isTouching(CatHero.class)) {
-            //nextWorldReady = true;
-            WorldController.switchToNextWorld(getWorld());
             onCollect();
+            getWorld().removeObject(this);
+            if (!(this instanceof HealingFish)) {
+                WorldController.switchToNextWorld(getWorld());
+            }
         }
     }
     
@@ -35,6 +37,10 @@ public abstract class Loot extends Actor
 
     public void increaseLife(int amount) {
         WorldController.increaseHeroLife(amount);
+    }
+    
+    public void heal(int amount) {
+        WorldController.heal(amount);
     }
 
     public void increaseDamageMultiplier(double amount) {

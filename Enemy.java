@@ -2,6 +2,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 public abstract class Enemy extends Entity {
+    private static final int DROP_CHANCE_MOUSE = 10;
+    private static final int DROP_CHANCE_SQUIRREL = 15;
+    private static final int DROP_CHANCE_RAT = 25;
+    private static final int DROP_CHANCE_APE = 15;
+    private static final int DROP_CHANCE_DINO = 25;
+    
     private int shotTimer;
     public int health;
     public int maximalHealth;
@@ -50,10 +56,31 @@ public abstract class Enemy extends Entity {
                     getWorld().removeObject(bosshealthbar);
                     getWorld().addObject(new Keycard(), getX(), getY());
                 }
+                if(this instanceof Mouse) {
+                    dropHealingFish(DROP_CHANCE_MOUSE, this.getX(), this.getY());
+                }
+                if(this instanceof Squirrel) {
+                    dropHealingFish(DROP_CHANCE_SQUIRREL, this.getX(), this.getY());
+                }
+                if(this instanceof Rat) {
+                    dropHealingFish(DROP_CHANCE_RAT, this.getX(), this.getY());
+                }
+                if(this instanceof Ape) {
+                    dropHealingFish(DROP_CHANCE_APE, this.getX(), this.getY());
+                }
+                if(this instanceof Dinosaur) {
+                    dropHealingFish(DROP_CHANCE_DINO, this.getX(), this.getY());
+                }
 
                 getWorld().removeObject(this);
                 CatWorld.registerKill();
             }
+        }
+    }
+    
+    private void dropHealingFish(int chance, int x, int y) {
+        if (Greenfoot.getRandomNumber(100) < chance) {
+            getWorld().addObject(new HealingFish(), x, y);
         }
     }
 
