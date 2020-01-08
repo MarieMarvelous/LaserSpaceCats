@@ -20,7 +20,7 @@ public class Garden extends CatWorld {
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
 
-    public Garden(CatHero hero) {
+    public Garden() {
         super();
         //Sound
         backgroundMusic.playLoop();
@@ -29,7 +29,7 @@ public class Garden extends CatWorld {
 
 
         //Spawn Objects in World
-        addObject(hero,885,260);
+        addObject(WorldController.getCatHero(), 885, 260);
 
         //addHealthbar
         Healthbar healthbar = new Healthbar();

@@ -24,35 +24,35 @@ public class WorldController {
     }
 
     private static World createHouse() {
-        House world = new House(catHero);
+        House world = new House();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createGarden() {
-        Garden world = new Garden(catHero);
+        Garden world = new Garden();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createSewers() {
-        Sewers world = new Sewers(catHero);
+        Sewers world = new Sewers();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createGuianaSpaceCenter() {
-        GuianaSpaceCenter world = new GuianaSpaceCenter(catHero);
+        GuianaSpaceCenter world = new GuianaSpaceCenter();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
     }
 
     private static World createMoon() {
-        Moon world = new Moon(catHero);
+        Moon world = new Moon();
         Greenfoot.setWorld(world);
         CatWorld.killedEnemies = 0;
         return world;
@@ -95,5 +95,9 @@ public class WorldController {
     
     public static double getDamageMultiplier() {
         return catHero.damageMultiplier;
+    }
+    
+    public static CatHero getCatHero() {
+        return catHero;
     }
 }

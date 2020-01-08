@@ -20,11 +20,11 @@ public class Moon extends CatWorld {
     GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     
 
-    public Moon(CatHero hero) {
+    public Moon() {
         super();
         //Sound
         backgroundMusic.playLoop();
-        addObject(hero, 800, 500);
+        addObject(WorldController.getCatHero(), 800, 500);
         addObject(new DeathStar(),1240,724);
         addObject(new Triceratops(), 250, 524);
         //addHealthbar

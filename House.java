@@ -21,13 +21,13 @@ public class House extends CatWorld {
     private static boolean itemSpawned = false;
 
     Bosshealthbar bosshealthbar = new Bosshealthbar();
-    public House(CatHero hero) {
+    public House() {
         super();
         //Sound
         SoundController.startSound(SoundType.BACKGROUND_MUSIC, true);
         SoundController.setVolume(SoundType.THUNDERSTORM, 0);
 
-        addObject(hero, 751, 542);
+        addObject(WorldController.getCatHero(), 751, 542);
         //Leveldesign starts here
         addObject(new UpperLeftPiece(), 294, 62);
         addObject(new UpperRightPiece(), 1209, 66);
