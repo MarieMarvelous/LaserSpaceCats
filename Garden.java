@@ -24,6 +24,7 @@ public class Garden extends CatWorld {
     public Garden() {
         super();
         //Sound
+        boolean isPlaying = backgroundMusic.isPlaying();
         backgroundMusic.playLoop();
         //Leveldesign
 

@@ -13,7 +13,7 @@ public class StoryScreen extends CatWorld {
     boolean isSkipped = false;
 
     public StoryScreen() {
-        SoundController.startSound(SoundType.THUNDERSTORM, true);
+        SoundController.startSound("thunderstrike.mp3", true);
         addObject(startStory, 800, 1600);
         fading.setTransparency(0);
         addObject(fading, 800, 400);
@@ -22,7 +22,7 @@ public class StoryScreen extends CatWorld {
     public void act() {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if (Greenfoot.isKeyDown("enter") || (mouse != null && mouse.getButton() == 1)) {
-            SoundController.stopSound(SoundType.THUNDERSTORM);
+            SoundController.stopSound("thunderstrike.mp3");
             WorldController.switchToNextWorld(this);
         }
         
@@ -36,7 +36,7 @@ public class StoryScreen extends CatWorld {
         } else if (fading.getTransparency() < 255) { 
             fading.setTransparency(fading.getTransparency() +1) ;
         } else {
-            SoundController.stopSound(SoundType.THUNDERSTORM);
+            SoundController.stopSound("thunderstrike.mp3");
             WorldController.switchToNextWorld(this);  
         }
     }

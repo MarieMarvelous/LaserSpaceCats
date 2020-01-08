@@ -19,13 +19,16 @@ public class House extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     private static boolean itemSpawned = false;
+    
+    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
+    GreenfootSound thunderstorm = new GreenfootSound("thunderstrike.mp3");
 
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     public House() {
         super();
         //Sound
-        SoundController.startSound(SoundType.BACKGROUND_MUSIC, true);
-        SoundController.setVolume(SoundType.THUNDERSTORM, 0);
+        backgroundMusic.playLoop();
+        thunderstorm.playLoop();
 
         addObject(WorldController.getCatHero(), 751, 542);
         //Leveldesign starts here
