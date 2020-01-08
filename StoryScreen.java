@@ -10,6 +10,7 @@ public class StoryScreen extends CatWorld {
     ScrollingStartScreen startStory = new ScrollingStartScreen();
     BlackImage fading = new BlackImage();
     boolean isSecondFrame = false; //Allow for scrolling with only half the speed.
+    boolean isSkipped = false;
 
     public StoryScreen() {
         SoundController.startSound(SoundType.THUNDERSTORM, true);
@@ -19,6 +20,11 @@ public class StoryScreen extends CatWorld {
     }
 
     public void act() {
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        if (Greenfoot.isKeyDown("enter") || (mouse != null && mouse.getButton() == 1)) {
+            SoundController.stopSound(SoundType.THUNDERSTORM);
+            WorldController.switchToNextWorld(this);
+        }
         
         if(startStory.getY() != 0) {
             if (isSecondFrame) {

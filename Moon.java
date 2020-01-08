@@ -26,6 +26,7 @@ public class Moon extends CatWorld {
         backgroundMusic.playLoop();
         addObject(hero, 800, 500);
         addObject(new DeathStar(),1240,724);
+        addObject(new Triceratops(), 250, 524);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);

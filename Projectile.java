@@ -1,6 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public abstract class Projectile extends Entity {
+    public int timeToLive;
+    
     public abstract int getSpeed();
     public int angle;
 

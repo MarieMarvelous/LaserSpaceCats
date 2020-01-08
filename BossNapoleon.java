@@ -13,7 +13,8 @@ public class BossNapoleon extends Enemy {
     }
     
     public BossNapoleon() {
-        super(10);
+        super(90);
+        resizeImage(54, 87);
     }
     
     public void act() {

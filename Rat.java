@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rat extends Enemy {
     public Rat() {
-        super(5);
+        super(6);
         resizeImage(30, 30);
         damage = 3;
         tempDamage = damage;
@@ -13,7 +13,7 @@ public class Rat extends Enemy {
     }
 
     public void act() {
-        randomMovement(5, 3, 8);
+        randomMovement(1, 35, 8);
         super.act();
     }    
 }

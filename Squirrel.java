@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Squirrel extends Enemy {
     
     public Squirrel() {
-        super(1);
+        super(4);
         damage = 5;
         tempDamage = damage;
     }
@@ -17,7 +17,7 @@ public class Squirrel extends Enemy {
         return damage;
     }
     public void act() {
-        randomMovement(3, 40 , 10);
+        randomMovement(2, 40, 10);
         super.act();
     }    
 }

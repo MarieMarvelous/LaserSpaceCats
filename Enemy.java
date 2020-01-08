@@ -57,12 +57,6 @@ public abstract class Enemy extends Entity {
         }
     }
 
-    public void resizeImage(int width, int height) {
-        GreenfootImage image =getImage();
-        image.scale(width, height);
-        setImage(image);
-    } 
-
     public void randomMovement(int randomForward, int randomTurn, int turn) {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         int mf = Greenfoot.getRandomNumber(10);
@@ -72,19 +66,15 @@ public abstract class Enemy extends Entity {
                     turnTowards(cat.getX(), cat.getY());
                     move(mf);
                 }
-            } else {
-                if(Greenfoot.getRandomNumber(100) <= randomTurn) {
-                    turn(-  Greenfoot.getRandomNumber(turn));
-                } else {
-                    if (Greenfoot.getRandomNumber(100) <= randomTurn) {
-                        turn(Greenfoot.getRandomNumber(turn));
-                    }
-                }
-                move(randomForward);
+            } else if (Greenfoot.getRandomNumber(100) <= randomTurn) {
+                turn(-Greenfoot.getRandomNumber(turn));
+            } else if (Greenfoot.getRandomNumber(100) <= randomTurn) {
+                turn(Greenfoot.getRandomNumber(turn));
             }
-            if (isTouching(Artefact.class)) {
-                move(-mf-1);
-            }
+            move(randomForward);
+        }
+        if (isTouching(Artefact.class)) {
+            move(-mf-1);
         }
     }
 

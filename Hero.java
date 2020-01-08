@@ -81,8 +81,7 @@ public class Hero extends Actor {
         }
         String leben = String.valueOf(health);
         if(health <= 0){
-            Greenfoot.stop();
-            getWorld().showText("Game Over", 400, 225);
+            WorldController.switchToNextWorld(new CatWorld());
         }
     }
 
@@ -96,7 +95,7 @@ public class Hero extends Actor {
 
     public void checkForShooting() {
         MouseInfo mouse = Greenfoot.getMouseInfo();
-        if (mouse != null && Greenfoot.getMouseInfo().getButton() == 1) {
+        if (mouse != null && mouse.getButton() == 1) {
             shootLaser(getMouseDirection(mouse));
         }
     }    

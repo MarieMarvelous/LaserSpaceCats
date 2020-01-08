@@ -26,6 +26,12 @@ public abstract class Loot extends Actor
             onCollect();
         }
     }
+    
+    public void resizeImage(int width, int height) {
+        GreenfootImage image = getImage();
+        image.scale(width, height);
+        setImage(image);
+    } 
 
     public void increaseLife(int amount) {
         WorldController.increaseHeroLife(amount);

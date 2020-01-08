@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ape extends Enemy {
     
     public Ape() {
-        super(5);
+        super(6);
         damage = 5;
         tempDamage = damage;
     }
@@ -19,14 +19,7 @@ public class Ape extends Enemy {
     }
     
     public void act() {
-        // movement(5, 3, 8);
-        randomMovement(7, 5, 8);
+        randomMovement(4, 30, 8);
         super.act();
-        //shootBanana();
-        //shootCatHero();
-        //shootBanana();
-        //super.canSee();
-        
-        
     }   
 }

@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TinArmor extends Loot
 {
+    public TinArmor() {
+        resizeImage(15, 30);
+    }
+    
     public void act() {
         super.act();
     }

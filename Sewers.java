@@ -67,42 +67,42 @@ public class Sewers extends CatWorld {
     public void act() {
         setPaintOrder(Healthbar.class, tunnelVision.class);
         if (firstWaveReady) {
-            spawnedEnemy(4, 20, 200);
+            spawnedEnemy(4, 576, 313);
             firstWaveReady = false;
         }
         if (killedEnemies >= 4 && secondWaveReady) {
-            spawnedEnemy(3, 20, 200);
+            spawnedEnemy(3, 1305, 319);
             secondWaveReady = false;
         }
         if (killedEnemies >= 7 && thirdWaveReady) {
-            spawnedEnemy(5, 90,500);
+            spawnedEnemy(5, 561, 738);
             thirdWaveReady = false;
         }
 
         if (killedEnemies >= 12 && fourthWaveReady) {
-            spawnedEnemy(7, 800,200);
+            spawnedEnemy(7, 1305, 319);
             fourthWaveReady = false;
         }
 
         if (killedEnemies >= 19 && fithWaveReady) {
-            spawnedEnemy(8, 1000,700);
+            spawnedEnemy(8, 1440, 726);
             fithWaveReady = false;
         }
         if (killedEnemies >= 27 && sixthWaveReady) {
-            spawnedEnemy(8, 30,600);
+            spawnedEnemy(8, 576, 313);
             sixthWaveReady = false;
         }
         if (killedEnemies >= 35 && seventhWaveReady) {
-            spawnedEnemy(8, 800,200);
+            spawnedEnemy(8, 1305, 319);
             seventhWaveReady = false;
         }
         if (killedEnemies >= 43 && eigthWaveReady) {
-            spawnedEnemy(10, 100,700);
+            spawnedEnemy(10, 561, 738);
             eigthWaveReady = false;
         }
 
         if (killedEnemies >= 53 && bossWaveReady) {
-            addObject(new BossSlime(), 691, 571);
+            addObject(new BossSlime(), 1099, 352);
             addObject(bosshealthbar,800,100);
             bossWaveReady = false;
         }        

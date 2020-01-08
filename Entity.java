@@ -8,6 +8,12 @@ public abstract class Entity extends Actor {
     public void act() {
 
     }  
+    
+    public void resizeImage(int width, int height) {
+        GreenfootImage image = getImage();
+        image.scale(width, height);
+        setImage(image);
+    } 
 
     /**
      * Move an Entity into the direction it is currently facing

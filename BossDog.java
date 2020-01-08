@@ -14,7 +14,8 @@ public class BossDog extends Enemy {
     }
     
     public BossDog() {
-        super(5);
+        super(30);
+        resizeImage(50, 50);
     }
     
     public void act() {

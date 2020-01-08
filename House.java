@@ -28,11 +28,7 @@ public class House extends CatWorld {
         SoundController.setVolume(SoundType.THUNDERSTORM, 0);
 
         addObject(hero, 751, 542);
-        //this.showText("Welle 1", 700, 25);
         //Leveldesign starts here
-        addObject(new Shelf2(), 200, 30);
-        addObject(new ShelfKitchen(), 260, 30);
-        addObject(new Couch(), 260, 400);
         addObject(new UpperLeftPiece(), 294, 62);
         addObject(new UpperRightPiece(), 1209, 66);
         addObject(new Bed(), 1058, 172);
@@ -71,7 +67,6 @@ public class House extends CatWorld {
 
         fading.setTransparency(255);
         addObject(fading, 800, 400);
-        prepare();
     }
 
     public void act() {
@@ -126,13 +121,5 @@ public class House extends CatWorld {
         for (int i = 0; i < n; i++) {            
             addObject(new Mouse(), Greenfoot.getRandomNumber(100)+xMin, Greenfoot.getRandomNumber(50)+yMin);
         }
-    }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
     }
 }

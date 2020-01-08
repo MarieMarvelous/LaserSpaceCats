@@ -18,8 +18,7 @@ public class Dinosaur extends Enemy {
     }
     public void act() 
     {
-       // movement(5, 3, 8);
-        randomMovement(8, 5, 8);
+        randomMovement(8, 25, 8);
         super.act();
     }    
 }
