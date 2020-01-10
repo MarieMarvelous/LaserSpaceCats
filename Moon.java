@@ -29,6 +29,7 @@ public class Moon extends CatWorld {
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
         prepare();
+        //WorldController.setCurrentLevel(this);
     }
 
     public void act() {

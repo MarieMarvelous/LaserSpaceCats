@@ -11,6 +11,7 @@ public class CatWorld extends World {
     public CatWorld() {
         super(1600, 800, 1);
         Greenfoot.setSpeed(50);
+        WorldController.setCurrentLevel(this);
     }
 
     public void act() {

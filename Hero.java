@@ -83,6 +83,15 @@ public class Hero extends Actor {
         }
         String leben = String.valueOf(health);
         if(health <= 0){
+            YouDied overlay = new YouDied();
+            overlay.setTransparency(0);
+            WorldController.addActorToCurrentWorld(overlay, 800, 400);
+            while (overlay.getTransparency() < 255) {
+                int currentTransparency = overlay.getTransparency();
+                overlay.setTransparency(++currentTransparency);
+                Greenfoot.delay(1);
+            }
+            Greenfoot.delay(500);
             WorldController.switchToNextWorld(new CatWorld());
         }
     }

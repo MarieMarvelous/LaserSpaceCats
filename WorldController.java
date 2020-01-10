@@ -10,6 +10,8 @@ public class WorldController {
 
     private static CatHero catHero = new CatHero(); //the one and only!
     
+    private static World currentWorld;
+    
     public WorldController() {
     }
     
@@ -67,19 +69,24 @@ public class WorldController {
         }
         if (world instanceof StoryScreen) {
             World house = createHouse();
+            currentWorld = house;
         }
         if (world instanceof House) {
             SoundController.stopSound("thunderstrike.mp3");
             World garden = createGarden();
+            currentWorld = garden;
         }
         if (world instanceof Garden) {
             World sewers = createSewers();
+            currentWorld = sewers;
         }
         if (world instanceof Sewers) {
             World guianaSpaceCenter = createGuianaSpaceCenter();
+            currentWorld = guianaSpaceCenter;
         }
         if (world instanceof GuianaSpaceCenter) {
             World moon = createMoon();
+            currentWorld = moon;
         }
         if (world instanceof Moon) {
             createMainMenu();
@@ -108,5 +115,13 @@ public class WorldController {
     
     public static CatHero getCatHero() {
         return catHero;
+    }
+    
+    public static void addActorToCurrentWorld(Actor actor, int x, int y) {
+        currentWorld.addObject(actor, x, y);
+    }
+    
+    public static void setCurrentLevel(CatWorld world) {
+        currentWorld = world;
     }
 }
