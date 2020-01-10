@@ -18,9 +18,22 @@ public class Sewers extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     Bosshealthbar bosshealthbar = new Bosshealthbar();
-    
+
     public Sewers() {
         super();
+
+        //init
+        firstWaveReady = true;
+        secondWaveReady = true;
+        thirdWaveReady = true;
+        fourthWaveReady = true;
+        fithWaveReady = true;
+        sixtWaveReady = true;
+        seventhWaveReady = true;
+        sixthWaveReady = true;
+        eigthWaveReady = true;
+        bossWaveReady = true;
+
         //Sound
         SoundController.startSound("RaMxGF.mp3", true);
         addObject(WorldController.getCatHero(), 50, 50);
@@ -105,5 +118,4 @@ public class Sewers extends CatWorld {
         }
     }
 
-   
 }

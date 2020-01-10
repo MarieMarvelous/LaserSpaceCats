@@ -23,6 +23,20 @@ public class House extends CatWorld {
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     public House() {
         super();
+
+        //init
+        firstWaveReady = true;
+        secondWaveReady = true;
+        thirdWaveReady = true;
+        fourthWaveReady = true;
+        fithWaveReady = true;
+        sixtWaveReady = true;
+        seventhWaveReady = true;
+        sixthWaveReady = true;
+        eigthWaveReady = true;
+        bossWaveReady = true;
+        itemSpawned = false;
+
         //Sound
         SoundController.startSound("RaMxGF.mp3", true);
         SoundController.startSound("thunderstrike.mp3", true);

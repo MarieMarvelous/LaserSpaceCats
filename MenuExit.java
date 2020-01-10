@@ -15,8 +15,8 @@ public class MenuExit extends HUD
     public void act() 
     {
         if (Greenfoot.mouseClicked(this))
-            {
-             System.exit(0);
-            }
+        {
+            System.exit(0);
+        }
     }    
 }

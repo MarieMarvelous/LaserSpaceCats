@@ -8,13 +8,13 @@ import greenfoot.*;
  */
 public class WorldController {
 
-    private static CatHero catHero = new CatHero(); //the one and only!
-    
+    private static CatHero catHero; //the one and only!
+
     private static World currentWorld;
-    
+
     public WorldController() {
     }
-    
+
     private static void createMainMenu() {
         MainMenu world = new MainMenu();
         Greenfoot.setWorld(world);
@@ -60,11 +60,18 @@ public class WorldController {
         return world;
     }
 
+    private static World createEndScreen() {
+        EndScreen world = new EndScreen();
+        Greenfoot.setWorld(world);
+        return world;
+    }
+
     public static void switchToNextWorld(World world) {
         if (world instanceof CatWorld) {
             createMainMenu();
         }
         if (world instanceof MainMenu) {
+            catHero = new CatHero(); //Reset if started new, or died. No progress save here. Git gud.
             createStoryScreen();
         }
         if (world instanceof StoryScreen) {
@@ -89,22 +96,25 @@ public class WorldController {
             currentWorld = moon;
         }
         if (world instanceof Moon) {
-            createMainMenu();
+            createEndScreen();
         }
+        if (world instanceof EndScreen) {
+            createMainMenu();
+        }   
     }
-    
+
     public static void increaseHeroLife(int amount) {
         catHero.increaseMaximumHealth(amount);
     }
-    
+
     public static void increaseDamageMultiplier(double amount) {
         catHero.increaseDamageMultiplier(amount);
     }
-    
+
     public static double getDamageMultiplier() {
         return catHero.damageMultiplier;
     }
-    
+
     public static void heal(int amount) {
         if ((catHero.health + amount) > catHero.maximalHealth) {
             catHero.health = catHero.maximalHealth;
@@ -112,15 +122,18 @@ public class WorldController {
             catHero.health += amount;
         }
     }
-    
+
     public static CatHero getCatHero() {
+        if (catHero == null) {
+            catHero = new CatHero();
+        }
         return catHero;
     }
-    
+
     public static void addActorToCurrentWorld(Actor actor, int x, int y) {
         currentWorld.addObject(actor, x, y);
     }
-    
+
     public static void setCurrentLevel(CatWorld world) {
         currentWorld = world;
     }

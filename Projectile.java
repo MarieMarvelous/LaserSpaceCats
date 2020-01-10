@@ -8,7 +8,7 @@ public abstract class Projectile extends Entity {
 
     public void act() {
         move(getSpeed());
-        if(isAtEdge()) {
+        if(isAtEdge() || isTouching(Artefact.class)) {
             getWorld().removeObject(this);
         }
     }   

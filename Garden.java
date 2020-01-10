@@ -26,7 +26,16 @@ public class Garden extends CatWorld {
         SoundController.startSound("RaMxGF.mp3", true);
         //Leveldesign
 
-
+        //init
+        firstWaveReady = true;
+        secondWaveReady = true;
+        thirdWaveReady = true;
+        fourthWaveReady = true;
+        fithWaveReady = true;
+        sixthWaveReady = true;
+        seventhWaveReady = true;
+        eightWaveReady = true;
+        bossWaveReady = true;
 
         //Spawn Objects in World
         addObject(WorldController.getCatHero(), 885, 260);
