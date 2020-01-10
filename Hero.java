@@ -75,8 +75,10 @@ public class Hero extends Actor {
         if(isTouching(Enemy.class)){
             List<Enemy> listDamagingEnemy=getIntersectingObjects(Enemy.class);
             for(Enemy enemy : listDamagingEnemy){
-                health-=enemy.giveDamage();
-                enemy.drawBack();
+                if(enemy.framesToCount == 0) {
+                    health-=enemy.giveDamage();
+                    enemy.drawBack();
+                }
             }
         }
         String leben = String.valueOf(health);
@@ -116,12 +118,12 @@ public class Hero extends Actor {
         healthbar.setImage(imageName);
 
     }
-    
+
     public void increaseMaximumHealth(int delta) {
         this.maximalHealth += delta;
         this.health = this.maximalHealth; //Full Heal for the sake of the level Up!
     }
-    
+
     public void increaseDamageMultiplier(double delta) {
         this.damageMultiplier += delta;
     }
