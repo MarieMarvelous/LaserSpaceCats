@@ -52,7 +52,6 @@ public class House extends CatWorld {
         addObject(new UnderKitchen(), 237, 790);
         addObject(new UnderKitchenDownLeft(), 22, 782);
         addObject(new KitchenDownLeft(), 13, 746);
-        addObject(new HouseMiddleDown(), 753, 780);
         addObject(new HouseWallRight(), 1327, 363);
         addObject(new HouseWallRightLong(), 1586, 490);
         addObject(new HouseCornerDownRight(), 1575, 783);
