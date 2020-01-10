@@ -139,20 +139,8 @@ public abstract class Enemy extends Entity {
         bosshealthbar.setImage(imageName);
     }
 
-    public void runTowardsCatHero () {
-        tryMove(1);
-        List<CatHero> catHeroes = getWorld().getObjects(CatHero.class);
-        if (catHeroes.isEmpty()) {
-            return; 
-        }
-        Actor catHero = catHeroes.get(0);
-        turnTowards(catHero.getX(), catHero.getY()); 
-    }
-
     public void drawBack() {
-        CatHero catHero = getWorld().getObjects(CatHero.class).get(0);
-        turnTowards(catHero.getX(), catHero.getY());
-        startFrameCounting(30);
         tryMove(-5);
+        startFrameCounting(30);
     }
 }
