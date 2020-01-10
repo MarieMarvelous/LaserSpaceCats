@@ -17,31 +17,22 @@ public class Sewers extends CatWorld {
     private static boolean sixthWaveReady = true;
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
-
-    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     
     public Sewers() {
         super();
         //Sound
-        backgroundMusic.playLoop();
+        SoundController.startSound("RaMxGF.mp3", true);
         addObject(WorldController.getCatHero(), 50, 50);
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
-
-        addObject(new SunGlasses(), 600, 600);
-
-        //TunnelVision
-        // tunnelVision tunnelVision = new tunnelVision();
-        // addObject(tunnelVision,1141,364);
 
         //Map-Design
         addObject(new SewerParts1(), 305, 396);
         addObject(new SewerParts2(), 223, 585);
         addObject(new SewerParts3(), 832, 91);
         addObject(new SewerParts4(), 308, 241);
-        //addObject(new SewerParts5(), 24, 208);
         addObject(new SewerParts6(), 459, 556);
         addObject(new SewerParts7(), 588, 556);
         addObject(new SewerParts8(), 1029, 604);
@@ -110,7 +101,7 @@ public class Sewers extends CatWorld {
 
     public void spawnedEnemy(int n, int xMin, int yMin) {
         for (int i = 0; i < n; i++) {            
-            addObject(new Rat(), Greenfoot.getRandomNumber(100) + xMin, Greenfoot.getRandomNumber(50) + yMin);
+            addObject(new Rat(), Greenfoot.getRandomNumber(25) + xMin, Greenfoot.getRandomNumber(25) + yMin);
         }
     }
 

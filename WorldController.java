@@ -69,6 +69,7 @@ public class WorldController {
             World house = createHouse();
         }
         if (world instanceof House) {
+            SoundController.stopSound("thunderstrike.mp3");
             World garden = createGarden();
         }
         if (world instanceof Garden) {
@@ -83,7 +84,6 @@ public class WorldController {
         if (world instanceof Moon) {
             createMainMenu();
         }
-        SoundController.stopAllSounds();
     }
     
     public static void increaseHeroLife(int amount) {

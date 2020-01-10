@@ -19,16 +19,13 @@ public class House extends CatWorld {
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
     private static boolean itemSpawned = false;
-    
-    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
-    GreenfootSound thunderstorm = new GreenfootSound("thunderstrike.mp3");
 
     Bosshealthbar bosshealthbar = new Bosshealthbar();
     public House() {
         super();
         //Sound
-        backgroundMusic.playLoop();
-        thunderstorm.playLoop();
+        SoundController.startSound("RaMxGF.mp3", true);
+        SoundController.startSound("thunderstrike.mp3", true);
 
         addObject(WorldController.getCatHero(), 751, 542);
         //Leveldesign starts here
@@ -122,7 +119,7 @@ public class House extends CatWorld {
 
     public void spawnedEnemy(int n, int xMin, int yMin) {
         for (int i = 0; i < n; i++) {            
-            addObject(new Mouse(), Greenfoot.getRandomNumber(100)+xMin, Greenfoot.getRandomNumber(50)+yMin);
+            addObject(new Mouse(), Greenfoot.getRandomNumber(25)+xMin, Greenfoot.getRandomNumber(25)+yMin);
         }
     }
 }

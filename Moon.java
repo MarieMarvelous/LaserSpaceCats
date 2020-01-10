@@ -17,13 +17,11 @@ public class Moon extends CatWorld {
     private static boolean sixthWaveReady = true;
     private static boolean eigthWaveReady = true;
     private static boolean bossWaveReady = true;
-    GreenfootSound backgroundMusic = new GreenfootSound("RaMxGF.mp3");
-    
 
     public Moon() {
         super();
         //Sound
-        backgroundMusic.playLoop();
+        SoundController.startSound("RaMxGF.mp3", true);
         addObject(WorldController.getCatHero(), 800, 500);
         addObject(new DeathStar(),1240,724);
         addObject(new Triceratops(), 250, 524);
@@ -80,7 +78,7 @@ public class Moon extends CatWorld {
 
     public void spawnedEnemy(int n, int xMin, int yMin) {
         for (int i = 0; i < n; i++) {            
-            addObject(new Dinosaur(), Greenfoot.getRandomNumber(100)+xMin, Greenfoot.getRandomNumber(50)+yMin);
+            addObject(new Dinosaur(), Greenfoot.getRandomNumber(25)+xMin, Greenfoot.getRandomNumber(25)+yMin);
         }
     }
 
