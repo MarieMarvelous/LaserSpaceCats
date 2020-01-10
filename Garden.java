@@ -209,6 +209,6 @@ public class Garden extends CatWorld {
         addObject(new Rain(),808,86);
         addObject(new Rain(),490,734);
         addObject(new GardenBaumkrone(),1509,515);
-        addObject(dog,191,403);
+        addObject(dog,180,403);
     }
 }
