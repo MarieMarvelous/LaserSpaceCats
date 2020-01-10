@@ -1,7 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.ArrayList;
 
 public class CatHero extends Hero {
     public static final int SPEED=5;
+    public static final int ANIMATION_SPEED = 4; //the more the slower is the speed
+    public int countdownForNextFrame;
+    public int currentFrame;
+    
+    List<GreenfootImage> currentAnimation = new ArrayList<>();
 
     // Hierrüber wird der Kater beim Laufen animiert
     private final GreenfootImage imagef1;
@@ -36,27 +43,66 @@ public class CatHero extends Hero {
         // Level 5
         imagef11 = new GreenfootImage("catherospace1.png");
         imagef12 = new GreenfootImage("catherospace1.png");
-        
-        
+
         setImage(imagef1);
+        countdownForNextFrame = ANIMATION_SPEED;
+        currentFrame = 0;
     }     
 
     public void act() {
         super.act();
         super.movement("a", "d", "w", "s", SPEED);
-        super.checkCollision();         
+        super.checkCollision();
 
         GreenfootImage current = getImage();
-
-        if (current == imagef1) {
-            setImage(imagef2);
-        } else if (current == imagef2) {
-            setImage(imagef3);
-        } else if (current == imagef3) {
-            setImage(imagef4);
+        
+        World currentWorldType = WorldController.getCurrentWorld();
+        
+        if (countdownForNextFrame == 0) {
+            if (currentWorldType instanceof House) {
+                currentAnimation.clear();
+                currentAnimation.add(imagef1);
+                currentAnimation.add(imagef2);
+                currentAnimation.add(imagef3);
+                currentAnimation.add(imagef4);
+            }
+            if (currentWorldType instanceof Garden) {
+                currentAnimation.clear();
+                currentAnimation.add(imagef5);
+                currentAnimation.add(imagef6);
+                currentAnimation.add(imagef5);
+                currentAnimation.add(imagef6);
+            }
+            if (currentWorldType instanceof Sewers) {
+                currentAnimation.clear();
+                currentAnimation.add(imagef7);
+                currentAnimation.add(imagef8);
+                currentAnimation.add(imagef7);
+                currentAnimation.add(imagef8);
+            }
+            if (currentWorldType instanceof GuianaSpaceCenter) {
+                currentAnimation.clear();
+                currentAnimation.add(imagef9);
+                currentAnimation.add(imagef10);
+                currentAnimation.add(imagef9);
+                currentAnimation.add(imagef10);
+            }
+            if (currentWorldType instanceof Moon) {
+                currentAnimation.clear();
+                currentAnimation.add(imagef11);
+                currentAnimation.add(imagef12);
+                currentAnimation.add(imagef11);
+                currentAnimation.add(imagef12);
+            }
+            if (currentFrame == 4) {
+                currentFrame = 0;
+            }
+            this.setImage(currentAnimation.get(currentFrame++));
+            countdownForNextFrame = ANIMATION_SPEED;
         } else {
-            setImage(imagef1);
+            countdownForNextFrame--;
         }
+        
     }
 
 }

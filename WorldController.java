@@ -137,4 +137,8 @@ public class WorldController {
     public static void setCurrentLevel(CatWorld world) {
         currentWorld = world;
     }
+    
+    public static World getCurrentWorld() {
+        return currentWorld;
+    }
 }
