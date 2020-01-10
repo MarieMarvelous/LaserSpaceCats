@@ -86,6 +86,13 @@ public class Hero extends Actor {
             YouDied overlay = new YouDied();
             overlay.setTransparency(0);
             WorldController.addActorToCurrentWorld(overlay, 800, 400);
+            WorldController.getCurrentWorld().removeObject((Healthbar) getWorld().getObjects(Healthbar.class).get(0));
+            while (overlay.getTransparency() < 175) {
+                int currentTransparency = overlay.getTransparency();
+                currentTransparency += 5;
+                overlay.setTransparency(currentTransparency);
+                Greenfoot.delay(1);
+            }
             while (overlay.getTransparency() < 255) {
                 int currentTransparency = overlay.getTransparency();
                 overlay.setTransparency(++currentTransparency);
