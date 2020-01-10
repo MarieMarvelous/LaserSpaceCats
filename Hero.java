@@ -87,7 +87,7 @@ public class Hero extends Actor {
 
     public void shootLaser(int angle) {
         if (canShootAgain) {
-            SoundController.startSound("lasersound3.mp3", false);
+            Greenfoot.playSound("lasersound3.mp3");
             getWorld().addObject(new Laser(angle), this.getX(), this.getY());
             canShootAgain = false;
         }

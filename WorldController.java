@@ -83,6 +83,7 @@ public class WorldController {
         if (world instanceof Moon) {
             createMainMenu();
         }
+        SoundController.stopAllSounds();
     }
     
     public static void increaseHeroLife(int amount) {
