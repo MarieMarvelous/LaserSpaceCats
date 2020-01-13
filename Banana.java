@@ -26,6 +26,7 @@ public class Banana extends Projectile {
   
     public void act() {
         super.act();
+        turn(5);
     }     
 }  
 

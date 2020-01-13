@@ -47,49 +47,48 @@ public class Garden extends CatWorld {
     }
 
     public void act() {
-        
+
         if (firstWaveReady) {
-                spawnedEnemy(4, 20, 200);
-                firstWaveReady = false;
-            }
-            if (killedEnemies >= 4 && secondWaveReady) {
-                spawnedEnemy(3, 20, 200);
-                secondWaveReady = false;
-            }
-            if (killedEnemies >= 7 && thirdWaveReady) {
-                spawnedEnemy(5, 90,500);
-                thirdWaveReady = false;
-            }
+            spawnedEnemy(4, 20, 200);
+            firstWaveReady = false;
+        }
+        if (killedEnemies >= 4 && secondWaveReady) {
+            spawnedEnemy(3, 20, 200);
+            secondWaveReady = false;
+        }
+        if (killedEnemies >= 7 && thirdWaveReady) {
+            spawnedEnemy(5, 90,500);
+            thirdWaveReady = false;
+        }
 
-            if (killedEnemies >= 12 && fourthWaveReady) {
-                spawnedEnemy(7, 806,351);
-                fourthWaveReady = false;
-            }
+        if (killedEnemies >= 12 && fourthWaveReady) {
+            spawnedEnemy(7, 806,351);
+            fourthWaveReady = false;
+        }
 
-            if (killedEnemies >= 19 && fithWaveReady) {
-                spawnedEnemy(8, 1300,700);
-                fithWaveReady = false;
-            }
-            if (killedEnemies >= 27 && sixthWaveReady) {
-                spawnedEnemy(8, 150,600);
-                sixthWaveReady = false;
-            }
-            if (killedEnemies >= 35 && seventhWaveReady) {
-                spawnedEnemy(8, 806,351);
-                seventhWaveReady = false;
-            }
-            if (killedEnemies >= 43 && eightWaveReady) {
-                spawnedEnemy(10, 100,700);
-                eightWaveReady = false;
-            }
+        if (killedEnemies >= 19 && fithWaveReady) {
+            spawnedEnemy(8, 1300,700);
+            fithWaveReady = false;
+        }
+        if (killedEnemies >= 27 && sixthWaveReady) {
+            spawnedEnemy(8, 150,600);
+            sixthWaveReady = false;
+        }
+        if (killedEnemies >= 35 && seventhWaveReady) {
+            spawnedEnemy(8, 806,351);
+            seventhWaveReady = false;
+        }
+        if (killedEnemies >= 43 && eightWaveReady) {
+            spawnedEnemy(10, 100,700);
+            eightWaveReady = false;
+        }
 
-            if (killedEnemies >= 53 && bossWaveReady) {
-                removeObject(dog);
-                addObject(new BossDog(), 691, 571);
-                addObject(bosshealthbar,800,100);
-                bossWaveReady = false;
-            }
-       
+        if (killedEnemies >= 53 && bossWaveReady) {
+            removeObject(dog);
+            addObject(new BossDog(), 691, 571);
+            addObject(bosshealthbar,800,100);
+            bossWaveReady = false;
+        }
 
     }
 
@@ -105,6 +104,68 @@ public class Garden extends CatWorld {
      */
     private void prepare()
     {
+        addObject(new Blocking(197, 88), 99, 43);
+        addObject(new Blocking(29, 44), 806, 244);
+        addObject(new Blocking(29, 44), 953, 269);
+        addObject(new Blocking(29, 44), 953, 292);
+        addObject(new Blocking(28, 41), 952,321);
+        addObject(new Blocking(28, 41),1187,645);
+        addObject(new Blocking(28, 41),249,718);
+        addObject(new Blocking(28, 41),601,593);
+        addObject(new Blocking(28, 41),455,544);
+        addObject(new Blocking(28, 41),218,643);
+        addObject(new Blocking(28, 41),512,345);
+        addObject(new Blocking(28, 41),601,170);
+        addObject(new Blocking(28, 41),572,96);
+        addObject(new Blocking(28, 41),543,146);
+        addObject(new Blocking(28, 41),44,94);
+        addObject(new Blocking(28, 41),44,445);
+        addObject(new Blocking(28, 41),13,494);
+        addObject(new Blocking(28, 41),43,619);
+        addObject(new Blocking(28, 41),15,743);
+        addObject(new Blocking(28, 41), 368, 21);
+        addObject(new Blocking(28, 41), 1393, 694);
+        addObject(new Blocking(52, 51),27,136);
+        addObject(new Blocking(52, 51),88,411);
+        addObject(new Blocking(52, 51),0,385);
+        addObject(new Blocking(52, 51),0,708);
+        addObject(new Blocking(52, 51),261,585);
+        addObject(new Blocking(52, 51),264,659);
+        addObject(new Blocking(52, 51),674,634);
+        addObject(new Blocking(52, 51),499,385);
+        addObject(new Blocking(52, 51),524,111);
+        addObject(new Blocking(52, 51),1172,559);
+        addObject(new Blocking(29, 45),159,116);
+        addObject(new Blocking(29, 45),1361,439);
+        addObject(new Blocking(54, 53),293,51);
+        addObject(new Blocking(99, 133),197,415);
+        addObject(new Blocking(79, 61),395,83);
+        addObject(new Blocking(79, 61),571,357);
+        addObject(new Blocking(79, 61),513,581);
+        addObject(new Blocking(79, 61),72,357);
+        addObject(new Blocking(79, 61),1481,655);
+        addObject(new Blocking(30, 38),1452,448);
+        addObject(new Blocking(59, 19),1511,515);
+        addObject(new Blocking(397, 142),1402,592);
+        addObject(new Blocking(78, 33),1395,679);
+        addObject(new Blocking(60, 36),703,221);
+        addObject(new Blocking(60, 36),938,247);
+        addObject(new Blocking(60, 36),822,247);
+        addObject(new Blocking(60, 36),763,247);
+        addObject(new Blocking(60, 36),498,0);
+        addObject(new Blocking(29, 44),952,267);
+        addObject(new Blocking(29, 44),953,294);
+        addObject(new Blocking(29, 44),806,243);
+        addObject(new Blocking(1010, 136),1097,72);
+        addObject(new Blocking(983, 81),1110,179);
+        addObject(new Blocking(622, 173),1288,322);
+        addObject(new Blocking(84, 29),1216,510);
+        addObject(new Blocking(60, 25),559,29);
+        addObject(new Blocking(30, 60),12,607);
+        addObject(new Blocking(367, 29),1421, 781);
+        addObject(dog,180,403);
+
+        //Rain
         addObject(new Rain(),1113,21);
         addObject(new Rain(),807,65);
         addObject(new Rain(),1402,308);
@@ -134,63 +195,6 @@ public class Garden extends CatWorld {
         addObject(new Rain(),651,581);
         addObject(new Rain(),816,162);
         addObject(new Rain(),405,272);
-        addObject(new GardenUpperLeftCorner(),99,43);
-        addObject(new GardenBarrel(),806,244);
-        addObject(new GardenBarrel(),953,269);
-        addObject(new GardenBarrel(),953,292);
-        addObject(new GardenSmallestBush(),952,321);
-        addObject(new GardenSmallestBush(),1187,645);
-        addObject(new GardenSmallestBush(),249,718);
-        addObject(new GardenSmallestBush(),601,593);
-        addObject(new GardenSmallestBush(),455,544);
-        addObject(new GardenSmallestBush(),218,643);
-        addObject(new GardenSmallestBush(),512,345);
-        addObject(new GardenSmallestBush(),601,170);
-        addObject(new GardenSmallestBush(),572,96);
-        addObject(new GardenSmallestBush(),543,146);
-        addObject(new GardenSmallestBush(),44,94);
-        addObject(new GardenSmallestBush(),44,445);
-        addObject(new GardenSmallestBush(),13,494);
-        addObject(new GardenSmallestBush(),43,619);
-        addObject(new GardenSmallestBush(),15,743);
-        addObject(new GardenSmallerBush(),27,136);
-        addObject(new GardenSmallerBush(),88,411);
-        addObject(new GardenSmallerBush(),0,385);
-        addObject(new GardenSmallerBush(),0,708);
-        addObject(new GardenSmallerBush(),261,585);
-        addObject(new GardenSmallerBush(),264,659);
-        addObject(new GardenSmallerBush(),674,634);
-        addObject(new GardenSmallerBush(),499,385);
-        addObject(new GardenSmallerBush(),524,111);
-        addObject(new GardenSmallerBush(),1172,559);
-        addObject(new GardenSign(),159,116);
-        addObject(new GardenSign(),1361,439);
-        addObject(new GardenSewer(),293,51);
-        addObject(new GardenDoghouse(),197,415);
-        addObject(new GardenBigBush(),395,83);
-        addObject(new GardenBigBush(),571,357);
-        addObject(new GardenBigBush(),513,581);
-        addObject(new GardenBigBush(),72,357);
-        addObject(new GardenBigBush(),1481,655);
-        addObject(new GardenBaumStumpf(),1452,448);
-        addObject(new GardenBaumkrone(),1511,515);
-        addObject(new GardenHouseLowerRightCorner1(),1405,592);
-        addObject(new GardenHouseLowerRightCornerBottom(),1395,679);
-        addObject(new GardenStraw(),703,221);
-        addObject(new GardenStraw(),938,247);
-        addObject(new GardenBarrel(),952,267);
-        addObject(new GardenBarrel(),953,294);
-        addObject(new GardenSmallestBush(),953,321);
-        addObject(new GardenStraw(),822,247);
-        addObject(new GardenBarrel(),806,243);
-        addObject(new GardenUpperRightCorner(),1097,72);
-        addObject(new GardenUpperRightCornerLowerPart(),1110,179);
-        addObject(new GardenUpperRightCornerLowerPart(),1108,178);
-        addObject(new GardenHouseLowerRightCorner(),776,251);
-        addObject(new GardenHouseLowerRightCorner(),747,252);
-        addObject(new GardenUpperRightCornerLowestPart(),1288,322);
-        addObject(new GardenBushKrone(),1216,510);
-        addObject(new GardenMiddleLower(),559,29);
         addObject(new Rain(),1129,137);
         addObject(new Rain(),800,182);
         addObject(new Rain(),753,89);
@@ -208,7 +212,5 @@ public class Garden extends CatWorld {
         addObject(new Rain(),849,174);
         addObject(new Rain(),808,86);
         addObject(new Rain(),490,734);
-        addObject(new GardenBaumkrone(),1509,515);
-        addObject(dog,180,403);
     }
 }
