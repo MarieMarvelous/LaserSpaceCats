@@ -42,44 +42,45 @@ public class House extends CatWorld {
         SoundController.startSound("thunderstrike.mp3", true);
 
         addObject(WorldController.getCatHero(), 751, 542);
+        
         //Leveldesign starts here
-        addObject(new UpperLeftPiece(), 294, 62);
-        addObject(new UpperRightPiece(), 1209, 66);
-        addObject(new Bed(), 1058, 172);
-        addObject(new Bed(), 1245, 172);
-
-        addObject(new UpperLeftCorner(), 1446, 163);
-        addObject(new UnderKitchen(), 237, 790);
-        addObject(new UnderKitchenDownLeft(), 22, 782);
-        addObject(new KitchenDownLeft(), 13, 746);
-        addObject(new HouseWallRight(), 1327, 363);
-        addObject(new HouseWallRightLong(), 1586, 490);
-        addObject(new HouseCornerDownRight(), 1575, 783);
-        addObject(new HouseDownMiddlePass(), 1010, 672);
-        addObject(new HouseDoorDownLeft(), 493, 728);
-        addObject(new HouseDoorDownRight(), 823, 737);
-        addObject(new HouseDownDoorDown(), 566, 747);
-        addObject(new BigBed(), 1315, 455);
-        addObject(new HouseCamin(), 825, 389);
-        addObject(new HouseKitchenLeft(), 37, 478);
-        addObject(new HouseKitchenMiddle(), 83, 344);
-        addObject(new HouseKitchenMiddleLong(), 1141, 366);
-        addObject(new HouseMiddleMiddle(), 637, 327);
-        addObject(new HouseKitchenChair(), 613, 447);
-        addObject(new HouseKitchenTable(), 682, 473);
-        addObject(new HouseTV(), 496, 469);
-        addObject(new HouseWallUpLeft(), 294, 61);
-        addObject(new HouseWallUpRight(), 1210, 66);
-        addObject(new HouseKitchenZeile(), 306, 366);
-        addObject(new HouseBedding2(), 752, 121);
-        addObject(new HouseWallElement(), 637, 84);
+        addObject(new Blocking(91, 119), 1058, 172);
+        addObject(new Blocking(91, 119), 1245, 172);
+        addObject(new Blocking(1600, 125), 800, 57);
+        addObject(new Blocking(308, 318), 1446, 163);
+        addObject(new Blocking(386, 19), 237, 790);
+        addObject(new Blocking(44, 36), 22, 782);
+        addObject(new Blocking(27, 107), 13, 746);
+        addObject(new Blocking(1050, 152), 1116, 363);
+        addObject(new Blocking(26, 561), 1586, 543);
+        addObject(new Blocking(89, 43), 1010, 672);
+        addObject(new Blocking(87, 102), 493, 728);
+        addObject(new Blocking(647, 37), 747, 781);
+        addObject(new Blocking(464, 123), 823, 738);
+        addObject(new Blocking(98, 71), 566, 747);
+        addObject(new Blocking(140,120), 1315, 455);
+        addObject(new Blocking(94,176), 825, 389);
+        addObject(new Blocking(75, 428), 37, 478);
+        addObject(new Blocking(90, 220), 637, 327);
+        addObject(new Blocking(43, 71), 613, 447);
+        addObject(new Blocking(90, 85), 682, 473);
+        addObject(new Blocking(88,85), 496, 469);
+        addObject(new Blocking(144, 160), 754, 97);
+        addObject(new Blocking(91, 168), 637, 84);
+        addObject(new Blocking(94, 162), 1012, 513);
+        addObject(new Blocking(498, 16), 1326, 792);
+        addObject(new Blocking(494, 186), 247, 346);
+        addObject(new Blocking(281, 49), 308, 454);
+        addObject(new Blocking(29, 48), 473, 654);
+        addObject(new Blocking(26, 192), 13, 171);
+        
         //addHealthbar
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,275,75);
         Bosshealthbar bosshealthbar = new Bosshealthbar();
 
         fading.setTransparency(255);
-        addObject(fading, 800, 400);
+        //addObject(fading, 800, 400);
     }
 
     public void act() {
