@@ -88,11 +88,11 @@ public class House extends CatWorld {
             fading.setTransparency(fading.getTransparency() - 5);
         } else {
             if (firstWaveReady) {
-                spawnedEnemy(4, 20, 200);
+                spawnedEnemy(4, 35, 200);
                 firstWaveReady = false;
             }
             if (killedEnemies >= 4 && secondWaveReady) {
-                spawnedEnemy(3, 20, 200);
+                spawnedEnemy(3, 35, 200);
                 secondWaveReady = false;
             }
             if (killedEnemies >= 7 && thirdWaveReady) {
@@ -133,7 +133,7 @@ public class House extends CatWorld {
 
     public void spawnedEnemy(int n, int xMin, int yMin) {
         for (int i = 0; i < n; i++) {            
-            addObject(new Mouse(), Greenfoot.getRandomNumber(25)+xMin, Greenfoot.getRandomNumber(25)+yMin);
+            addObject(new Mouse(), Greenfoot.getRandomNumber(5)+xMin, Greenfoot.getRandomNumber(5)+yMin);
         }
     }
 }
