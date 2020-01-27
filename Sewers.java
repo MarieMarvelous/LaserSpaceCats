@@ -41,31 +41,31 @@ public class Sewers extends CatWorld {
         Healthbar healthbar = new Healthbar();
         addObject(healthbar,296,68);
 
-        //Map-Design
-        addObject(new SewerParts1(), 305, 396);
-        addObject(new SewerParts2(), 223, 585);
-        addObject(new SewerParts3(), 832, 91);
-        addObject(new SewerParts4(), 308, 241);
-        addObject(new SewerParts6(), 459, 556);
-        addObject(new SewerParts7(), 588, 556);
-        addObject(new SewerParts8(), 1029, 604);
-        addObject(new SewerParts9(), 864, 763);
-        addObject(new SewerParts10(), 1314, 720);
-        addObject(new SewerParts11(), 1591, 557);
-        addObject(new SewerParts12(), 746, 435);
-        addObject(new SewerParts13(), 1002, 434);
-        addObject(new SewerParts14(), 678, 176);
-        addObject(new SewerParts15(), 1050, 174);
-        addObject(new SewerParts16(), 1581, 171);
-        addObject(new SewerParts17(), 604, 695);
-        addObject(new SewerParts17(), 1481, 695);
-        addObject(new SewerParts18(), 1509, 385);
-        addObject(new SewerParts19(), 1442, 314);
-        addObject(new SewerParts20(), 1465, 291);
+        addObject(new Blocking(1538, 184), 831, 92);
+        addObject(new Blocking(277, 93), 1050, 231);
+        addObject(new Blocking(92, 187), 679, 276);
+        addObject(new Blocking(271, 106), 311, 239);
+        addObject(new Blocking(276, 14), 307, 368);
+        addObject(new Blocking(446, 426), 223, 587);
+        addObject(new Blocking(24, 178), 457, 564);
+        addObject(new Blocking(118, 173), 588, 560);
+        addObject(new Blocking(27, 42), 604, 695);
+        addObject(new Blocking(637, 178), 1027, 559);
+        addObject(new Blocking(527, 152), 1082, 723);
+        addObject(new Blocking(92, 97), 773, 695);
+        addObject(new Blocking(544, 47), 1005, 439);
+        addObject(new Blocking(32, 94), 1581, 232);
+        addObject(new Blocking(32, 44), 1583, 439);
+        addObject(new Blocking(14, 181), 1592, 561);
+        addObject(new Blocking(114, 175), 1466, 560);
+        addObject(new Blocking(27, 42), 1481, 696);
+        addObject(new Blocking(27, 42), 1508, 386);
+        addObject(new Blocking(27, 42), 1440, 315);
+        addObject(new Blocking(27, 42), 1466, 290);
 
         //TunnelVision
         tunnelVision tunnelVision = new tunnelVision();
-        addObject(tunnelVision,1141,364);
+        //addObject(tunnelVision,1141,364);
     }
 
     public void act() {
