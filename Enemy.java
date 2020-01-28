@@ -13,6 +13,7 @@ public abstract class Enemy extends Entity {
     private int shotTimer;
     public int health;
     public int maximalHealth;
+    public int seeingRange;
 
     public abstract int giveDamage();
 
@@ -117,7 +118,7 @@ public abstract class Enemy extends Entity {
         CatHero cat = getWorld().getObjects(CatHero.class).get(0);
         int mf = Greenfoot.getRandomNumber(3) + 2;
         if (framesToCount == 0) {
-            if (canSeeCatHero(400)) {
+            if (canSeeCatHero(this.seeingRange != 0 ? this.seeingRange : 600)) {
                 if(Greenfoot.getRandomNumber(100) <= 90) {
                     turnTowards(cat.getX(), cat.getY());
                     tryMove(mf);

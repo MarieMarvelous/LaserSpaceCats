@@ -80,7 +80,7 @@ public class House extends CatWorld {
         Bosshealthbar bosshealthbar = new Bosshealthbar();
 
         fading.setTransparency(255);
-        //addObject(fading, 800, 400);
+        addObject(fading, 800, 400);
     }
 
     public void act() {

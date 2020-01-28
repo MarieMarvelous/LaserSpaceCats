@@ -6,6 +6,7 @@ public class Mouse extends Enemy {
         resizeImage(20, 20);
         damage = 2;
         tempDamage = damage;
+        seeingRange = 750;
     }    
     
     public int giveDamage (){
