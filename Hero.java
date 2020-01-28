@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
-import java.awt.Point;
 
 public class Hero extends Actor {
     public int maximalHealth;
@@ -112,13 +111,13 @@ public class Hero extends Actor {
     }    
 
     public void checkForShooting() {
-        MouseInfo mouse = Greenfoot.getMouseInfo();
+        greenfoot.MouseInfo mouse = Greenfoot.getMouseInfo();
         if (mouse != null && mouse.getButton() == 1) {
             shootLaser(getMouseDirection(mouse));
         }
     }    
 
-    public int getMouseDirection(MouseInfo mouse) {
+    public int getMouseDirection(greenfoot.MouseInfo mouse) {
         double deltaX = mouse.getX() - this.getX();
         double deltaY = mouse.getY() - this.getY();
 
